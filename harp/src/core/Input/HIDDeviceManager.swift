@@ -22,7 +22,7 @@ fileprivate func bridge<T: AnyObject>(ptr: UnsafeRawPointer) -> T {
   return Unmanaged<T>.fromOpaque(ptr).takeUnretainedValue()
 }
 
-fileprivate func perseValue(value: IOHIDValue) -> (ControllerInput, Int) {
+fileprivate func parseValue(value: IOHIDValue) -> (ControllerInput, Int) {
   let element = IOHIDValueGetElement(value)
   let usage = Int(IOHIDElementGetUsage(element))
   let usagePage = Int(IOHIDElementGetUsagePage(element))
@@ -36,15 +36,15 @@ fileprivate func perseValue(value: IOHIDValue) -> (ControllerInput, Int) {
 
 class HIDDeviceManager {
   private var manager: IOHIDManager?
-  fileprivate var subject = PublishSubject<(ControllerInput, Int)>()
-  
+  private var subject = PublishSubject<(ControllerInput, Int)>()
+
   init?() {
     manager = IOHIDManagerCreate(kCFAllocatorDefault, IOOptionBits(kIOHIDOptionsTypeNone))
   
     guard let manager = manager else {
       return nil
     }
-  
+
     IOHIDManagerSetDeviceMatching(manager, criteria)
 
     let result = IOHIDManagerOpen(manager, IOOptionBits(kIOHIDOptionsTypeNone))
@@ -52,7 +52,7 @@ class HIDDeviceManager {
       return nil
     }
   }
-  
+
   func start() -> Observable<(ControllerInput, Int)> {
     guard let manager = manager else {
       return Observable.error(NSError(domain: "a", code: 299, userInfo: nil))
@@ -64,9 +64,9 @@ class HIDDeviceManager {
         return
       }
       
-      let persed = perseValue(value: value)
-      let selfPtr: HIDDeviceManager = bridge(ptr: context)
-      selfPtr.subject.onNext(persed)
+      let parsed = parseValue(value: value)
+      let selfRef: HIDDeviceManager = bridge(ptr: context)
+      selfRef.subject.onNext(parsed)
     }, bridge(obj: self))
 
     return subject.asObservable()
