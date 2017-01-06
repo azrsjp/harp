@@ -14,11 +14,7 @@ final class ControllerInputToGameEvent {
     }
     
     return hidManager.start().map({ value -> GameEvent in
-      if value.0 == .button {
-        return self.convertButtonNoToKey(number: value.1)
-      }
-
-      return .noteOn7
+      return self.convertButtonNoToKey(number: value)
     })
   }
   
@@ -26,7 +22,7 @@ final class ControllerInputToGameEvent {
     subject.onCompleted()
   }
   
-  private func convertButtonNoToKey(number: Int) -> GameEvent {
+  private func convertButtonNoToKey(number: JoypadInputType) -> GameEvent {
     return .noteOn7
   }
 }
