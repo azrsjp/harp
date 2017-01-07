@@ -26,7 +26,7 @@ final class DebugMenuScene: BasicScene {
     // Closure to generate button in alignment
     let placer = { (pairs: [(String, () -> SKScene)], index: Int, offsetX: CGFloat) in
       let label = pairs[index].0
-      let scene = pairs[index].1()
+      let scene = pairs[index].1
 
       let button = TextButton(text: label)
       let y = self.size.height - (10.0 + button.fontSize) * CGFloat(index)
@@ -34,8 +34,12 @@ final class DebugMenuScene: BasicScene {
       button.position = CGPoint(x: offsetX, y: y - 20.0)
       button.horizontalAlignmentMode = .left
       button.verticalAlignmentMode = .top
-      button.onClicked = { _ in
-        self.view?.presentScene(scene)
+      button.onClicked = { [weak self] _ in
+        guard let view = self?.view else {
+          return
+        }
+
+        view.presentScene(scene())
       }
 
       self.addChild(button)

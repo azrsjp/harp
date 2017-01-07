@@ -19,12 +19,16 @@ class DebugInputKeysScene: BasicScene {
     // Subscribe event stream
     if let notifier = notifier {
 
-      notifier.observable().subscribe(onNext: { event in
-        self.label.text = event.rawValue
+      notifier.observable().subscribe(onNext: { [weak self] event in
+        guard let _self = self else {
+          return
+        }
+        
+        _self.label.text = event.rawValue
         Logger.debug(event)
         
         if event == GameEvent.exit {
-          self.notifier?.stopNofitying()
+          _self.notifier?.stopNofitying()
         }
       }).addDisposableTo(disposeBag)
     }

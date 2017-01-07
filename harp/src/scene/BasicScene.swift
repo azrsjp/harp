@@ -45,8 +45,12 @@ class BasicScene: SKScene {
     button.horizontalAlignmentMode = .right
     button.position = CGPoint(x: frame.width - padding, y: padding)
     button.zPosition = CGFloat(FP_INFINITE)
-    button.onClicked = { _ in
-      self.view?.presentScene(DebugMenuScene())
+    button.onClicked = { [weak self] _ in
+      guard let view = self?.view else {
+        return
+      }
+
+      view.presentScene(DebugMenuScene())
     }
     
     addChild(button)
