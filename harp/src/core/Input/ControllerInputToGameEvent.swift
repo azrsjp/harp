@@ -13,8 +13,8 @@ final class ControllerInputToGameEvent {
       return Observable.of(GameEvent.hispeedDown).asObservable()
     }
     
-    return hidManager.start().map({ value -> GameEvent in
-      return self.convertButtonNoToKey(number: value)
+    return hidManager.start().filter({ $0.type != .unknown}).map({ input -> GameEvent in
+      return self.convertInputToEvent(input)
     })
   }
   
@@ -22,7 +22,7 @@ final class ControllerInputToGameEvent {
     subject.onCompleted()
   }
   
-  private func convertButtonNoToKey(number: JoypadInputType) -> GameEvent {
+  private func convertInputToEvent(_ input: HIDInputData) -> GameEvent {
     return .noteOn7
   }
 }
