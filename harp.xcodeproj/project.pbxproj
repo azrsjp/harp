@@ -33,7 +33,7 @@
 
 /* Begin PBXBuildFile section */
 		710655DB1DF26AC3003A1169 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710655DA1DF26AC3003A1169 /* CGSize.swift */; };
-		716140291E1FE54600034402 /* JoypadInputType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716140281E1FE54600034402 /* JoypadInputType.swift */; };
+		716140291E1FE54600034402 /* HIDInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716140281E1FE54600034402 /* HIDInputData.swift */; };
 		717A12281E0FC740006A4B4B /* CGSizeOperatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7161AF0C1E0FBEE4002286CD /* CGSizeOperatorSpec.swift */; };
 		718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */; };
 		718A5CFD1D4531F400B88A76 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A5CFC1D4531F400B88A76 /* Common.swift */; };
@@ -79,7 +79,7 @@
 		1BC48912B861C3D307876491 /* Pods-harp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harp.release.xcconfig"; path = "Pods/Target Support Files/Pods-harp/Pods-harp.release.xcconfig"; sourceTree = "<group>"; };
 		1F92FA1D5E2CCC3D4EB7FEDC /* Pods-harpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-harpTests/Pods-harpTests.release.xcconfig"; sourceTree = "<group>"; };
 		710655DA1DF26AC3003A1169 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
-		716140281E1FE54600034402 /* JoypadInputType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JoypadInputType.swift; sourceTree = "<group>"; };
+		716140281E1FE54600034402 /* HIDInputData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDInputData.swift; sourceTree = "<group>"; };
 		7161AF0C1E0FBEE4002286CD /* CGSizeOperatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeOperatorSpec.swift; sourceTree = "<group>"; };
 		718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMenuScene.swift; sourceTree = "<group>"; };
 		718A5CFC1D4531F400B88A76 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -282,7 +282,7 @@
 				71CC198E1E1B2E7100391CAA /* KeyboardInputToGameEvent.swift */,
 				71CC19921E1B449B00391CAA /* ControllerInputToGameEvent.swift */,
 				71CC19941E1B461D00391CAA /* GameEventNotifier.swift */,
-				716140281E1FE54600034402 /* JoypadInputType.swift */,
+				716140281E1FE54600034402 /* HIDInputData.swift */,
 			);
 			path = Input;
 			sourceTree = "<group>";
@@ -604,7 +604,7 @@
 				71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */,
 				718A5CFD1D4531F400B88A76 /* Common.swift in Sources */,
 				71CC19971E1BCF0B00391CAA /* Images.swift in Sources */,
-				716140291E1FE54600034402 /* JoypadInputType.swift in Sources */,
+				716140291E1FE54600034402 /* HIDInputData.swift in Sources */,
 				71CC19911E1B384200391CAA /* DebugUIComponentsScene.swift in Sources */,
 				71A2A1E21E1ABE41000C885A /* Clickable.swift in Sources */,
 				71CC19951E1B461D00391CAA /* GameEventNotifier.swift in Sources */,
