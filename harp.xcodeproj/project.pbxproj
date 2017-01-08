@@ -48,10 +48,8 @@
 		71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */; };
 		71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19881E1B21BD00391CAA /* GameEvent.swift */; };
 		71CC198D1E1B2A0700391CAA /* Judge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC198C1E1B2A0700391CAA /* Judge.swift */; };
-		71CC198F1E1B2E7100391CAA /* KeyboardInputToGameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC198E1E1B2E7100391CAA /* KeyboardInputToGameEvent.swift */; };
 		71CC19911E1B384200391CAA /* DebugUIComponentsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19901E1B384200391CAA /* DebugUIComponentsScene.swift */; };
-		71CC19931E1B449B00391CAA /* ControllerInputToGameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19921E1B449B00391CAA /* ControllerInputToGameEvent.swift */; };
-		71CC19951E1B461D00391CAA /* GameEventNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19941E1B461D00391CAA /* GameEventNotifier.swift */; };
+		71CC19931E1B449B00391CAA /* GameEventNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19921E1B449B00391CAA /* GameEventNotifier.swift */; };
 		71CC19971E1BCF0B00391CAA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19961E1BCF0B00391CAA /* Images.swift */; };
 		71CC199B1E1BDF6B00391CAA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC199A1E1BDF6B00391CAA /* Logger.swift */; };
 		71E6B7891E1695E600475846 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B7881E1695E600475846 /* CGPoint.swift */; };
@@ -98,10 +96,8 @@
 		71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugInputKeysScene.swift; sourceTree = "<group>"; };
 		71CC19881E1B21BD00391CAA /* GameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEvent.swift; sourceTree = "<group>"; };
 		71CC198C1E1B2A0700391CAA /* Judge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Judge.swift; sourceTree = "<group>"; };
-		71CC198E1E1B2E7100391CAA /* KeyboardInputToGameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardInputToGameEvent.swift; sourceTree = "<group>"; };
 		71CC19901E1B384200391CAA /* DebugUIComponentsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugUIComponentsScene.swift; sourceTree = "<group>"; };
-		71CC19921E1B449B00391CAA /* ControllerInputToGameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerInputToGameEvent.swift; sourceTree = "<group>"; };
-		71CC19941E1B461D00391CAA /* GameEventNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEventNotifier.swift; sourceTree = "<group>"; };
+		71CC19921E1B449B00391CAA /* GameEventNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEventNotifier.swift; sourceTree = "<group>"; };
 		71CC19961E1BCF0B00391CAA /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		71CC199A1E1BDF6B00391CAA /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		71E6B7881E1695E600475846 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
@@ -279,9 +275,7 @@
 			isa = PBXGroup;
 			children = (
 				71E6B7921E16C76C00475846 /* HIDDeviceManager.swift */,
-				71CC198E1E1B2E7100391CAA /* KeyboardInputToGameEvent.swift */,
-				71CC19921E1B449B00391CAA /* ControllerInputToGameEvent.swift */,
-				71CC19941E1B461D00391CAA /* GameEventNotifier.swift */,
+				71CC19921E1B449B00391CAA /* GameEventNotifier.swift */,
 				716140281E1FE54600034402 /* HIDInputData.swift */,
 			);
 			path = Input;
@@ -607,15 +601,13 @@
 				716140291E1FE54600034402 /* HIDInputData.swift in Sources */,
 				71CC19911E1B384200391CAA /* DebugUIComponentsScene.swift in Sources */,
 				71A2A1E21E1ABE41000C885A /* Clickable.swift in Sources */,
-				71CC19951E1B461D00391CAA /* GameEventNotifier.swift in Sources */,
 				718C06DB1D241B6E002F6E68 /* StartScene.swift in Sources */,
 				71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */,
 				71CC199B1E1BDF6B00391CAA /* Logger.swift in Sources */,
 				71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */,
 				710655DB1DF26AC3003A1169 /* CGSize.swift in Sources */,
-				71CC198F1E1B2E7100391CAA /* KeyboardInputToGameEvent.swift in Sources */,
 				71E6B7891E1695E600475846 /* CGPoint.swift in Sources */,
-				71CC19931E1B449B00391CAA /* ControllerInputToGameEvent.swift in Sources */,
+				71CC19931E1B449B00391CAA /* GameEventNotifier.swift in Sources */,
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
 				71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */,
 				71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */,
