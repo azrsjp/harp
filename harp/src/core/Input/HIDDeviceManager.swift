@@ -25,22 +25,22 @@ fileprivate typealias D = HIDInputData
 
 fileprivate let inputValueMap: [Int:[Int:[Int:HIDInputData]]] = [
   kHIDPage_Button: [
-    1:  [kOff: D(.button1, .off), kOn: D(.button1, .on)], // kHIDUsage_Button_1,
-    2:  [kOff: D(.button2, .off), kOn: D(.button2, .on)], // kHIDUsage_Button_2,
-    3:  [kOff: D(.button3, .off), kOn: D(.button3, .on)], // kHIDUsage_Button_3,
-    4:  [kOff: D(.button4, .off), kOn: D(.button4, .on)], // kHIDUsage_Button_4 exist but
-    5:  [kOff: D(.button5, .off), kOn: D(.button5, .on)], // kHIDUsage_Button_5 do not exist, so use Raw Int
-    6:  [kOff: D(.button6, .off), kOn: D(.button6, .on)],
-    7:  [kOff: D(.button7, .off), kOn: D(.button7, .on)],
-    8:  [kOff: D(.button8, .off), kOn: D(.button8, .on)],
-    9:  [kOff: D(.button9, .off), kOn: D(.button9, .on)],
-    10: [kOff: D(.button10, .off), kOn: D(.button10, .on)],
-    11: [kOff: D(.button11, .off), kOn: D(.button11, .on)],
-    12: [kOff: D(.button12, .off), kOn: D(.button12, .on)],
-    13: [kOff: D(.button13, .off), kOn: D(.button13, .on)],
-    14: [kOff: D(.button14, .off), kOn: D(.button14, .on)],
-    15: [kOff: D(.button15, .off), kOn: D(.button15, .on)],
-    16: [kOff: D(.button16, .off), kOn: D(.button16, .on)]
+    1:  [kOff: D(.button1, .off),   kOn: D(.button1, .on)], // kHIDUsage_Button_1,
+    2:  [kOff: D(.button2, .off),   kOn: D(.button2, .on)], // kHIDUsage_Button_2,
+    3:  [kOff: D(.button3, .off),   kOn: D(.button3, .on)], // kHIDUsage_Button_3,
+    4:  [kOff: D(.button4, .off),   kOn: D(.button4, .on)], // kHIDUsage_Button_4 exist but
+    5:  [kOff: D(.button5, .off),   kOn: D(.button5, .on)], // kHIDUsage_Button_5 do not exist, so use Raw Int
+    6:  [kOff: D(.button6, .off),   kOn: D(.button6, .on)],
+    7:  [kOff: D(.button7, .off),   kOn: D(.button7, .on)],
+    8:  [kOff: D(.button8, .off),   kOn: D(.button8, .on)],
+    9:  [kOff: D(.button9, .off),   kOn: D(.button9, .on)],
+    10: [kOff: D(.button10, .off),  kOn: D(.button10, .on)],
+    11: [kOff: D(.button11, .off),  kOn: D(.button11, .on)],
+    12: [kOff: D(.button12, .off),  kOn: D(.button12, .on)],
+    13: [kOff: D(.button13, .off),  kOn: D(.button13, .on)],
+    14: [kOff: D(.button14, .off),  kOn: D(.button14, .on)],
+    15: [kOff: D(.button15, .off),  kOn: D(.button15, .on)],
+    16: [kOff: D(.button16, .off),  kOn: D(.button16, .on)]
   ],
   kHIDPage_GenericDesktop: [
     kHIDUsage_GD_X: [kAxisPlus: D(.left, .none), kAxisNuetral: D(.hNeutral, .none), kAxisMinus: D(.right, .none)],
@@ -93,48 +93,6 @@ fileprivate let inputValueMap: [Int:[Int:[Int:HIDInputData]]] = [
   ]
 ]
 
-fileprivate func parseValue(_ value: IOHIDValue) -> HIDInputData {
-  let element = IOHIDValueGetElement(value)
-  let usagePage = Int(IOHIDElementGetUsagePage(element))
-  let usage = Int(IOHIDElementGetUsage(element))
-  let intValue = IOHIDValueGetIntegerValue(value)
-//  let device = IOHIDElementGetDevice(element)
-//  let serial = IOHIDDeviceGetProperty(device, kIOHIDSerialNumberKey as CFString)
-//  let name = IOHIDDeviceGetProperty(device, kIOHIDProductKey as CFString)
-//  Logger.info(("uasgePage: \(usagePage), usage: \(usage), int: \(intValue)")
-  
-  return inputValueMap[usagePage]?[usage]?[intValue] ?? D(.unknown, .none)
-}
-
-// Callbacks for IOHIDManager
-fileprivate let onInputValue: IOHIDValueCallback = { (context, result, sender, value) in
-  guard let context = context, result == kIOReturnSuccess else {
-    return
-  }
-
-  let parsed = parseValue(value)
-  let selfRef: HIDDeviceManager = Bridge.toSwiftRef(ptr: context)
-  selfRef.subject.onNext(parsed)
-}
-
-fileprivate let onDeviceAttached: IOHIDDeviceCallback = { (context, result, sender, device) in
-  guard result == kIOReturnSuccess else {
-    return
-  }
-
-  let deviceName = IOHIDDeviceGetProperty(device, kIOHIDProductKey as CFString)
-  Logger.info("onDeviceAttach: \(deviceName)")
-}
-
-fileprivate let onDeviceRemoved: IOHIDDeviceCallback = { (context, result, sender, device) in
-  guard result == kIOReturnSuccess else {
-    return
-  }
-
-  let deviceName = IOHIDDeviceGetProperty(device, kIOHIDProductKey as CFString)
-  Logger.info("onDeviceRemoved: \(deviceName)")
-}
-
 class HIDDeviceManager {
   private var isRunning = false
   private var manager: IOHIDManager
@@ -147,6 +105,7 @@ class HIDDeviceManager {
 
   init?() {
     manager = IOHIDManagerCreate(kCFAllocatorDefault, IOOptionBits(kIOHIDOptionsTypeNone))
+
     IOHIDManagerSetDeviceMatchingMultiple(manager, criteria as CFArray)
     IOHIDManagerRegisterDeviceMatchingCallback(manager, onDeviceAttached, Bridge.toCPtr(obj: self))
     IOHIDManagerRegisterDeviceRemovalCallback(manager, onDeviceRemoved, Bridge.toCPtr(obj: self))
@@ -172,5 +131,47 @@ class HIDDeviceManager {
       IOHIDManagerScheduleWithRunLoop(manager, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode.rawValue)
       isRunning = false
     }
+  }
+  
+  // Callbacks for IOHIDManager
+  private let onInputValue: IOHIDValueCallback = { (context, result, sender, value) in
+    guard let context = context, result == kIOReturnSuccess else {
+      return
+    }
+    
+    let selfRef: HIDDeviceManager = Bridge.toSwiftRef(ptr: context)
+    let parsed = selfRef.parseValue(value)
+    selfRef.subject.onNext(parsed)
+  }
+  
+  private let onDeviceAttached: IOHIDDeviceCallback = { (context, result, sender, device) in
+    guard result == kIOReturnSuccess else {
+      return
+    }
+    
+    let deviceName = IOHIDDeviceGetProperty(device, kIOHIDProductKey as CFString)
+    Logger.info("onDeviceAttach: \(deviceName)")
+  }
+  
+  private let onDeviceRemoved: IOHIDDeviceCallback = { (context, result, sender, device) in
+    guard result == kIOReturnSuccess else {
+      return
+    }
+    
+    let deviceName = IOHIDDeviceGetProperty(device, kIOHIDProductKey as CFString)
+    Logger.info("onDeviceRemoved: \(deviceName)")
+  }
+  
+  fileprivate func parseValue(_ value: IOHIDValue) -> HIDInputData {
+    let element = IOHIDValueGetElement(value)
+    let usagePage = Int(IOHIDElementGetUsagePage(element))
+    let usage = Int(IOHIDElementGetUsage(element))
+    let intValue = IOHIDValueGetIntegerValue(value)
+    //  let device = IOHIDElementGetDevice(element)
+    //  let serial = IOHIDDeviceGetProperty(device, kIOHIDSerialNumberKey as CFString)
+    //  let name = IOHIDDeviceGetProperty(device, kIOHIDProductKey as CFString)
+    //  Logger.info(("uasgePage: \(usagePage), usage: \(usage), int: \(intValue)")
+    
+    return inputValueMap[usagePage]?[usage]?[intValue] ?? D(.unknown, .none)
   }
 }
