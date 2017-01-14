@@ -14,19 +14,22 @@ class DebugInputKeysScene: BasicScene {
     label.position = CGPoint(x: size.width / 2, y:  size.height / 2)
     addChild(label)
 
-    notifier = GameEventNotifier(scene: self)
+    notifier = GameEventNotifier()
     
     // Subscribe event stream
     if let notifier = notifier {
 
-      notifier.observable().subscribe(onNext: { event in
-        self.label.text = event.rawValue
-        Logger.debug(event)
-        
-        if event == GameEvent.exit {
-          self.notifier?.stopNofitying()
+      notifier.observable().subscribe(onNext: { [weak self] event in
+        guard let _self = self else {
+          return
         }
+        
+        _self.label.text = event.rawValue
+        Logger.debug(event)
       }).addDisposableTo(disposeBag)
     }
+  }
+  
+  override func keyDown(with event: NSEvent) {
   }
 }

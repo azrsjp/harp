@@ -1,30 +1,23 @@
-import SpriteKit
 import RxSwift
 
 final class GameEventNotifier {
-  // Note: - Prepare InputToGameEvent protorol?
-  private let keyboard = KeyboardInputToGameEvent()
-  private let controller = ControllerInputToGameEvent()
+  private var hidManager: HIDDeviceManager?
   
-  init?(scene: SKScene) {
-    guard let window = scene.view?.window else {
-      return nil
+  init() {
+    hidManager = HIDDeviceManager()
+  }
+  
+  func observable() -> Observable<GameEvent> {
+    guard let hidManager = hidManager else {
+      return Observable.of(GameEvent.hispeedDown).asObservable()
     }
     
-    guard window.makeFirstResponder(keyboard) else {
-      return nil
-    }
+    return hidManager.start().filter({ $0.type != .unknown}).map({ input -> GameEvent in
+      return self.convertInputToEvent(input)
+    })
   }
 
-  func observable() -> Observable<GameEvent> {
-    let forKeyboard = keyboard.observable()
-    let forController = controller.observable()
-
-    return Observable.of(forKeyboard, forController).merge()
-  }
-
-  func stopNofitying() {
-    keyboard.complete()
-    controller.complete()
+  private func convertInputToEvent(_ input: HIDInputData) -> GameEvent {
+    return .noteOn7
   }
 }
