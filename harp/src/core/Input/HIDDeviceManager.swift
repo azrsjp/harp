@@ -15,15 +15,6 @@ let criteria: [NSDictionary] = [
   ]
 ]
 
-// Define swift ref <-> pointer converter (working with c++ functions)
-fileprivate func bridge<T: AnyObject>(obj: T) -> UnsafeMutableRawPointer {
-  return Unmanaged.passUnretained(obj).toOpaque()
-}
-
-fileprivate func bridge<T: AnyObject>(ptr: UnsafeRawPointer) -> T {
-  return Unmanaged<T>.fromOpaque(ptr).takeUnretainedValue()
-}
-
 // Define joypad input to JoypadInputType converter
 fileprivate let kOn = 1
 fileprivate let kOff = 0
@@ -122,7 +113,7 @@ fileprivate let onInputValue: IOHIDValueCallback = { (context, result, sender, v
   }
 
   let parsed = parseValue(value)
-  let selfRef: HIDDeviceManager = bridge(ptr: context)
+  let selfRef: HIDDeviceManager = Bridge.toSwiftRef(ptr: context)
   selfRef.subject.onNext(parsed)
 }
 
@@ -157,9 +148,9 @@ class HIDDeviceManager {
   init?() {
     manager = IOHIDManagerCreate(kCFAllocatorDefault, IOOptionBits(kIOHIDOptionsTypeNone))
     IOHIDManagerSetDeviceMatchingMultiple(manager, criteria as CFArray)
-    IOHIDManagerRegisterDeviceMatchingCallback(manager, onDeviceAttached, bridge(obj: self))
-    IOHIDManagerRegisterDeviceRemovalCallback(manager, onDeviceRemoved, bridge(obj: self))
-    IOHIDManagerRegisterInputValueCallback(manager, onInputValue, bridge(obj: self))
+    IOHIDManagerRegisterDeviceMatchingCallback(manager, onDeviceAttached, Bridge.toCPtr(obj: self))
+    IOHIDManagerRegisterDeviceRemovalCallback(manager, onDeviceRemoved, Bridge.toCPtr(obj: self))
+    IOHIDManagerRegisterInputValueCallback(manager, onInputValue, Bridge.toCPtr(obj: self))
 
     let result = IOHIDManagerOpen(manager, IOOptionBits(kIOHIDOptionsTypeNone))
     guard result == kIOReturnSuccess else {

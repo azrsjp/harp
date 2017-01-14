@@ -34,6 +34,7 @@
 /* Begin PBXBuildFile section */
 		710655DB1DF26AC3003A1169 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710655DA1DF26AC3003A1169 /* CGSize.swift */; };
 		716140291E1FE54600034402 /* HIDInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716140281E1FE54600034402 /* HIDInputData.swift */; };
+		7166A0071E2A7D3A00D1588C /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7166A0061E2A7D3A00D1588C /* Bridge.swift */; };
 		717A12281E0FC740006A4B4B /* CGSizeOperatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7161AF0C1E0FBEE4002286CD /* CGSizeOperatorSpec.swift */; };
 		718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */; };
 		718A5CFD1D4531F400B88A76 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A5CFC1D4531F400B88A76 /* Common.swift */; };
@@ -79,6 +80,7 @@
 		710655DA1DF26AC3003A1169 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
 		716140281E1FE54600034402 /* HIDInputData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDInputData.swift; sourceTree = "<group>"; };
 		7161AF0C1E0FBEE4002286CD /* CGSizeOperatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeOperatorSpec.swift; sourceTree = "<group>"; };
+		7166A0061E2A7D3A00D1588C /* Bridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMenuScene.swift; sourceTree = "<group>"; };
 		718A5CFC1D4531F400B88A76 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		718C06D51D241B6E002F6E68 /* harp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = harp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -288,6 +290,7 @@
 				71E6B78D1E16ABA900475846 /* extension */,
 				710655DC1DF26ADD003A1169 /* operator */,
 				71CC199A1E1BDF6B00391CAA /* Logger.swift */,
+				7166A0061E2A7D3A00D1588C /* Bridge.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -607,6 +610,7 @@
 				71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */,
 				710655DB1DF26AC3003A1169 /* CGSize.swift in Sources */,
 				71E6B7891E1695E600475846 /* CGPoint.swift in Sources */,
+				7166A0071E2A7D3A00D1588C /* Bridge.swift in Sources */,
 				71CC19931E1B449B00391CAA /* GameEventNotifier.swift in Sources */,
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
 				71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */,
