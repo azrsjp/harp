@@ -6,7 +6,7 @@ protocol HIDInputConverter {
 }
 
 final class InputEventNotifier<T: HIDInputConverter> {
-  private let hidManager: HIDDeviceManager?
+  private let hidManager: HIDDeviceManager
   private let converter: T
 
   init?(converter: T) {
@@ -19,7 +19,7 @@ final class InputEventNotifier<T: HIDInputConverter> {
   }
   
   func observable() -> Observable<T.EventType> {
-    return hidManager!.start()
+    return hidManager.start()
       .filter { $0.type != .unknown}
       .map { input -> T.EventType in
         return self.converter.toEvent(input)
