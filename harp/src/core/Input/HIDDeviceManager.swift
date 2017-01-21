@@ -128,7 +128,7 @@ class HIDDeviceManager {
 
   func stop() {
     if isRunning {
-      IOHIDManagerScheduleWithRunLoop(manager, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode.rawValue)
+      IOHIDManagerUnscheduleFromRunLoop(manager, CFRunLoopGetCurrent(), CFRunLoopMode.defaultMode.rawValue)
       isRunning = false
     }
   }
