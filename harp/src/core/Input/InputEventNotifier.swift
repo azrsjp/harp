@@ -5,13 +5,6 @@ protocol HIDInputConverter {
   func toEvent(_ input: HIDInputData) -> EventType
 }
 
-final class HIDInputConverterForInGame: HIDInputConverter {
-  func toEvent(_ input: HIDInputData) -> GameEvent {
-    // TODO: Implement
-    return GameEvent.noteOn1
-  }
-}
-
 final class InputEventNotifier<T: HIDInputConverter> {
   private let hidManager: HIDDeviceManager?
   private let converter: T
