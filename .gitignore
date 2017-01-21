@@ -1,6 +1,6 @@
 *.xcodeproj/*
 !*.xcodeproj/project.pbxproj
-!*.xcworkspace/contents.xcworkspacedata
+*.xcworkspace/*
 UserInterfaceState.xcuserstate
 xcuserdata
 Pods/*
