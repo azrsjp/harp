@@ -19,7 +19,7 @@ enum GameEvent: String {
   case noteOff7         = "noteOff7"
   case scrachLeft       = "scrachLeft"
   case scrachRight      = "scrachRight"
-  case scrashEnd        = "scrashEnd"
+  case scrachEnd        = "scrachEnd"
   case hispeedUp        = "hispeedUp"
   case hispeedDown      = "hispeedDown"
   case suddenPlusUp     = "suddenPlusUp"
