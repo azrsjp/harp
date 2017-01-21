@@ -140,8 +140,11 @@ class HIDDeviceManager {
     }
     
     let selfRef: HIDDeviceManager = Bridge.toSwiftRef(ptr: context)
-    let parsed = selfRef.parseValue(value)
-    selfRef.subject.onNext(parsed)
+    
+    // Catch only registered input value(in inputValueMap)
+    if let parsed = selfRef.parseValue(value) {
+      selfRef.subject.onNext(parsed)
+    }
   }
   
   private let onDeviceAttached: IOHIDDeviceCallback = { (context, result, sender, device) in
@@ -162,7 +165,7 @@ class HIDDeviceManager {
     Logger.info("onDeviceRemoved: \(deviceName)")
   }
   
-  fileprivate func parseValue(_ value: IOHIDValue) -> HIDInputData {
+  fileprivate func parseValue(_ value: IOHIDValue) -> HIDInputData? {
     let element = IOHIDValueGetElement(value)
     let usagePage = Int(IOHIDElementGetUsagePage(element))
     let usage = Int(IOHIDElementGetUsage(element))
@@ -172,6 +175,6 @@ class HIDDeviceManager {
     //  let name = IOHIDDeviceGetProperty(device, kIOHIDProductKey as CFString)
     //  Logger.info(("uasgePage: \(usagePage), usage: \(usage), int: \(intValue)")
     
-    return inputValueMap[usagePage]?[usage]?[intValue] ?? D(.unknown, .none)
+    return inputValueMap[usagePage]?[usage]?[intValue]
   }
 }
