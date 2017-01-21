@@ -4,7 +4,7 @@ import RxSwift
 class DebugInputKeysScene: BasicScene {
   let label = SKLabelNode(text: "")
   let disposeBag = DisposeBag()
-  var notifier: GameEventNotifier?
+  var notifier: InputEventNotifier<HIDInputConverterForInGame>?
   
   override func didMove(to view: SKView) {
     super.didMove(to: view)
@@ -14,7 +14,7 @@ class DebugInputKeysScene: BasicScene {
     label.position = CGPoint(x: size.width / 2, y:  size.height / 2)
     addChild(label)
 
-    notifier = GameEventNotifier()
+    notifier = InputEventNotifier(converter: HIDInputConverterForInGame())
     
     // Subscribe event stream
     if let notifier = notifier {
