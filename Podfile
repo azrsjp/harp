@@ -9,6 +9,7 @@ target 'harp' do
   pod 'RealmSwift', '~> 2.0'
   pod 'SwiftGen', '~> 4.0'
   pod 'XCGLogger', '~> 4.0'
+  pod 'Swinject', '2.0.0'
 
   target 'harpTests' do
     inherit! :search_paths

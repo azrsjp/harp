@@ -1,7 +1,7 @@
 import SpriteKit
 import RxSwift
 
-class DebugInputKeysScene: BasicScene {
+class DebugInputKeysScene: DebugScene {
   let label = SKLabelNode(text: "")
   let disposeBag = DisposeBag()
   var notifier: InputEventNotifier<HIDInputConverterForInGame>?

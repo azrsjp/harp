@@ -14,6 +14,7 @@ PODS:
   - RxTest (3.0.1):
     - RxSwift (~> 3.0)
   - SwiftGen (4.0.0)
+  - Swinject (2.0.0)
   - XCGLogger (4.0.0):
     - XCGLogger/Core (= 4.0.0)
   - XCGLogger/Core (4.0.0)
@@ -27,6 +28,7 @@ DEPENDENCIES:
   - RxSwift (~> 3.0)
   - RxTest (~> 3.0)
   - SwiftGen (~> 4.0)
+  - Swinject (= 2.0.0)
   - XCGLogger (~> 4.0)
 
 SPEC CHECKSUMS:
@@ -39,8 +41,9 @@ SPEC CHECKSUMS:
   RxSwift: af5680055c4ad04480189c52d28385b1029493a6
   RxTest: 9867e6f3c435af30fbdb44b6d8ec30b78c40b515
   SwiftGen: 1590785599faa3d073235fc86c48aa40ba7a65ae
+  Swinject: 2e964a80d70ab09b3949c99032711f89147bfd60
   XCGLogger: 38063ea89b4c8b23232d18efd2e12eb0005f3ea4
 
-PODFILE CHECKSUM: 565158f96dc320dfb20a4263d9afa2097ed7222f
+PODFILE CHECKSUM: 9ff1c45d8e25fa19e2f927737d40e5357f035adf
 
 COCOAPODS: 1.2.0.beta.1

@@ -11,10 +11,10 @@ fileprivate let debugs: [(String, () -> SKScene)] = [
 
 // Viewgroup for on product
 fileprivate let views: [(String, () -> SKScene)] = [
-  ("Start", { StartScene() })
+  ("Start", { DIContainer.scene(StartScene.self) })
 ]
 
-final class DebugMenuScene: BasicScene {
+final class DebugMenuScene: DebugScene {
 
   override func didMove(to view: SKView) {
     super.didMove(to: view)
