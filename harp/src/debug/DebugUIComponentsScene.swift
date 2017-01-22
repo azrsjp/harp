@@ -1,6 +1,6 @@
 import SpriteKit
 
-class DebugUIComponentsScene: BasicScene {
+class DebugUIComponentsScene: DebugScene {
   
   override func didMove(to view: SKView) {
     super.didMove(to: view)

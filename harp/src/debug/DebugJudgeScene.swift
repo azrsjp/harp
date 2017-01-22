@@ -27,7 +27,7 @@ class MyThread: Thread {
   }
 }
 
-class DebugJudgeScene: BasicScene {
+class DebugJudgeScene: DebugScene {
 
   private var height: CGFloat = 0.0
   private var thread = MyThread()
