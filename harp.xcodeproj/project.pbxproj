@@ -41,6 +41,7 @@
 		7127902E1E34DF6C00F0C5FE /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127902D1E34DF6C00F0C5FE /* StartView.swift */; };
 		712790301E34DF7700F0C5FE /* StartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127902F1E34DF7700F0C5FE /* StartModel.swift */; };
 		712790321E34DF8200F0C5FE /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790311E34DF8200F0C5FE /* StartController.swift */; };
+		712790341E34E47C00F0C5FE /* DebugScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790331E34E47C00F0C5FE /* DebugScene.swift */; };
 		716140291E1FE54600034402 /* HIDInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716140281E1FE54600034402 /* HIDInputData.swift */; };
 		7166A0071E2A7D3A00D1588C /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7166A0061E2A7D3A00D1588C /* Bridge.swift */; };
 		717A12281E0FC740006A4B4B /* CGSizeOperatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7161AF0C1E0FBEE4002286CD /* CGSizeOperatorSpec.swift */; };
@@ -94,6 +95,7 @@
 		7127902D1E34DF6C00F0C5FE /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		7127902F1E34DF7700F0C5FE /* StartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartModel.swift; sourceTree = "<group>"; };
 		712790311E34DF8200F0C5FE /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
+		712790331E34E47C00F0C5FE /* DebugScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugScene.swift; sourceTree = "<group>"; };
 		716140281E1FE54600034402 /* HIDInputData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDInputData.swift; sourceTree = "<group>"; };
 		7161AF0C1E0FBEE4002286CD /* CGSizeOperatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeOperatorSpec.swift; sourceTree = "<group>"; };
 		7166A0061E2A7D3A00D1588C /* Bridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */,
 				71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */,
 				71CC19901E1B384200391CAA /* DebugUIComponentsScene.swift */,
+				712790331E34E47C00F0C5FE /* DebugScene.swift */,
 			);
 			path = debug;
 			sourceTree = "<group>";
@@ -629,6 +632,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				712790341E34E47C00F0C5FE /* DebugScene.swift in Sources */,
 				71E6B7911E16AD1300475846 /* SKSpriteNode.swift in Sources */,
 				71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */,
 				718A5CFD1D4531F400B88A76 /* Common.swift in Sources */,
