@@ -4,17 +4,30 @@ import SpriteKit
 // Every scene should inherit BasicScene
 
 class BasicScene: SKScene {
+  var rootView: View? {
+    willSet {
+      if let rootView = self.rootView {
+        rootView.removeFromParent()
+      }
+    }
+    didSet {
+      if let rootView = self.rootView {
+        rootView.constructView(sceneSize: size)
+        insertChild(rootView, at: 0)
+      }
+    }
+  }
 
   override func didMove(to view: SKView) {
     super.didMove(to: view)
-
+    
     // Size of scene always fits with view frame
     size = Config.Common.defaultWindowSize
     scaleMode = .aspectFill
 
-#if DEBUG
-    putButtonToDebugScene()
-#endif
+    #if DEBUG
+      putButtonToDebugScene()
+    #endif
   }
   
   override func mouseDown(with event: NSEvent) {
@@ -26,6 +39,12 @@ class BasicScene: SKScene {
         node.onClicked?($0)
       }
     }
+  }
+  
+  override func update(_ currentTime: TimeInterval) {
+    super.update(currentTime)
+    
+    rootView?.update(currentTime)
   }
 
 #if DEBUG
