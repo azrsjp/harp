@@ -3,7 +3,11 @@ import SpriteKit
 // Fundamental class for scene in harp project
 // Every scene should inherit BasicScene
 
-class BasicScene: SKScene {
+class BasicScene<M: Model, V: View, C>: SKScene {
+  let m: M?
+  let v: V?
+  let c: C?
+  
   var rootView: View? {
     willSet {
       if let rootView = self.rootView {
@@ -18,12 +22,27 @@ class BasicScene: SKScene {
     }
   }
 
+  init(model: M?, view: V?, controller: C?) {
+    m = model
+    v = view
+    c = controller
+    
+    super.init(size: Config.Common.defaultWindowSize)
+  }
+  
+  required init?(coder aDecoder: NSCoder) {
+    fatalError("init(coder:) has not been implemented")
+  }
+
   override func didMove(to view: SKView) {
     super.didMove(to: view)
     
     // Size of scene always fits with view frame
     size = Config.Common.defaultWindowSize
     scaleMode = .aspectFill
+    
+    // Setup root view
+    rootView = v
 
     #if DEBUG
       putButtonToDebugScene()
