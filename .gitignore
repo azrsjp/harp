@@ -1,0 +1,7 @@
+*.xcodeproj/*
+!*.xcodeproj/project.pbxproj
+!*.xcworkspace/contents.xcworkspacedata
+UserInterfaceState.xcuserstate
+xcuserdata
+Pods/*
+.DS_Store

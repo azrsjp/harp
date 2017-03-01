@@ -1,0 +1,905 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		71F099701DF2813C006C8B62 /* Synx */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 71F099711DF2813C006C8B62 /* Build configuration list for PBXAggregateTarget "Synx" */;
+			buildPhases = (
+				71F099741DF28159006C8B62 /* Run Synx */,
+			);
+			dependencies = (
+			);
+			name = Synx;
+			productName = Synx;
+		};
+		71FD1E391DF2D5280081E1B1 /* SwiftGen */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 71FD1E3A1DF2D5280081E1B1 /* Build configuration list for PBXAggregateTarget "SwiftGen" */;
+			buildPhases = (
+				71FD1E3D1DF2D52E0081E1B1 /* Run SwiftGen */,
+			);
+			dependencies = (
+			);
+			name = SwiftGen;
+			productName = SwiftGen;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		710655DB1DF26AC3003A1169 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710655DA1DF26AC3003A1169 /* CGSize.swift */; };
+		717A12281E0FC740006A4B4B /* CGSizeOperatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7161AF0C1E0FBEE4002286CD /* CGSizeOperatorSpec.swift */; };
+		718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */; };
+		718A5CFD1D4531F400B88A76 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A5CFC1D4531F400B88A76 /* Common.swift */; };
+		718C06D91D241B6E002F6E68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C06D81D241B6E002F6E68 /* AppDelegate.swift */; };
+		718C06DB1D241B6E002F6E68 /* StartScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C06DA1D241B6E002F6E68 /* StartScene.swift */; };
+		718C06DF1D241B6E002F6E68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 718C06DE1D241B6E002F6E68 /* Images.xcassets */; };
+		718C06E21D241B6E002F6E68 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 718C06E01D241B6E002F6E68 /* MainMenu.xib */; };
+		71A2A1E21E1ABE41000C885A /* Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E11E1ABE41000C885A /* Clickable.swift */; };
+		71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E31E1ABE68000C885A /* TextButton.swift */; };
+		71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E51E1ABEA8000C885A /* BasicScene.swift */; };
+		71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */; };
+		71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */; };
+		71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19881E1B21BD00391CAA /* GameEvent.swift */; };
+		71CC198D1E1B2A0700391CAA /* Judge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC198C1E1B2A0700391CAA /* Judge.swift */; };
+		71CC198F1E1B2E7100391CAA /* KeyboardInputToGameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC198E1E1B2E7100391CAA /* KeyboardInputToGameEvent.swift */; };
+		71CC19911E1B384200391CAA /* DebugUIComponentsScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19901E1B384200391CAA /* DebugUIComponentsScene.swift */; };
+		71CC19931E1B449B00391CAA /* ControllerInputToGameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19921E1B449B00391CAA /* ControllerInputToGameEvent.swift */; };
+		71CC19951E1B461D00391CAA /* GameEventNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19941E1B461D00391CAA /* GameEventNotifier.swift */; };
+		71CC19971E1BCF0B00391CAA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19961E1BCF0B00391CAA /* Images.swift */; };
+		71CC199B1E1BDF6B00391CAA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC199A1E1BDF6B00391CAA /* Logger.swift */; };
+		71E6B7891E1695E600475846 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B7881E1695E600475846 /* CGPoint.swift */; };
+		71E6B78C1E16970F00475846 /* CGPointOperatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B78A1E16969100475846 /* CGPointOperatorSpec.swift */; };
+		71E6B78F1E16ABC600475846 /* SKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B78E1E16ABC600475846 /* SKView.swift */; };
+		71E6B7911E16AD1300475846 /* SKSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B7901E16AD1300475846 /* SKSpriteNode.swift */; };
+		71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B7921E16C76C00475846 /* HIDDeviceManager.swift */; };
+		71FD1E3F1DF2D6800081E1B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */; };
+		71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD1E451DF2D9060081E1B1 /* Strings.swift */; };
+		80E8F7F6D865896580BADDD0 /* Pods_harp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8314DF37622C99C638799F2F /* Pods_harp.framework */; };
+		FF77D49430DC4714EF2EFC36 /* Pods_harpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B598A602A9F503F31E01D4 /* Pods_harpTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		718C06E91D241B6E002F6E68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 718C06CD1D241B6E002F6E68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 718C06D41D241B6E002F6E68;
+			remoteInfo = harp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1BC48912B861C3D307876491 /* Pods-harp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harp.release.xcconfig"; path = "Pods/Target Support Files/Pods-harp/Pods-harp.release.xcconfig"; sourceTree = "<group>"; };
+		1F92FA1D5E2CCC3D4EB7FEDC /* Pods-harpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-harpTests/Pods-harpTests.release.xcconfig"; sourceTree = "<group>"; };
+		710655DA1DF26AC3003A1169 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
+		7161AF0C1E0FBEE4002286CD /* CGSizeOperatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeOperatorSpec.swift; sourceTree = "<group>"; };
+		718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMenuScene.swift; sourceTree = "<group>"; };
+		718A5CFC1D4531F400B88A76 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		718C06D51D241B6E002F6E68 /* harp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = harp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		718C06D81D241B6E002F6E68 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		718C06DA1D241B6E002F6E68 /* StartScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartScene.swift; sourceTree = "<group>"; };
+		718C06DE1D241B6E002F6E68 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		718C06E11D241B6E002F6E68 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		718C06E31D241B6E002F6E68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		718C06E81D241B6E002F6E68 /* harpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = harpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		718C06EE1D241B6E002F6E68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		71A2A1E11E1ABE41000C885A /* Clickable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clickable.swift; sourceTree = "<group>"; };
+		71A2A1E31E1ABE68000C885A /* TextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
+		71A2A1E51E1ABEA8000C885A /* BasicScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicScene.swift; sourceTree = "<group>"; };
+		71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugJudgeScene.swift; sourceTree = "<group>"; };
+		71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugInputKeysScene.swift; sourceTree = "<group>"; };
+		71CC19881E1B21BD00391CAA /* GameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEvent.swift; sourceTree = "<group>"; };
+		71CC198C1E1B2A0700391CAA /* Judge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Judge.swift; sourceTree = "<group>"; };
+		71CC198E1E1B2E7100391CAA /* KeyboardInputToGameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeyboardInputToGameEvent.swift; sourceTree = "<group>"; };
+		71CC19901E1B384200391CAA /* DebugUIComponentsScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugUIComponentsScene.swift; sourceTree = "<group>"; };
+		71CC19921E1B449B00391CAA /* ControllerInputToGameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControllerInputToGameEvent.swift; sourceTree = "<group>"; };
+		71CC19941E1B461D00391CAA /* GameEventNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEventNotifier.swift; sourceTree = "<group>"; };
+		71CC19961E1BCF0B00391CAA /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		71CC199A1E1BDF6B00391CAA /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		71E6B7881E1695E600475846 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
+		71E6B78A1E16969100475846 /* CGPointOperatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointOperatorSpec.swift; sourceTree = "<group>"; };
+		71E6B78E1E16ABC600475846 /* SKView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKView.swift; sourceTree = "<group>"; };
+		71E6B7901E16AD1300475846 /* SKSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSpriteNode.swift; sourceTree = "<group>"; };
+		71E6B7921E16C76C00475846 /* HIDDeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDDeviceManager.swift; sourceTree = "<group>"; };
+		71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		71FD1E451DF2D9060081E1B1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
+		81DDCDB21F14871B9B5A301B /* Pods-harp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harp/Pods-harp.debug.xcconfig"; sourceTree = "<group>"; };
+		8314DF37622C99C638799F2F /* Pods_harp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_harp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		84B598A602A9F503F31E01D4 /* Pods_harpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_harpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F21D0D7C81FFDE80F912DDA1 /* Pods-harpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harpTests/Pods-harpTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		718C06D21D241B6E002F6E68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80E8F7F6D865896580BADDD0 /* Pods_harp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718C06E51D241B6E002F6E68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FF77D49430DC4714EF2EFC36 /* Pods_harpTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		600424E54397458BB8BDFC48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				81DDCDB21F14871B9B5A301B /* Pods-harp.debug.xcconfig */,
+				1BC48912B861C3D307876491 /* Pods-harp.release.xcconfig */,
+				F21D0D7C81FFDE80F912DDA1 /* Pods-harpTests.debug.xcconfig */,
+				1F92FA1D5E2CCC3D4EB7FEDC /* Pods-harpTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		710655DC1DF26ADD003A1169 /* operator */ = {
+			isa = PBXGroup;
+			children = (
+				710655DA1DF26AC3003A1169 /* CGSize.swift */,
+				71E6B7881E1695E600475846 /* CGPoint.swift */,
+			);
+			path = operator;
+			sourceTree = "<group>";
+		};
+		7110D2401D45147000A11D76 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				718C06DE1D241B6E002F6E68 /* Images.xcassets */,
+				718C06E31D241B6E002F6E68 /* Info.plist */,
+				71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		7110D2411D45151E00A11D76 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				71FD1E421DF2D7A70081E1B1 /* constants */,
+				71C9DB9F1D45344C00C7EEF0 /* core */,
+				718A5CF91D452B1700B88A76 /* debug */,
+				7110D2421D45153200A11D76 /* scene */,
+				7110D2441D45163400A11D76 /* type */,
+				7110D2431D45162800A11D76 /* ui */,
+				718C06D81D241B6E002F6E68 /* AppDelegate.swift */,
+				718C06E01D241B6E002F6E68 /* MainMenu.xib */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
+		7110D2421D45153200A11D76 /* scene */ = {
+			isa = PBXGroup;
+			children = (
+				71C9DBA01D453EA100C7EEF0 /* start */,
+				71A2A1E51E1ABEA8000C885A /* BasicScene.swift */,
+			);
+			path = scene;
+			sourceTree = "<group>";
+		};
+		7110D2431D45162800A11D76 /* ui */ = {
+			isa = PBXGroup;
+			children = (
+				71A2A1E11E1ABE41000C885A /* Clickable.swift */,
+				71A2A1E31E1ABE68000C885A /* TextButton.swift */,
+			);
+			path = ui;
+			sourceTree = "<group>";
+		};
+		7110D2441D45163400A11D76 /* type */ = {
+			isa = PBXGroup;
+			children = (
+				71CC19881E1B21BD00391CAA /* GameEvent.swift */,
+				71CC198C1E1B2A0700391CAA /* Judge.swift */,
+			);
+			path = type;
+			sourceTree = "<group>";
+		};
+		717A12291E0FCF94006A4B4B /* operator */ = {
+			isa = PBXGroup;
+			children = (
+				7161AF0C1E0FBEE4002286CD /* CGSizeOperatorSpec.swift */,
+				71E6B78A1E16969100475846 /* CGPointOperatorSpec.swift */,
+			);
+			path = operator;
+			sourceTree = "<group>";
+		};
+		718A5CF81D45292700B88A76 /* config */ = {
+			isa = PBXGroup;
+			children = (
+				718A5CFC1D4531F400B88A76 /* Common.swift */,
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		718A5CF91D452B1700B88A76 /* debug */ = {
+			isa = PBXGroup;
+			children = (
+				718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */,
+				71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */,
+				71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */,
+				71CC19901E1B384200391CAA /* DebugUIComponentsScene.swift */,
+			);
+			path = debug;
+			sourceTree = "<group>";
+		};
+		718C06CC1D241B6E002F6E68 = {
+			isa = PBXGroup;
+			children = (
+				718C06D61D241B6E002F6E68 /* Products */,
+				718C06D71D241B6E002F6E68 /* harp */,
+				718C06EB1D241B6E002F6E68 /* harpTest */,
+				CBB1086F74CD780FA108E3B0 /* Frameworks */,
+				600424E54397458BB8BDFC48 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		718C06D61D241B6E002F6E68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				718C06D51D241B6E002F6E68 /* harp.app */,
+				718C06E81D241B6E002F6E68 /* harpTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		718C06D71D241B6E002F6E68 /* harp */ = {
+			isa = PBXGroup;
+			children = (
+				7110D2401D45147000A11D76 /* resources */,
+				7110D2411D45151E00A11D76 /* src */,
+			);
+			path = harp;
+			sourceTree = "<group>";
+		};
+		718C06EB1D241B6E002F6E68 /* harpTest */ = {
+			isa = PBXGroup;
+			children = (
+				717A12291E0FCF94006A4B4B /* operator */,
+				718C06EE1D241B6E002F6E68 /* Info.plist */,
+			);
+			path = harpTest;
+			sourceTree = "<group>";
+		};
+		71A2A1E01E1A96C4000C885A /* Input */ = {
+			isa = PBXGroup;
+			children = (
+				71E6B7921E16C76C00475846 /* HIDDeviceManager.swift */,
+				71CC198E1E1B2E7100391CAA /* KeyboardInputToGameEvent.swift */,
+				71CC19921E1B449B00391CAA /* ControllerInputToGameEvent.swift */,
+				71CC19941E1B461D00391CAA /* GameEventNotifier.swift */,
+			);
+			path = Input;
+			sourceTree = "<group>";
+		};
+		71C9DB9F1D45344C00C7EEF0 /* core */ = {
+			isa = PBXGroup;
+			children = (
+				71A2A1E01E1A96C4000C885A /* Input */,
+				71E6B78D1E16ABA900475846 /* extension */,
+				710655DC1DF26ADD003A1169 /* operator */,
+				71CC199A1E1BDF6B00391CAA /* Logger.swift */,
+			);
+			path = core;
+			sourceTree = "<group>";
+		};
+		71C9DBA01D453EA100C7EEF0 /* start */ = {
+			isa = PBXGroup;
+			children = (
+				718C06DA1D241B6E002F6E68 /* StartScene.swift */,
+			);
+			path = start;
+			sourceTree = "<group>";
+		};
+		71E6B78D1E16ABA900475846 /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				71E6B78E1E16ABC600475846 /* SKView.swift */,
+				71E6B7901E16AD1300475846 /* SKSpriteNode.swift */,
+			);
+			path = extension;
+			sourceTree = "<group>";
+		};
+		71FD1E421DF2D7A70081E1B1 /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				718A5CF81D45292700B88A76 /* config */,
+				71FD1E431DF2D7FC0081E1B1 /* resources */,
+			);
+			path = constants;
+			sourceTree = "<group>";
+		};
+		71FD1E431DF2D7FC0081E1B1 /* resources */ = {
+			isa = PBXGroup;
+			children = (
+				71CC19961E1BCF0B00391CAA /* Images.swift */,
+				71FD1E451DF2D9060081E1B1 /* Strings.swift */,
+			);
+			path = resources;
+			sourceTree = "<group>";
+		};
+		CBB1086F74CD780FA108E3B0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8314DF37622C99C638799F2F /* Pods_harp.framework */,
+				84B598A602A9F503F31E01D4 /* Pods_harpTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		718C06D41D241B6E002F6E68 /* harp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 718C06FC1D241B6E002F6E68 /* Build configuration list for PBXNativeTarget "harp" */;
+			buildPhases = (
+				0BF6027594042CBB4B774BCA /* [CP] Check Pods Manifest.lock */,
+				711DF0521DF28ACF0059B8DB /* Run SwiftLint */,
+				718C06D11D241B6E002F6E68 /* Sources */,
+				718C06D21D241B6E002F6E68 /* Frameworks */,
+				718C06D31D241B6E002F6E68 /* Resources */,
+				D557A7AAF6C31B3F0A3DD0AF /* [CP] Embed Pods Frameworks */,
+				962069121753EEA308718EB8 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = harp;
+			productName = harp;
+			productReference = 718C06D51D241B6E002F6E68 /* harp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		718C06E71D241B6E002F6E68 /* harpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 718C06FF1D241B6E002F6E68 /* Build configuration list for PBXNativeTarget "harpTests" */;
+			buildPhases = (
+				FBC06542CC2B1B86CA430865 /* [CP] Check Pods Manifest.lock */,
+				718C06E41D241B6E002F6E68 /* Sources */,
+				718C06E51D241B6E002F6E68 /* Frameworks */,
+				718C06E61D241B6E002F6E68 /* Resources */,
+				4C2E87060A45D8F9813E2E12 /* [CP] Embed Pods Frameworks */,
+				5DBAC56D4B8D253EF55D3852 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				718C06EA1D241B6E002F6E68 /* PBXTargetDependency */,
+			);
+			name = harpTests;
+			productName = harpTests;
+			productReference = 718C06E81D241B6E002F6E68 /* harpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		718C06CD1D241B6E002F6E68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = net.sealcreation;
+				TargetAttributes = {
+					718C06D41D241B6E002F6E68 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0820;
+					};
+					718C06E71D241B6E002F6E68 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0810;
+						TestTargetID = 718C06D41D241B6E002F6E68;
+					};
+					71F099701DF2813C006C8B62 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+					71FD1E391DF2D5280081E1B1 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 718C06D01D241B6E002F6E68 /* Build configuration list for PBXProject "harp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+			);
+			mainGroup = 718C06CC1D241B6E002F6E68;
+			productRefGroup = 718C06D61D241B6E002F6E68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				718C06D41D241B6E002F6E68 /* harp */,
+				718C06E71D241B6E002F6E68 /* harpTests */,
+				71F099701DF2813C006C8B62 /* Synx */,
+				71FD1E391DF2D5280081E1B1 /* SwiftGen */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		718C06D31D241B6E002F6E68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				718C06DF1D241B6E002F6E68 /* Images.xcassets in Resources */,
+				71FD1E3F1DF2D6800081E1B1 /* Localizable.strings in Resources */,
+				718C06E21D241B6E002F6E68 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718C06E61D241B6E002F6E68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0BF6027594042CBB4B774BCA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4C2E87060A45D8F9813E2E12 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-harpTests/Pods-harpTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5DBAC56D4B8D253EF55D3852 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-harpTests/Pods-harpTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		711DF0521DF28ACF0059B8DB /* Run SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run SwiftLint";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n    swiftlint\nelse\n    echo \"warning: SwiftLint not installed.\"\nfi";
+		};
+		71F099741DF28159006C8B62 /* Run Synx */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Synx";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which rbenv > /dev/null 2>&1; then\n    eval \"$(rbenv init - zsh)\"\nfi\n\nif which synx >/dev/null; then\n    synx -p --no-sort-by-name ${PROJECT_FILE_PATH}\nelse\n    echo \"warning: Synx not installed.\"\nfi";
+		};
+		71FD1E3D1DF2D52E0081E1B1 /* Run SwiftGen */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/harp/resources/Images.xcassets",
+				"$(SRCROOT)/harp/resources/Localizable.strings",
+			);
+			name = "Run SwiftGen";
+			outputPaths = (
+				"$(SRCROOT)/harp/src/constants/resources/Images.swift",
+				"$(SRCROOT)/harp/src/constants/resources/Strings.swift",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "SWIFT_GEN=\"${SRCROOT}/Pods/SwiftGen/bin/swiftgen\"\n\nif which ${SWIFT_GEN} >/dev/null; then\n    ${SWIFT_GEN} images ${SCRIPT_INPUT_FILE_0} --output ${SCRIPT_OUTPUT_FILE_0} --template swift3\n    ${SWIFT_GEN} strings ${SCRIPT_INPUT_FILE_1} --output ${SCRIPT_OUTPUT_FILE_1} --template swift3\nelse\n    echo \"warning: SwiftGen not installed.\"\nfi";
+		};
+		962069121753EEA308718EB8 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-harp/Pods-harp-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D557A7AAF6C31B3F0A3DD0AF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-harp/Pods-harp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FBC06542CC2B1B86CA430865 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		718C06D11D241B6E002F6E68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71E6B7911E16AD1300475846 /* SKSpriteNode.swift in Sources */,
+				71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */,
+				718A5CFD1D4531F400B88A76 /* Common.swift in Sources */,
+				71CC19971E1BCF0B00391CAA /* Images.swift in Sources */,
+				71CC19911E1B384200391CAA /* DebugUIComponentsScene.swift in Sources */,
+				71A2A1E21E1ABE41000C885A /* Clickable.swift in Sources */,
+				71CC19951E1B461D00391CAA /* GameEventNotifier.swift in Sources */,
+				718C06DB1D241B6E002F6E68 /* StartScene.swift in Sources */,
+				71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */,
+				71CC199B1E1BDF6B00391CAA /* Logger.swift in Sources */,
+				71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */,
+				710655DB1DF26AC3003A1169 /* CGSize.swift in Sources */,
+				71CC198F1E1B2E7100391CAA /* KeyboardInputToGameEvent.swift in Sources */,
+				71E6B7891E1695E600475846 /* CGPoint.swift in Sources */,
+				71CC19931E1B449B00391CAA /* ControllerInputToGameEvent.swift in Sources */,
+				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
+				71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */,
+				71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */,
+				718C06D91D241B6E002F6E68 /* AppDelegate.swift in Sources */,
+				71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */,
+				71CC198D1E1B2A0700391CAA /* Judge.swift in Sources */,
+				71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */,
+				71E6B78F1E16ABC600475846 /* SKView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		718C06E41D241B6E002F6E68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				71E6B78C1E16970F00475846 /* CGPointOperatorSpec.swift in Sources */,
+				717A12281E0FC740006A4B4B /* CGSizeOperatorSpec.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		718C06EA1D241B6E002F6E68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 718C06D41D241B6E002F6E68 /* harp */;
+			targetProxy = 718C06E91D241B6E002F6E68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		718C06E01D241B6E002F6E68 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				718C06E11D241B6E002F6E68 /* Base */,
+			);
+			name = MainMenu.xib;
+			path = .;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		718C06FA1D241B6E002F6E68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		718C06FB1D241B6E002F6E68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+			};
+			name = Release;
+		};
+		718C06FD1D241B6E002F6E68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 81DDCDB21F14871B9B5A301B /* Pods-harp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				EXCLUDED_SOURCE_FILE_NAMES = "";
+				GCC_PREPROCESSOR_DEFINITIONS = "$(inherited)";
+				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
+				INFOPLIST_FILE = harp/resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_SWIFT_FLAGS = "-D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = net.sealcreation.harp;
+				PRODUCT_NAME = harp;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		718C06FE1D241B6E002F6E68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BC48912B861C3D307876491 /* Pods-harp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				EXCLUDED_SOURCE_FILE_NAMES = "Debug*";
+				INFOPLIST_FILE = harp/resources/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_CFLAGS = "";
+				OTHER_SWIFT_FLAGS = "";
+				PRODUCT_BUNDLE_IDENTIFIER = net.sealcreation.harp;
+				PRODUCT_NAME = harp;
+				SWIFT_INSTALL_OBJC_HEADER = NO;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		718C07001D241B6E002F6E68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F21D0D7C81FFDE80F912DDA1 /* Pods-harpTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = harpTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = net.sealcreation.harpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/harp.app/Contents/MacOS/harp";
+			};
+			name = Debug;
+		};
+		718C07011D241B6E002F6E68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F92FA1D5E2CCC3D4EB7FEDC /* Pods-harpTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = harpTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_BUNDLE_IDENTIFIER = net.sealcreation.harpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/harp.app/Contents/MacOS/harp";
+			};
+			name = Release;
+		};
+		71F099721DF2813C006C8B62 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		71F099731DF2813C006C8B62 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		71FD1E3B1DF2D5280081E1B1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		71FD1E3C1DF2D5280081E1B1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		718C06D01D241B6E002F6E68 /* Build configuration list for PBXProject "harp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718C06FA1D241B6E002F6E68 /* Debug */,
+				718C06FB1D241B6E002F6E68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		718C06FC1D241B6E002F6E68 /* Build configuration list for PBXNativeTarget "harp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718C06FD1D241B6E002F6E68 /* Debug */,
+				718C06FE1D241B6E002F6E68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		718C06FF1D241B6E002F6E68 /* Build configuration list for PBXNativeTarget "harpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				718C07001D241B6E002F6E68 /* Debug */,
+				718C07011D241B6E002F6E68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71F099711DF2813C006C8B62 /* Build configuration list for PBXAggregateTarget "Synx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71F099721DF2813C006C8B62 /* Debug */,
+				71F099731DF2813C006C8B62 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		71FD1E3A1DF2D5280081E1B1 /* Build configuration list for PBXAggregateTarget "SwiftGen" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				71FD1E3B1DF2D5280081E1B1 /* Debug */,
+				71FD1E3C1DF2D5280081E1B1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 718C06CD1D241B6E002F6E68 /* Project object */;
+}
