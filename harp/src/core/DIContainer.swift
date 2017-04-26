@@ -8,8 +8,8 @@ struct DIContainer {
   }
 }
 
-fileprivate let container = Container() { c in
-  c.register(StartScene.self) { r in
+fileprivate let container = Container { c in
+  c.register(StartScene.self) { _ in
     let m = StartModel()
     let v = StartView()
     let c = StartController(model: m, view: v)
