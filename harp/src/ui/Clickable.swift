@@ -1,5 +1,7 @@
 import SpriteKit
 
 protocol Clickable {
-  var onClicked: ((SKNode) -> Void)? { get set }
+  /// Callback working in BasicScene
+  /// Returns bool presents consume click event
+  var onClicked: ((_ event: NSEvent) -> Bool)? { get set }
 }

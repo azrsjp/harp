@@ -54,8 +54,11 @@ class BasicScene<M: Model, V: View, C>: SKScene {
     let clickedNodes = nodes(at: location)
 
     clickedNodes.forEach {
-      if let node = $0 as? Clickable {
-        node.onClicked?($0)
+      // Propagate event if not consumed
+      if let node = $0 as? Clickable,
+         let isConsumedEvent = node.onClicked?(event),
+         isConsumedEvent {
+        return
       }
     }
   }
@@ -84,11 +87,9 @@ class BasicScene<M: Model, V: View, C>: SKScene {
     button.position = CGPoint(x: frame.width - padding, y: padding)
     button.zPosition = CGFloat(FP_INFINITE)
     button.onClicked = { [weak self] _ in
-      guard let view = self?.view else {
-        return
-      }
+      self?.view?.presentScene(DebugMenuScene())
 
-      view.presentScene(DebugMenuScene())
+      return true
     }
     
     addChild(button)
