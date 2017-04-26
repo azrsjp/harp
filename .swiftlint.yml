@@ -21,12 +21,13 @@ disabled_rules:
 #   - operator_whitespace
 #   - return_arrow_whitespace
 #   - statement_position
+    - shorthand_operator
     - todo
 #   - trailing_newline
 #   - trailing_semicolon
     - trailing_whitespace
     - type_body_length
-#   - type_name
+    - type_name
     - variable_name
     - valid_docs
 
@@ -39,20 +40,6 @@ excluded:
 line_length:
   warning: 130
   error:   300
-
-type_name:
-  min_length:
-    warning: 3
-    error:   3
-  max_length:
-    warning: 50
-    error:   75
-  excluded:
-    - QA
-    - AND
-    - OR
-    - Up
-    - Down
 
 type_body_length:
   warning: 1000
