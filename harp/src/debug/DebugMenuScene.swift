@@ -35,11 +35,9 @@ final class DebugMenuScene: DebugScene {
       button.horizontalAlignmentMode = .left
       button.verticalAlignmentMode = .top
       button.onClicked = { [weak self] _ in
-        guard let view = self?.view else {
-          return
-        }
+        self?.view?.presentScene(scene())
 
-        view.presentScene(scene())
+        return true
       }
 
       self.addChild(button)

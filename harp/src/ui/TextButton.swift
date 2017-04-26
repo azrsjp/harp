@@ -1,5 +1,5 @@
 import SpriteKit
 
 class TextButton: SKLabelNode, Clickable {
-  var onClicked: ((SKNode) -> Void)?
+  var onClicked: ((_ event: NSEvent) -> Bool)?
 }
