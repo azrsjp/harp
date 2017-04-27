@@ -35,6 +35,23 @@ extension String {
     return results.count > 0
   }
 
+  func pregMatcheFirst(pattern: String, options: NSRegularExpression.Options = []) -> String? {
+    guard let regex = try? NSRegularExpression(pattern: pattern, options: options) else {
+      return nil
+    }
+    let targetStringRange = NSRange(location: 0, length: count)
+    let results = regex.matches(in: self, options: [], range: targetStringRange)
+
+    for i in 0 ..< results.count {
+      for j in 0 ..< results[i].numberOfRanges {
+        let range = results[i].rangeAt(j)
+        return (self as NSString).substring(with: range)
+      }
+    }
+
+    return nil
+  }
+
   func pregReplace(pattern: String, with: String, options: NSRegularExpression.Options = []) -> String {
     guard let regex = try? NSRegularExpression(pattern: pattern, options: options) else {
       return pattern
