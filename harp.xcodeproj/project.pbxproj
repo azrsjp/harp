@@ -70,6 +70,8 @@
 		71FD1E3F1DF2D6800081E1B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */; };
 		71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD1E451DF2D9060081E1B1 /* Strings.swift */; };
 		80E8F7F6D865896580BADDD0 /* Pods_harp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8314DF37622C99C638799F2F /* Pods_harp.framework */; };
+		E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38C1EB1BF5100A672AB /* String+preg.swift */; };
+		E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38F1EB1BF6800A672AB /* String+pregTest.swift */; };
 		FF77D49430DC4714EF2EFC36 /* Pods_harpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B598A602A9F503F31E01D4 /* Pods_harpTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -130,6 +132,8 @@
 		81DDCDB21F14871B9B5A301B /* Pods-harp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harp/Pods-harp.debug.xcconfig"; sourceTree = "<group>"; };
 		8314DF37622C99C638799F2F /* Pods_harp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_harp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B598A602A9F503F31E01D4 /* Pods_harpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_harpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E592F38C1EB1BF5100A672AB /* String+preg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+preg.swift"; sourceTree = "<group>"; };
+		E592F38F1EB1BF6800A672AB /* String+pregTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+pregTest.swift"; path = "extension/String+pregTest.swift"; sourceTree = "<group>"; };
 		F21D0D7C81FFDE80F912DDA1 /* Pods-harpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harpTests/Pods-harpTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -296,6 +300,7 @@
 		718C06EB1D241B6E002F6E68 /* harpTest */ = {
 			isa = PBXGroup;
 			children = (
+				E592F38E1EB1BF5700A672AB /* extension */,
 				717A12291E0FCF94006A4B4B /* operator */,
 				718C06EE1D241B6E002F6E68 /* Info.plist */,
 			);
@@ -341,6 +346,7 @@
 		71E6B78D1E16ABA900475846 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				E592F38C1EB1BF5100A672AB /* String+preg.swift */,
 				71E6B78E1E16ABC600475846 /* SKView.swift */,
 				71E6B7901E16AD1300475846 /* SKSpriteNode.swift */,
 			);
@@ -372,6 +378,14 @@
 				84B598A602A9F503F31E01D4 /* Pods_harpTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E592F38E1EB1BF5700A672AB /* extension */ = {
+			isa = PBXGroup;
+			children = (
+				E592F38F1EB1BF6800A672AB /* String+pregTest.swift */,
+			);
+			name = extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -632,6 +646,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */,
 				712790341E34E47C00F0C5FE /* DebugScene.swift in Sources */,
 				71E6B7911E16AD1300475846 /* SKSpriteNode.swift in Sources */,
 				71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */,
@@ -673,6 +688,7 @@
 			files = (
 				71E6B78C1E16970F00475846 /* CGPointOperatorSpec.swift in Sources */,
 				717A12281E0FC740006A4B4B /* CGSizeOperatorSpec.swift in Sources */,
+				E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
