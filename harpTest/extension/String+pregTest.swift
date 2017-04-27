@@ -65,6 +65,13 @@ class StringPregTest: QuickSpec {
             let result = string.pregMatche(pattern: "^#BPM ")
             expect(result).to(beFalse())
           }
+
+          it("全後方先読みを使って'TITLE'を抽出する") {
+            var matches = [String]()
+            let result = string.pregMatche(pattern: "(?<=^#)[a-zA-Z0-9]*(?=(\\s|　))", matches: &matches)
+            expect(result).to(beTrue())
+            expect(matches.first!).to(equal("TITLE"))
+          }
         }
       }
     }
