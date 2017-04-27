@@ -5,6 +5,10 @@ extension String {
     return (self as NSString).length
   }
 
+  func trim() -> String {
+    return trimmingCharacters(in: .whitespacesAndNewlines)
+  }
+
   func pregMatche(pattern: String, options: NSRegularExpression.Options = []) -> Bool {
     guard let regex = try? NSRegularExpression(pattern: pattern, options: options) else {
       return false

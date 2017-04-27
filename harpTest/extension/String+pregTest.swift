@@ -5,6 +5,17 @@ import Nimble
 class StringPregTest: QuickSpec {
   override func spec() {
     describe("String") {
+      describe("trim") {
+        context(" hello azarashi　world　\n 　　") {
+          let string = " hello azarashi　world　\n 　　"
+
+          it("前後のスペースがトリムされて'hello azarashi　world'になる") {
+            let result = string.trim()
+            expect(result).to(equal("hello azarashi　world"))
+          }
+        }
+      }
+
       describe("pergMatch") {
         context("🍣 is good, tasty. 🍣 = 🐟 + 🍚. マルチバイト文字列のサンプル。") {
           let string = "🍣 is good, tasty. 🍣 = 🐟 + 🍚. マルチバイト文字列のサンプル。"
