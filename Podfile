@@ -6,7 +6,6 @@ target 'harp' do
   # Pods for harp
   pod 'RxSwift', '~> 3.0'
   pod 'RxCocoa', '~> 3.0'
-  pod 'RealmSwift', '~> 2.0'
   pod 'SwiftGen', '~> 4.0'
   pod 'XCGLogger', '~> 4.0'
   pod 'Swinject', '2.0.0'
