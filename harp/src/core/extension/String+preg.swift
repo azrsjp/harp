@@ -5,9 +5,9 @@ extension String {
     return (self as NSString).length
   }
 
-  func pregMatche(pattern: String, options: NSRegularExpression.Options = []) -> [String] {
+  func pregMatche(pattern: String, options: NSRegularExpression.Options = []) -> [String]? {
     guard let regex = try? NSRegularExpression(pattern: pattern, options: options) else {
-      return [String]()
+      return nil
     }
     let targetStringRange = NSRange(location: 0, length: count)
     let results = regex.matches(in: self, options: [], range: targetStringRange)
@@ -21,7 +21,7 @@ extension String {
       }
     }
 
-    return matches
+    return matches.count > 0 ? matches : nil
   }
 
   func pregMatcheFirst(pattern: String, options: NSRegularExpression.Options = []) -> String? {
