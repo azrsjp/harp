@@ -5,25 +5,14 @@ extension String {
     return (self as NSString).length
   }
 
-  func trim() -> String {
-    return trimmingCharacters(in: .whitespacesAndNewlines)
-  }
-
-  func pregMatche(pattern: String, options: NSRegularExpression.Options = []) -> Bool {
+  func pregMatche(pattern: String, options: NSRegularExpression.Options = []) -> [String] {
     guard let regex = try? NSRegularExpression(pattern: pattern, options: options) else {
-      return false
-    }
-
-    let matches = regex.matches(in: self, options: [], range: NSRange(location: 0, length: count))
-    return matches.count > 0
-  }
-
-  func pregMatche(pattern: String, options: NSRegularExpression.Options = [], matches: inout [String]) -> Bool {
-    guard let regex = try? NSRegularExpression(pattern: pattern, options: options) else {
-      return false
+      return [String]()
     }
     let targetStringRange = NSRange(location: 0, length: count)
     let results = regex.matches(in: self, options: [], range: targetStringRange)
+
+    var matches = [String]()
 
     results.forEach {
       for i in 0 ..< $0.numberOfRanges {
@@ -32,7 +21,7 @@ extension String {
       }
     }
 
-    return results.count > 0
+    return matches
   }
 
   func pregMatcheFirst(pattern: String, options: NSRegularExpression.Options = []) -> String? {

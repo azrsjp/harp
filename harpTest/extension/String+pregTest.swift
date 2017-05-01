@@ -5,102 +5,89 @@ import Nimble
 class StringPregTest: QuickSpec {
   override func spec() {
     describe("String") {
-      describe("trim") {
-        context(" hello azarashi　world　\n 　　") {
-          let string = " hello azarashi　world　\n 　　"
+      describe("#pergMatch") {
+        context("has multi-byte characters") {
+          let string = "🍣 is good+, tasty. 🍣 = 🐟 + 🍚. マルチバイト文字列のサンプル。"
 
-          it("前後のスペースがトリムされて'hello azarashi　world'になる") {
-            let result = string.trim()
-            expect(result).to(equal("hello azarashi　world"))
-          }
-        }
-      }
-
-      describe("pergMatch") {
-        context("🍣 is good, tasty. 🍣 = 🐟 + 🍚. マルチバイト文字列のサンプル。") {
-          let string = "🍣 is good, tasty. 🍣 = 🐟 + 🍚. マルチバイト文字列のサンプル。"
-
-          it("🍣がマッチする") {
+          it("matches used emoji") {
             let result = string.pregMatche(pattern: "🍣")
-            expect(result).to(beTrue())
+            let hasMatches = result.count > 0
+            expect(hasMatches).to(beTrue())
           }
 
-          it("🐈はマッチしない") {
+          it("not matches unused emoji") {
             let result = string.pregMatche(pattern: "🐈")
-            expect(result).to(beFalse())
+            let hasMatches = result.count > 0
+            expect(hasMatches).to(beFalse())
           }
 
-          it("'マルチバイト文字列'はマッチする") {
+          it("matches multi-byte string") {
             let result = string.pregMatche(pattern: "マルチバイト文字列")
-            expect(result).to(beTrue())
+            let hasMatches = result.count > 0
+            expect(hasMatches).to(beTrue())
           }
 
-          it("'good'はマッチする") {
-            let result = string.pregMatche(pattern: "good")
-            expect(result).to(beTrue())
+          it("matches ascii characters") {
+            let result = string.pregMatche(pattern: "good+")
+            let hasMatches = result.count > 0
+            expect(hasMatches).to(beTrue())
           }
 
-          it("'g*d'はマッチする") {
+          it("matches wild card pattern") {
             let result = string.pregMatche(pattern: "g*d")
-            expect(result).to(beTrue())
+            let hasMatches = result.count > 0
+            expect(hasMatches).to(beTrue())
           }
 
-          it("'マルチバイト...'がマッチして'マルチバイト文字列'を取得") {
-            var matches = [String]()
-            let result = string.pregMatche(pattern: "マルチバイト...", matches: &matches)
-            expect(result).to(beTrue())
-            expect(matches.first!).to(equal("マルチバイト文字列"))
-          }
-        }
-
-        context("#TITLE タイトル #BPM 499 ああああ") {
-          let string = "#TITLE タイトル #BPM 499 ああああ"
-
-          it("'#TITLE 'から始まっている") {
-            let result = string.pregMatche(pattern: "^#TITLE ")
-            expect(result).to(beTrue())
+          it("matches wild card pattern and take results") {
+            let result = string.pregMatche(pattern: "マルチバイト...")
+            let hasMatches = result.count > 0
+            expect(hasMatches).to(beTrue())
+            expect(result.first!).to(equal("マルチバイト文字列"))
           }
 
-          it("'#BPM 'から始まっていない") {
-            let result = string.pregMatche(pattern: "^#BPM ")
-            expect(result).to(beFalse())
+          it("matches using lookahead and lookbehind pattern") {
+            let result = string.pregMatche(pattern: "(?<=\\s)[a-zA-Z0-9]+(?=\\+,)")
+            let hasMatches = result.count > 0
+            expect(hasMatches).to(beTrue())
+            expect(result[0]).to(equal("good"))
           }
 
-          it("全後方先読みを使って'TITLE'を抽出する") {
-            var matches = [String]()
-            let result = string.pregMatche(pattern: "(?<=^#)[a-zA-Z0-9]*(?=(\\s|　))", matches: &matches)
-            expect(result).to(beTrue())
-            expect(matches.first!).to(equal("TITLE"))
+          it("matches group") {
+            let result = string.pregMatche(pattern: "(is)\\s(good)\\+,\\s(tasty)")
+            expect(result.count).to(equal(4))
+            expect(result[1]).to(equal("is"))
+            expect(result[2]).to(equal("good"))
+            expect(result[3]).to(equal("tasty"))
+          }
+
+          it("matches multiple with group") {
+            let testString = "bbbbbb"
+            let result = testString.pregMatche(pattern: "(bb)(b)")
+            expect(result.count).to(equal(6))
+            expect(result[0]).to(equal("bbb"))
+            expect(result[1]).to(equal("bb"))
+            expect(result[2]).to(equal("b"))
+            expect(result[3]).to(equal("bbb"))
+            expect(result[4]).to(equal("bb"))
+            expect(result[5]).to(equal("b"))
           }
         }
       }
     }
 
     describe("pergReplace") {
-      context("#TITLE タイトル文字🍣") {
+      context("has multi-byte characters") {
         let string = "#TITLE タイトル文字🍣"
 
-        it("'#TITLE 'を''で置き換える") {
+        it("replace ascii characters") {
           let result = string.pregReplace(pattern: "#TITLE ", with: "")
           expect(result).to(equal("タイトル文字🍣"))
         }
-      }
 
-      context("#TITLE タイトル文字🍣") {
-        let string = "#TITLE タイトル文字🍣"
-
-        it("'#TITLE 'を''で置き換える") {
-          let result = string.pregReplace(pattern: "#TITLE ", with: "")
-          expect(result).to(equal("タイトル文字🍣"))
-        }
-      }
-
-      context("🍛 = 🐟 + 🍚") {
-        let string = "🍛 = 🐟 + 🍚"
-
-        it("'🍛'を'🍣'で置き換える") {
-          let result = string.pregReplace(pattern: "🍛", with: "🍣")
-          expect(result).to(equal("🍣 = 🐟 + 🍚"))
+        it("replace multi-byte characters") {
+          let result = string.pregReplace(pattern: "🍣", with: "🐟")
+          expect(result).to(equal("#TITLE タイトル文字🐟"))
         }
       }
     }
