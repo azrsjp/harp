@@ -54,6 +54,7 @@
 		71A2A1E21E1ABE41000C885A /* Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E11E1ABE41000C885A /* Clickable.swift */; };
 		71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E31E1ABE68000C885A /* TextButton.swift */; };
 		71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E51E1ABEA8000C885A /* BasicScene.swift */; };
+		71BFD6FA1EB638DA00658965 /* String+ReadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BFD6F91EB638DA00658965 /* String+ReadFile.swift */; };
 		71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */; };
 		71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */; };
 		71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19881E1B21BD00391CAA /* GameEvent.swift */; };
@@ -71,6 +72,8 @@
 		71FD1E3F1DF2D6800081E1B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */; };
 		71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD1E451DF2D9060081E1B1 /* Strings.swift */; };
 		80E8F7F6D865896580BADDD0 /* Pods_harp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8314DF37622C99C638799F2F /* Pods_harp.framework */; };
+		E542956E1EB6FF9700AAE250 /* String+trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = E542956D1EB6FF9700AAE250 /* String+trim.swift */; };
+		E54295701EB7000800AAE250 /* String+trimTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E542956F1EB7000800AAE250 /* String+trimTest.swift */; };
 		E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38C1EB1BF5100A672AB /* String+preg.swift */; };
 		E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38F1EB1BF6800A672AB /* String+pregTest.swift */; };
 		FF77D49430DC4714EF2EFC36 /* Pods_harpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B598A602A9F503F31E01D4 /* Pods_harpTests.framework */; };
@@ -115,6 +118,7 @@
 		71A2A1E11E1ABE41000C885A /* Clickable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clickable.swift; sourceTree = "<group>"; };
 		71A2A1E31E1ABE68000C885A /* TextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		71A2A1E51E1ABEA8000C885A /* BasicScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicScene.swift; sourceTree = "<group>"; };
+		71BFD6F91EB638DA00658965 /* String+ReadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ReadFile.swift"; sourceTree = "<group>"; };
 		71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugJudgeScene.swift; sourceTree = "<group>"; };
 		71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugInputKeysScene.swift; sourceTree = "<group>"; };
 		71CC19881E1B21BD00391CAA /* GameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEvent.swift; sourceTree = "<group>"; };
@@ -134,6 +138,8 @@
 		81DDCDB21F14871B9B5A301B /* Pods-harp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harp/Pods-harp.debug.xcconfig"; sourceTree = "<group>"; };
 		8314DF37622C99C638799F2F /* Pods_harp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_harp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B598A602A9F503F31E01D4 /* Pods_harpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_harpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E542956D1EB6FF9700AAE250 /* String+trim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+trim.swift"; sourceTree = "<group>"; };
+		E542956F1EB7000800AAE250 /* String+trimTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+trimTest.swift"; path = "extension/String+trimTest.swift"; sourceTree = "<group>"; };
 		E592F38C1EB1BF5100A672AB /* String+preg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+preg.swift"; sourceTree = "<group>"; };
 		E592F38F1EB1BF6800A672AB /* String+pregTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+pregTest.swift"; path = "extension/String+pregTest.swift"; sourceTree = "<group>"; };
 		F21D0D7C81FFDE80F912DDA1 /* Pods-harpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harpTests/Pods-harpTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -352,6 +358,8 @@
 				E592F38C1EB1BF5100A672AB /* String+preg.swift */,
 				71E6B78E1E16ABC600475846 /* SKView.swift */,
 				71E6B7901E16AD1300475846 /* SKSpriteNode.swift */,
+				71BFD6F91EB638DA00658965 /* String+ReadFile.swift */,
+				E542956D1EB6FF9700AAE250 /* String+trim.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -387,6 +395,7 @@
 			isa = PBXGroup;
 			children = (
 				E592F38F1EB1BF6800A672AB /* String+pregTest.swift */,
+				E542956F1EB7000800AAE250 /* String+trimTest.swift */,
 			);
 			name = extension;
 			sourceTree = "<group>";
@@ -657,10 +666,12 @@
 				71CC19971E1BCF0B00391CAA /* Images.swift in Sources */,
 				712790301E34DF7700F0C5FE /* StartModel.swift in Sources */,
 				716140291E1FE54600034402 /* HIDInputData.swift in Sources */,
+				71BFD6FA1EB638DA00658965 /* String+ReadFile.swift in Sources */,
 				71CC19911E1B384200391CAA /* DebugUIComponentsScene.swift in Sources */,
 				71A2A1E21E1ABE41000C885A /* Clickable.swift in Sources */,
 				718C06DB1D241B6E002F6E68 /* StartScene.swift in Sources */,
 				712790191E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift in Sources */,
+				E542956E1EB6FF9700AAE250 /* String+trim.swift in Sources */,
 				71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */,
 				71CC199B1E1BDF6B00391CAA /* Logger.swift in Sources */,
 				71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */,
@@ -692,6 +703,7 @@
 			files = (
 				71E6B78C1E16970F00475846 /* CGPointOperatorSpec.swift in Sources */,
 				717A12281E0FC740006A4B4B /* CGSizeOperatorSpec.swift in Sources */,
+				E54295701EB7000800AAE250 /* String+trimTest.swift in Sources */,
 				E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
