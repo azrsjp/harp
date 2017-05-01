@@ -44,7 +44,7 @@
 		712790341E34E47C00F0C5FE /* DebugScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790331E34E47C00F0C5FE /* DebugScene.swift */; };
 		716140291E1FE54600034402 /* HIDInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716140281E1FE54600034402 /* HIDInputData.swift */; };
 		7166A0071E2A7D3A00D1588C /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7166A0061E2A7D3A00D1588C /* Bridge.swift */; };
-		717A12281E0FC740006A4B4B /* CGSizeOperatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7161AF0C1E0FBEE4002286CD /* CGSizeOperatorSpec.swift */; };
+		717A12281E0FC740006A4B4B /* CGSizeOperatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7161AF0C1E0FBEE4002286CD /* CGSizeOperatorTest.swift */; };
 		718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */; };
 		718A5CFD1D4531F400B88A76 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A5CFC1D4531F400B88A76 /* Common.swift */; };
 		718C06D91D241B6E002F6E68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C06D81D241B6E002F6E68 /* AppDelegate.swift */; };
@@ -65,7 +65,7 @@
 		71CC19971E1BCF0B00391CAA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19961E1BCF0B00391CAA /* Images.swift */; };
 		71CC199B1E1BDF6B00391CAA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC199A1E1BDF6B00391CAA /* Logger.swift */; };
 		71E6B7891E1695E600475846 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B7881E1695E600475846 /* CGPoint.swift */; };
-		71E6B78C1E16970F00475846 /* CGPointOperatorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B78A1E16969100475846 /* CGPointOperatorSpec.swift */; };
+		71E6B78C1E16970F00475846 /* CGPointOperatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B78A1E16969100475846 /* CGPointOperatorTest.swift */; };
 		71E6B78F1E16ABC600475846 /* SKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B78E1E16ABC600475846 /* SKView.swift */; };
 		71E6B7911E16AD1300475846 /* SKSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B7901E16AD1300475846 /* SKSpriteNode.swift */; };
 		71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B7921E16C76C00475846 /* HIDDeviceManager.swift */; };
@@ -105,7 +105,7 @@
 		712790311E34DF8200F0C5FE /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		712790331E34E47C00F0C5FE /* DebugScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugScene.swift; sourceTree = "<group>"; };
 		716140281E1FE54600034402 /* HIDInputData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDInputData.swift; sourceTree = "<group>"; };
-		7161AF0C1E0FBEE4002286CD /* CGSizeOperatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeOperatorSpec.swift; sourceTree = "<group>"; };
+		7161AF0C1E0FBEE4002286CD /* CGSizeOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeOperatorTest.swift; sourceTree = "<group>"; };
 		7166A0061E2A7D3A00D1588C /* Bridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMenuScene.swift; sourceTree = "<group>"; };
 		718A5CFC1D4531F400B88A76 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 		71CC19961E1BCF0B00391CAA /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		71CC199A1E1BDF6B00391CAA /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		71E6B7881E1695E600475846 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
-		71E6B78A1E16969100475846 /* CGPointOperatorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointOperatorSpec.swift; sourceTree = "<group>"; };
+		71E6B78A1E16969100475846 /* CGPointOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointOperatorTest.swift; sourceTree = "<group>"; };
 		71E6B78E1E16ABC600475846 /* SKView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKView.swift; sourceTree = "<group>"; };
 		71E6B7901E16AD1300475846 /* SKSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSpriteNode.swift; sourceTree = "<group>"; };
 		71E6B7921E16C76C00475846 /* HIDDeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDDeviceManager.swift; sourceTree = "<group>"; };
@@ -254,8 +254,8 @@
 		717A12291E0FCF94006A4B4B /* operator */ = {
 			isa = PBXGroup;
 			children = (
-				7161AF0C1E0FBEE4002286CD /* CGSizeOperatorSpec.swift */,
-				71E6B78A1E16969100475846 /* CGPointOperatorSpec.swift */,
+				7161AF0C1E0FBEE4002286CD /* CGSizeOperatorTest.swift */,
+				71E6B78A1E16969100475846 /* CGPointOperatorTest.swift */,
 			);
 			path = operator;
 			sourceTree = "<group>";
@@ -401,6 +401,7 @@
 			children = (
 				E592F38F1EB1BF6800A672AB /* String+pregTest.swift */,
 				E542956F1EB7000800AAE250 /* String+trimTest.swift */,
+				E54295711EB70A8100AAE250 /* Array+safeTest.swift */,
 			);
 			name = extension;
 			sourceTree = "<group>";
@@ -708,8 +709,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E54295721EB70A8100AAE250 /* Array+safeTest.swift in Sources */,
-				71E6B78C1E16970F00475846 /* CGPointOperatorSpec.swift in Sources */,
-				717A12281E0FC740006A4B4B /* CGSizeOperatorSpec.swift in Sources */,
+				71E6B78C1E16970F00475846 /* CGPointOperatorTest.swift in Sources */,
+				717A12281E0FC740006A4B4B /* CGSizeOperatorTest.swift in Sources */,
 				E54295701EB7000800AAE250 /* String+trimTest.swift in Sources */,
 				E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */,
 			);
