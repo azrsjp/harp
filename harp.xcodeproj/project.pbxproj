@@ -59,6 +59,7 @@
 		71C273E51EB7A0760096A19D /* DebugUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273E41EB7A0760096A19D /* DebugUtil.swift */; };
 		71C273E81EB9D1490096A19D /* String+split.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273E71EB9D1490096A19D /* String+split.swift */; };
 		71C273EA1EB9D2840096A19D /* String+splitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273E91EB9D2840096A19D /* String+splitTest.swift */; };
+		71C273F31EBAF79D0096A19D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273F21EBAF79D0096A19D /* Math.swift */; };
 		71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */; };
 		71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */; };
 		71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19881E1B21BD00391CAA /* GameEvent.swift */; };
@@ -130,6 +131,7 @@
 		71C273E41EB7A0760096A19D /* DebugUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugUtil.swift; path = core/DebugUtil.swift; sourceTree = "<group>"; };
 		71C273E71EB9D1490096A19D /* String+split.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+split.swift"; sourceTree = "<group>"; };
 		71C273E91EB9D2840096A19D /* String+splitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+splitTest.swift"; path = "extension/String+splitTest.swift"; sourceTree = "<group>"; };
+		71C273F21EBAF79D0096A19D /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugJudgeScene.swift; sourceTree = "<group>"; };
 		71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugInputKeysScene.swift; sourceTree = "<group>"; };
 		71CC19881E1B21BD00391CAA /* GameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEvent.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				7166A0061E2A7D3A00D1588C /* Bridge.swift */,
 				712790241E34C18E00F0C5FE /* DIContainer.swift */,
 				71EA2C0C1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift */,
+				71C273F21EBAF79D0096A19D /* Math.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */,
 				718A5CFD1D4531F400B88A76 /* Common.swift in Sources */,
 				71CC19971E1BCF0B00391CAA /* Images.swift in Sources */,
+				71C273F31EBAF79D0096A19D /* Math.swift in Sources */,
 				712790301E34DF7700F0C5FE /* StartModel.swift in Sources */,
 				716140291E1FE54600034402 /* HIDInputData.swift in Sources */,
 				71BFD6FC1EB655E100658965 /* Array+safe.swift in Sources */,
