@@ -56,6 +56,8 @@
 		71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E51E1ABEA8000C885A /* BasicScene.swift */; };
 		71BFD6FA1EB638DA00658965 /* String+ReadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BFD6F91EB638DA00658965 /* String+ReadFile.swift */; };
 		71BFD6FC1EB655E100658965 /* Array+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BFD6FB1EB655E100658965 /* Array+safe.swift */; };
+		71C273E81EB9D1490096A19D /* String+split.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273E71EB9D1490096A19D /* String+split.swift */; };
+		71C273EA1EB9D2840096A19D /* String+splitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273E91EB9D2840096A19D /* String+splitTest.swift */; };
 		71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */; };
 		71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */; };
 		71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19881E1B21BD00391CAA /* GameEvent.swift */; };
@@ -124,6 +126,8 @@
 		71A2A1E51E1ABEA8000C885A /* BasicScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicScene.swift; sourceTree = "<group>"; };
 		71BFD6F91EB638DA00658965 /* String+ReadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ReadFile.swift"; sourceTree = "<group>"; };
 		71BFD6FB1EB655E100658965 /* Array+safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+safe.swift"; sourceTree = "<group>"; };
+		71C273E71EB9D1490096A19D /* String+split.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+split.swift"; sourceTree = "<group>"; };
+		71C273E91EB9D2840096A19D /* String+splitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+splitTest.swift"; path = "extension/String+splitTest.swift"; sourceTree = "<group>"; };
 		71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugJudgeScene.swift; sourceTree = "<group>"; };
 		71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugInputKeysScene.swift; sourceTree = "<group>"; };
 		71CC19881E1B21BD00391CAA /* GameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEvent.swift; sourceTree = "<group>"; };
@@ -371,6 +375,7 @@
 				71BFD6F91EB638DA00658965 /* String+ReadFile.swift */,
 				71BFD6FB1EB655E100658965 /* Array+safe.swift */,
 				E542956D1EB6FF9700AAE250 /* String+trim.swift */,
+				71C273E71EB9D1490096A19D /* String+split.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -407,6 +412,7 @@
 			children = (
 				E592F38F1EB1BF6800A672AB /* String+pregTest.swift */,
 				E542956F1EB7000800AAE250 /* String+trimTest.swift */,
+				71C273E91EB9D2840096A19D /* String+splitTest.swift */,
 				E54295711EB70A8100AAE250 /* Array+safeTest.swift */,
 			);
 			name = extension;
@@ -679,6 +685,7 @@
 				712790301E34DF7700F0C5FE /* StartModel.swift in Sources */,
 				716140291E1FE54600034402 /* HIDInputData.swift in Sources */,
 				71BFD6FC1EB655E100658965 /* Array+safe.swift in Sources */,
+				71C273E81EB9D1490096A19D /* String+split.swift in Sources */,
 				71BFD6FA1EB638DA00658965 /* String+ReadFile.swift in Sources */,
 				71CC19911E1B384200391CAA /* DebugUIComponentsScene.swift in Sources */,
 				71A2A1E21E1ABE41000C885A /* Clickable.swift in Sources */,
@@ -715,6 +722,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C273EA1EB9D2840096A19D /* String+splitTest.swift in Sources */,
 				E54295761EB7301D00AAE250 /* AnyOperatorTest.swift in Sources */,
 				E54295721EB70A8100AAE250 /* Array+safeTest.swift in Sources */,
 				71E6B78C1E16970F00475846 /* CGPointOperatorTest.swift in Sources */,
