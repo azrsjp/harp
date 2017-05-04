@@ -56,6 +56,7 @@
 		71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E51E1ABEA8000C885A /* BasicScene.swift */; };
 		71BFD6FA1EB638DA00658965 /* String+ReadFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BFD6F91EB638DA00658965 /* String+ReadFile.swift */; };
 		71BFD6FC1EB655E100658965 /* Array+safe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71BFD6FB1EB655E100658965 /* Array+safe.swift */; };
+		71C273E51EB7A0760096A19D /* DebugUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273E41EB7A0760096A19D /* DebugUtil.swift */; };
 		71C273E81EB9D1490096A19D /* String+split.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273E71EB9D1490096A19D /* String+split.swift */; };
 		71C273EA1EB9D2840096A19D /* String+splitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273E91EB9D2840096A19D /* String+splitTest.swift */; };
 		71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */; };
@@ -126,6 +127,7 @@
 		71A2A1E51E1ABEA8000C885A /* BasicScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicScene.swift; sourceTree = "<group>"; };
 		71BFD6F91EB638DA00658965 /* String+ReadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ReadFile.swift"; sourceTree = "<group>"; };
 		71BFD6FB1EB655E100658965 /* Array+safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+safe.swift"; sourceTree = "<group>"; };
+		71C273E41EB7A0760096A19D /* DebugUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugUtil.swift; path = core/DebugUtil.swift; sourceTree = "<group>"; };
 		71C273E71EB9D1490096A19D /* String+split.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+split.swift"; sourceTree = "<group>"; };
 		71C273E91EB9D2840096A19D /* String+splitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+splitTest.swift"; path = "extension/String+splitTest.swift"; sourceTree = "<group>"; };
 		71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugJudgeScene.swift; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 		718A5CF91D452B1700B88A76 /* debug */ = {
 			isa = PBXGroup;
 			children = (
+				71C273E31EB79FEE0096A19D /* core */,
 				718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */,
 				71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */,
 				71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */,
@@ -338,6 +341,14 @@
 				712790181E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift */,
 			);
 			path = Input;
+			sourceTree = "<group>";
+		};
+		71C273E31EB79FEE0096A19D /* core */ = {
+			isa = PBXGroup;
+			children = (
+				71C273E41EB7A0760096A19D /* DebugUtil.swift */,
+			);
+			name = core;
 			sourceTree = "<group>";
 		};
 		71C9DB9F1D45344C00C7EEF0 /* core */ = {
@@ -708,6 +719,7 @@
 				71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */,
 				712790281E34DD9F00F0C5FE /* Model.swift in Sources */,
 				718C06D91D241B6E002F6E68 /* AppDelegate.swift in Sources */,
+				71C273E51EB7A0760096A19D /* DebugUtil.swift in Sources */,
 				71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */,
 				71CC198D1E1B2A0700391CAA /* Judge.swift in Sources */,
 				712790251E34C18E00F0C5FE /* DIContainer.swift in Sources */,
