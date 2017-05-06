@@ -6,12 +6,10 @@ fileprivate let alFalse: ALboolean = Int8(AL_FALSE)
 fileprivate let alNone: ALuint = ALuint(AL_NONE)
 
 final class SoundPlayerFactory {
-  
-  private var cache = [String: SoundPlayer]()
 
   // This class is Singleton
   // If shared object is nil, try to instantiate because of failable initializer.
-  
+
   static private var instance = SoundPlayerFactory()
 
   static var shared: SoundPlayerFactory? {
@@ -34,55 +32,70 @@ final class SoundPlayerFactory {
   deinit {
     alureShutdownDevice()
   }
-  
-  // MARK: - internal
-  
-  func makePlayer(fullFilePath: String, shouldCache: Bool = false) -> SoundPlayer? {
-    if let player = cache[fullFilePath] {
-      return player
-    }
 
-    guard let player = HarpSoundPlayer(fullFilePath: fullFilePath) else {
-      return nil
+  // For golbal use sounds
+
+  private(set) var player: SoundPlayer<String>?
+
+  // MARK: - internal
+
+  func makePlayer<T>(keyAndFileFullPath: [T: String],
+                     onLoaded: @escaping ((SoundPlayer<T>, NSError?) -> Void)) {
+    DispatchQueue.global(qos: .background).async {
+      var keyAndSources = [T: ConcreteSoundSource]()
+      var errorToRead = [String]()
+
+      keyAndFileFullPath.forEach {
+        guard let source = ConcreteSoundSource(fullFilePath: $1) else {
+          errorToRead.append($1)
+          return
+        }
+
+        keyAndSources[$0] = source
+      }
+
+      let player = SoundPlayer(keyAndSources: keyAndSources)
+
+      var error: NSError?
+      if errorToRead.count > 0 {
+        error = NSError(domain: "harp.SoundPlayerFactory", code: 0,
+                        userInfo: [NSLocalizedDescriptionKey: "Failed to load \(errorToRead.count) files. \(errorToRead)"])
+      }
+
+      onLoaded(player, error)
     }
-    
-    if shouldCache {
-      cache[fullFilePath] = player
+  }
+
+  func makeSharedPlayer(keyAndFileFullPath: [String: String],
+                        onLoaded: @escaping ((SoundPlayer<String>, NSError?) -> Void)) {
+    makePlayer(keyAndFileFullPath: keyAndFileFullPath) { [weak self] in
+      self?.player = $0
+
+      onLoaded($0, $1)
     }
-    
-    return player
-  }
-  
-  func clearCache(fullFilePath: String) {
-    cache.removeValue(forKey: fullFilePath)
-  }
-  
-  func clearAllCache() {
-    cache.removeAll()
   }
 }
 
 // MARK: - fileprivate
 
-fileprivate final class HarpSoundPlayer: SoundPlayer {
-  
+fileprivate final class ConcreteSoundSource: SoundSource {
   private var buffer: ALuint
   private var source: ALuint
   private let fullFilePath: String
-  
+
   init?(fullFilePath: String) {
     let buffer = alureCreateBufferFromFile(fullFilePath)
-    
+
     if buffer == alNone {
       Logger.error("Failed to load \(fullFilePath)")
       return nil
     }
-    
+
     var source: ALuint = 0
     alGenSources(1, &source)
-    
+
     alSourcei(source, AL_BUFFER, ALint(buffer))
-    
+
     self.buffer = buffer
     self.source = source
     self.fullFilePath = fullFilePath
@@ -93,9 +106,9 @@ fileprivate final class HarpSoundPlayer: SoundPlayer {
     alDeleteSources(1, &source)
     alDeleteBuffers(1, &buffer)
   }
-  
+
   // MARK: - SoundPlayer
-  
+
   func play() {
     if alurePlaySource(source, nil, nil) != alTrue {
       Logger.info("Failed to play source \(self.fullFilePath)")
@@ -117,11 +130,11 @@ fileprivate final class HarpSoundPlayer: SoundPlayer {
   func setOffset(second: Float) {
     alSourcef(source, AL_SEC_OFFSET, second)
   }
-  
+
   func setShouldLooping(_ shouldLoop: Bool) {
     alSourcei(source, AL_LOOPING, shouldLoop ? 1 : 0)
   }
-  
+
   func setVolume(_ value: Float) {
     alSourcef(source, AL_GAIN, value)
   }
