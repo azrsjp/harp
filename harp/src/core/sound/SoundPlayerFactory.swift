@@ -33,10 +33,6 @@ final class SoundPlayerFactory {
     alureShutdownDevice()
   }
 
-  // For golbal use sounds
-
-  private(set) var player: SoundPlayer<String>?
-
   // MARK: - internal
 
   func makePlayer<T>(keyAndFileFullPath: [T: String],
@@ -63,15 +59,6 @@ final class SoundPlayerFactory {
       }
 
       onLoaded(player, error)
-    }
-  }
-
-  func makeSharedPlayer(keyAndFileFullPath: [String: String],
-                        onLoaded: @escaping ((SoundPlayer<String>, NSError?) -> Void)) {
-    makePlayer(keyAndFileFullPath: keyAndFileFullPath) { [weak self] in
-      self?.player = $0
-
-      onLoaded($0, $1)
     }
   }
 }
