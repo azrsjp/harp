@@ -35,6 +35,7 @@
 		710217781EBCE35A002C73FB /* SoundPlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710217771EBCE35A002C73FB /* SoundPlayerFactory.swift */; };
 		710217861EBDBE9F002C73FB /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710217851EBDBE9F002C73FB /* SoundPlayer.swift */; };
 		7102178A1EBE037E002C73FB /* SoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710217891EBE037D002C73FB /* SoundSource.swift */; };
+		7102178C1EBEEBC7002C73FB /* SharedSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7102178B1EBEEBC7002C73FB /* SharedSound.swift */; };
 		710655DB1DF26AC3003A1169 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710655DA1DF26AC3003A1169 /* CGSize.swift */; };
 		712790191E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790181E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift */; };
 		712790251E34C18E00F0C5FE /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790241E34C18E00F0C5FE /* DIContainer.swift */; };
@@ -107,6 +108,7 @@
 		7102177E1EBD83CE002C73FB /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
 		710217851EBDBE9F002C73FB /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = sound/SoundPlayer.swift; sourceTree = "<group>"; };
 		710217891EBE037D002C73FB /* SoundSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundSource.swift; path = sound/SoundSource.swift; sourceTree = "<group>"; };
+		7102178B1EBEEBC7002C73FB /* SharedSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedSound.swift; path = sound/SharedSound.swift; sourceTree = "<group>"; };
 		710655DA1DF26AC3003A1169 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
 		712790181E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDInputConverterForInGame.swift; sourceTree = "<group>"; };
 		712790241E34C18E00F0C5FE /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
@@ -205,6 +207,7 @@
 				710217771EBCE35A002C73FB /* SoundPlayerFactory.swift */,
 				710217851EBDBE9F002C73FB /* SoundPlayer.swift */,
 				710217891EBE037D002C73FB /* SoundSource.swift */,
+				7102178B1EBEEBC7002C73FB /* SharedSound.swift */,
 			);
 			name = sound;
 			sourceTree = "<group>";
@@ -738,6 +741,7 @@
 				71EA2C0D1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift in Sources */,
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
 				71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */,
+				7102178C1EBEEBC7002C73FB /* SharedSound.swift in Sources */,
 				E54295741EB72BFD00AAE250 /* Any.swift in Sources */,
 				710217781EBCE35A002C73FB /* SoundPlayerFactory.swift in Sources */,
 				71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */,
