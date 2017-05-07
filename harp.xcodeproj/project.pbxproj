@@ -969,11 +969,27 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				INFOPLIST_FILE = harpTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Nimble\"",
+					"-framework",
+					"\"Quick\"",
+					"-framework",
+					"\"RxBlocking\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxTest\"",
+					"-lalure",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.sealcreation.harpTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/harp.app/Contents/MacOS/harp";
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Debug;
 		};
@@ -985,11 +1001,27 @@
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = harpTest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"Nimble\"",
+					"-framework",
+					"\"Quick\"",
+					"-framework",
+					"\"RxBlocking\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"RxTest\"",
+					"-lalure",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = net.sealcreation.harpTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/harp.app/Contents/MacOS/harp";
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Release;
 		};
