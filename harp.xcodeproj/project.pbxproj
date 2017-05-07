@@ -32,6 +32,10 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		710217781EBCE35A002C73FB /* SoundPlayerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710217771EBCE35A002C73FB /* SoundPlayerFactory.swift */; };
+		710217861EBDBE9F002C73FB /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710217851EBDBE9F002C73FB /* SoundPlayer.swift */; };
+		7102178A1EBE037E002C73FB /* SoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710217891EBE037D002C73FB /* SoundSource.swift */; };
+		7102178C1EBEEBC7002C73FB /* SharedSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7102178B1EBEEBC7002C73FB /* SharedSound.swift */; };
 		710655DB1DF26AC3003A1169 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710655DA1DF26AC3003A1169 /* CGSize.swift */; };
 		712790191E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790181E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift */; };
 		712790251E34C18E00F0C5FE /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790241E34C18E00F0C5FE /* DIContainer.swift */; };
@@ -100,6 +104,11 @@
 /* Begin PBXFileReference section */
 		1BC48912B861C3D307876491 /* Pods-harp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harp.release.xcconfig"; path = "Pods/Target Support Files/Pods-harp/Pods-harp.release.xcconfig"; sourceTree = "<group>"; };
 		1F92FA1D5E2CCC3D4EB7FEDC /* Pods-harpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-harpTests/Pods-harpTests.release.xcconfig"; sourceTree = "<group>"; };
+		710217771EBCE35A002C73FB /* SoundPlayerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundPlayerFactory.swift; path = sound/SoundPlayerFactory.swift; sourceTree = "<group>"; };
+		7102177E1EBD83CE002C73FB /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
+		710217851EBDBE9F002C73FB /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = sound/SoundPlayer.swift; sourceTree = "<group>"; };
+		710217891EBE037D002C73FB /* SoundSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundSource.swift; path = sound/SoundSource.swift; sourceTree = "<group>"; };
+		7102178B1EBEEBC7002C73FB /* SharedSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedSound.swift; path = sound/SharedSound.swift; sourceTree = "<group>"; };
 		710655DA1DF26AC3003A1169 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
 		712790181E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDInputConverterForInGame.swift; sourceTree = "<group>"; };
 		712790241E34C18E00F0C5FE /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
@@ -192,6 +201,17 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		710217761EBCE33C002C73FB /* sound */ = {
+			isa = PBXGroup;
+			children = (
+				710217771EBCE35A002C73FB /* SoundPlayerFactory.swift */,
+				710217851EBDBE9F002C73FB /* SoundPlayer.swift */,
+				710217891EBE037D002C73FB /* SoundSource.swift */,
+				7102178B1EBEEBC7002C73FB /* SharedSound.swift */,
+			);
+			name = sound;
+			sourceTree = "<group>";
+		};
 		710655DC1DF26ADD003A1169 /* operator */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +243,7 @@
 				7110D2431D45162800A11D76 /* ui */,
 				718C06D81D241B6E002F6E68 /* AppDelegate.swift */,
 				718C06E01D241B6E002F6E68 /* MainMenu.xib */,
+				7102177E1EBD83CE002C73FB /* Bridging-Header.h */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -356,6 +377,7 @@
 		71C9DB9F1D45344C00C7EEF0 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				710217761EBCE33C002C73FB /* sound */,
 				712790261E34DD4800F0C5FE /* scene */,
 				71A2A1E01E1A96C4000C885A /* Input */,
 				71E6B78D1E16ABA900475846 /* extension */,
@@ -719,12 +741,16 @@
 				71EA2C0D1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift in Sources */,
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
 				71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */,
+				7102178C1EBEEBC7002C73FB /* SharedSound.swift in Sources */,
 				E54295741EB72BFD00AAE250 /* Any.swift in Sources */,
+				710217781EBCE35A002C73FB /* SoundPlayerFactory.swift in Sources */,
 				71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */,
 				712790281E34DD9F00F0C5FE /* Model.swift in Sources */,
 				718C06D91D241B6E002F6E68 /* AppDelegate.swift in Sources */,
 				71C273E51EB7A0760096A19D /* DebugUtil.swift in Sources */,
+				710217861EBDBE9F002C73FB /* SoundPlayer.swift in Sources */,
 				71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */,
+				7102178A1EBE037E002C73FB /* SoundSource.swift in Sources */,
 				71CC198D1E1B2A0700391CAA /* Judge.swift in Sources */,
 				712790251E34C18E00F0C5FE /* DIContainer.swift in Sources */,
 				712790321E34DF8200F0C5FE /* StartController.swift in Sources */,
@@ -873,15 +899,29 @@
 				GCC_PREPROCESSOR_DEFINITIONS_NOT_USED_IN_PRECOMPS = "";
 				INFOPLIST_FILE = harp/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"Swinject\"",
+					"-framework",
+					"\"XCGLogger\"",
+					"-lalure",
+				);
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = net.sealcreation.harp;
 				PRODUCT_NAME = harp;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)harp/src/Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Debug;
 		};
@@ -895,14 +935,28 @@
 				EXCLUDED_SOURCE_FILE_NAMES = "Debug*";
 				INFOPLIST_FILE = harp/resources/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LIBRARY_SEARCH_PATHS = /usr/local/lib;
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-framework",
+					"\"RxCocoa\"",
+					"-framework",
+					"\"RxSwift\"",
+					"-framework",
+					"\"Swinject\"",
+					"-framework",
+					"\"XCGLogger\"",
+					"-lalure",
+				);
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = net.sealcreation.harp;
 				PRODUCT_NAME = harp;
 				SWIFT_INSTALL_OBJC_HEADER = NO;
-				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/$(PRODUCT)harp/src/Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
+				USER_HEADER_SEARCH_PATHS = /usr/local/include;
 			};
 			name = Release;
 		};
