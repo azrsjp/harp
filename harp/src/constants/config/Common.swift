@@ -8,4 +8,10 @@ struct Config {
     
     static let defaultFontName = "Helvetica"
   }
+  
+  struct BMS {
+    static let resolution: Int = 480 * 14
+    static let baseBarTick: Int = resolution * 4
+    static let keyForRest: String = "00"
+  }
 }
