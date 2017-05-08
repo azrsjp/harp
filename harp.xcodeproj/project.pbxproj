@@ -49,6 +49,7 @@
 		712790301E34DF7700F0C5FE /* StartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127902F1E34DF7700F0C5FE /* StartModel.swift */; };
 		712790321E34DF8200F0C5FE /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790311E34DF8200F0C5FE /* StartController.swift */; };
 		712790341E34E47C00F0C5FE /* DebugScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790331E34E47C00F0C5FE /* DebugScene.swift */; };
+		714589741EBF37D200B7DD09 /* BMSBarDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589731EBF37D200B7DD09 /* BMSBarDataFactory.swift */; };
 		714589761EBF52B800B7DD09 /* BMSHeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589751EBF52B800B7DD09 /* BMSHeaderData.swift */; };
 		714589781EBF52D700B7DD09 /* BMSChannelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589771EBF52D700B7DD09 /* BMSChannelData.swift */; };
 		7145897A1EBF52FF00B7DD09 /* BMSBarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589791EBF52FF00B7DD09 /* BMSBarData.swift */; };
@@ -136,6 +137,7 @@
 		7127902F1E34DF7700F0C5FE /* StartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartModel.swift; sourceTree = "<group>"; };
 		712790311E34DF8200F0C5FE /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		712790331E34E47C00F0C5FE /* DebugScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugScene.swift; sourceTree = "<group>"; };
+		714589731EBF37D200B7DD09 /* BMSBarDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSBarDataFactory.swift; path = model/bms/BMSBarDataFactory.swift; sourceTree = "<group>"; };
 		714589751EBF52B800B7DD09 /* BMSHeaderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSHeaderData.swift; path = data/BMSHeaderData.swift; sourceTree = "<group>"; };
 		714589771EBF52D700B7DD09 /* BMSChannelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSChannelData.swift; path = data/BMSChannelData.swift; sourceTree = "<group>"; };
 		714589791EBF52FF00B7DD09 /* BMSBarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSBarData.swift; path = data/BMSBarData.swift; sourceTree = "<group>"; };
@@ -424,6 +426,7 @@
 				71C273EC1EBAD8D30096A19D /* BMSControlFlowParser.swift */,
 				71C273EE1EBADAD90096A19D /* BMSHeaderParser.swift */,
 				71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */,
+				714589731EBF37D200B7DD09 /* BMSBarDataFactory.swift */,
 			);
 			name = parser;
 			sourceTree = "<group>";
@@ -807,6 +810,7 @@
 				712790191E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift in Sources */,
 				E542956E1EB6FF9700AAE250 /* String+trim.swift in Sources */,
 				71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */,
+				714589741EBF37D200B7DD09 /* BMSBarDataFactory.swift in Sources */,
 				E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */,
 				71C273ED1EBAD8D30096A19D /* BMSControlFlowParser.swift in Sources */,
 				71CC199B1E1BDF6B00391CAA /* Logger.swift in Sources */,
