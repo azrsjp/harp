@@ -100,6 +100,7 @@
 		E54295721EB70A8100AAE250 /* Array+safeTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54295711EB70A8100AAE250 /* Array+safeTest.swift */; };
 		E54295741EB72BFD00AAE250 /* Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54295731EB72BFD00AAE250 /* Any.swift */; };
 		E54295761EB7301D00AAE250 /* AnyOperatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54295751EB7301D00AAE250 /* AnyOperatorTest.swift */; };
+		E54B71721EBB604400266777 /* BMSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B71711EBB604400266777 /* BMSParser.swift */; };
 		E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38C1EB1BF5100A672AB /* String+preg.swift */; };
 		E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38F1EB1BF6800A672AB /* String+pregTest.swift */; };
 		E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F3951EB1CA6C00A672AB /* BMSData.swift */; };
@@ -194,6 +195,7 @@
 		E54295711EB70A8100AAE250 /* Array+safeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+safeTest.swift"; path = "extension/Array+safeTest.swift"; sourceTree = "<group>"; };
 		E54295731EB72BFD00AAE250 /* Any.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Any.swift; sourceTree = "<group>"; };
 		E54295751EB7301D00AAE250 /* AnyOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyOperatorTest.swift; sourceTree = "<group>"; };
+		E54B71711EBB604400266777 /* BMSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSParser.swift; path = model/parser/BMSParser.swift; sourceTree = "<group>"; };
 		E592F38C1EB1BF5100A672AB /* String+preg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+preg.swift"; sourceTree = "<group>"; };
 		E592F38F1EB1BF6800A672AB /* String+pregTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+pregTest.swift"; path = "extension/String+pregTest.swift"; sourceTree = "<group>"; };
 		E592F3951EB1CA6C00A672AB /* BMSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSData.swift; path = data/BMSData.swift; sourceTree = "<group>"; };
@@ -423,6 +425,7 @@
 		71C273EB1EBAD89F0096A19D /* parser */ = {
 			isa = PBXGroup;
 			children = (
+				E54B71711EBB604400266777 /* BMSParser.swift */,
 				71C273EC1EBAD8D30096A19D /* BMSControlFlowParser.swift */,
 				71C273EE1EBADAD90096A19D /* BMSHeaderParser.swift */,
 				71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */,
@@ -810,6 +813,7 @@
 				712790191E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift in Sources */,
 				E542956E1EB6FF9700AAE250 /* String+trim.swift in Sources */,
 				71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */,
+				E54B71721EBB604400266777 /* BMSParser.swift in Sources */,
 				714589741EBF37D200B7DD09 /* BMSBarDataFactory.swift in Sources */,
 				E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */,
 				71C273ED1EBAD8D30096A19D /* BMSControlFlowParser.swift in Sources */,
