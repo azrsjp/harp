@@ -46,7 +46,14 @@
 		712790301E34DF7700F0C5FE /* StartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127902F1E34DF7700F0C5FE /* StartModel.swift */; };
 		712790321E34DF8200F0C5FE /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790311E34DF8200F0C5FE /* StartController.swift */; };
 		712790341E34E47C00F0C5FE /* DebugScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790331E34E47C00F0C5FE /* DebugScene.swift */; };
+		714589761EBF52B800B7DD09 /* BMSHeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589751EBF52B800B7DD09 /* BMSHeaderData.swift */; };
+		714589781EBF52D700B7DD09 /* BMSChannelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589771EBF52D700B7DD09 /* BMSChannelData.swift */; };
+		7145897A1EBF52FF00B7DD09 /* BMSBarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589791EBF52FF00B7DD09 /* BMSBarData.swift */; };
+		7145897C1EBF532B00B7DD09 /* LaneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145897B1EBF532B00B7DD09 /* LaneType.swift */; };
+		7145897E1EBF537F00B7DD09 /* NoteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145897D1EBF537F00B7DD09 /* NoteType.swift */; };
+		714589801EBF53C000B7DD09 /* SideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145897F1EBF53C000B7DD09 /* SideType.swift */; };
 		716140291E1FE54600034402 /* HIDInputData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716140281E1FE54600034402 /* HIDInputData.swift */; };
+		7161837D1EC0B66F00D7B374 /* BMSNoteTraitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */; };
 		7166A0071E2A7D3A00D1588C /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7166A0061E2A7D3A00D1588C /* Bridge.swift */; };
 		717A12281E0FC740006A4B4B /* CGSizeOperatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7161AF0C1E0FBEE4002286CD /* CGSizeOperatorTest.swift */; };
 		718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */; };
@@ -88,6 +95,7 @@
 		E54295761EB7301D00AAE250 /* AnyOperatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54295751EB7301D00AAE250 /* AnyOperatorTest.swift */; };
 		E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38C1EB1BF5100A672AB /* String+preg.swift */; };
 		E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38F1EB1BF6800A672AB /* String+pregTest.swift */; };
+		E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F3951EB1CA6C00A672AB /* BMSData.swift */; };
 		FF77D49430DC4714EF2EFC36 /* Pods_harpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B598A602A9F503F31E01D4 /* Pods_harpTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -119,7 +127,14 @@
 		7127902F1E34DF7700F0C5FE /* StartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartModel.swift; sourceTree = "<group>"; };
 		712790311E34DF8200F0C5FE /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		712790331E34E47C00F0C5FE /* DebugScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugScene.swift; sourceTree = "<group>"; };
+		714589751EBF52B800B7DD09 /* BMSHeaderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSHeaderData.swift; path = data/BMSHeaderData.swift; sourceTree = "<group>"; };
+		714589771EBF52D700B7DD09 /* BMSChannelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSChannelData.swift; path = data/BMSChannelData.swift; sourceTree = "<group>"; };
+		714589791EBF52FF00B7DD09 /* BMSBarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSBarData.swift; path = data/BMSBarData.swift; sourceTree = "<group>"; };
+		7145897B1EBF532B00B7DD09 /* LaneType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaneType.swift; sourceTree = "<group>"; };
+		7145897D1EBF537F00B7DD09 /* NoteType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteType.swift; sourceTree = "<group>"; };
+		7145897F1EBF53C000B7DD09 /* SideType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideType.swift; sourceTree = "<group>"; };
 		716140281E1FE54600034402 /* HIDInputData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDInputData.swift; sourceTree = "<group>"; };
+		7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSNoteTraitData.swift; path = data/BMSNoteTraitData.swift; sourceTree = "<group>"; };
 		7161AF0C1E0FBEE4002286CD /* CGSizeOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeOperatorTest.swift; sourceTree = "<group>"; };
 		7166A0061E2A7D3A00D1588C /* Bridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMenuScene.swift; sourceTree = "<group>"; };
@@ -167,6 +182,7 @@
 		E54295751EB7301D00AAE250 /* AnyOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyOperatorTest.swift; sourceTree = "<group>"; };
 		E592F38C1EB1BF5100A672AB /* String+preg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+preg.swift"; sourceTree = "<group>"; };
 		E592F38F1EB1BF6800A672AB /* String+pregTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+pregTest.swift"; path = "extension/String+pregTest.swift"; sourceTree = "<group>"; };
+		E592F3951EB1CA6C00A672AB /* BMSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSData.swift; path = data/BMSData.swift; sourceTree = "<group>"; };
 		F21D0D7C81FFDE80F912DDA1 /* Pods-harpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harpTests/Pods-harpTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -240,6 +256,7 @@
 				718A5CF91D452B1700B88A76 /* debug */,
 				7110D2421D45153200A11D76 /* scene */,
 				7110D2441D45163400A11D76 /* type */,
+				E592F3941EB1CA5300A672AB /* data */,
 				7110D2431D45162800A11D76 /* ui */,
 				718C06D81D241B6E002F6E68 /* AppDelegate.swift */,
 				718C06E01D241B6E002F6E68 /* MainMenu.xib */,
@@ -270,6 +287,9 @@
 			children = (
 				71CC19881E1B21BD00391CAA /* GameEvent.swift */,
 				71CC198C1E1B2A0700391CAA /* Judge.swift */,
+				7145897B1EBF532B00B7DD09 /* LaneType.swift */,
+				7145897D1EBF537F00B7DD09 /* NoteType.swift */,
+				7145897F1EBF53C000B7DD09 /* SideType.swift */,
 			);
 			path = type;
 			sourceTree = "<group>";
@@ -452,6 +472,18 @@
 				E54295711EB70A8100AAE250 /* Array+safeTest.swift */,
 			);
 			name = extension;
+			sourceTree = "<group>";
+		};
+		E592F3941EB1CA5300A672AB /* data */ = {
+			isa = PBXGroup;
+			children = (
+				E592F3951EB1CA6C00A672AB /* BMSData.swift */,
+				714589751EBF52B800B7DD09 /* BMSHeaderData.swift */,
+				714589771EBF52D700B7DD09 /* BMSChannelData.swift */,
+				714589791EBF52FF00B7DD09 /* BMSBarData.swift */,
+				7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */,
+			);
+			name = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -714,8 +746,10 @@
 			files = (
 				E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */,
 				712790341E34E47C00F0C5FE /* DebugScene.swift in Sources */,
+				714589761EBF52B800B7DD09 /* BMSHeaderData.swift in Sources */,
 				71E6B7911E16AD1300475846 /* SKSpriteNode.swift in Sources */,
 				71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */,
+				7161837D1EC0B66F00D7B374 /* BMSNoteTraitData.swift in Sources */,
 				718A5CFD1D4531F400B88A76 /* Common.swift in Sources */,
 				71CC19971E1BCF0B00391CAA /* Images.swift in Sources */,
 				71C273F31EBAF79D0096A19D /* Math.swift in Sources */,
@@ -730,18 +764,23 @@
 				712790191E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift in Sources */,
 				E542956E1EB6FF9700AAE250 /* String+trim.swift in Sources */,
 				71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */,
+				E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */,
 				71CC199B1E1BDF6B00391CAA /* Logger.swift in Sources */,
 				71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */,
+				7145897E1EBF537F00B7DD09 /* NoteType.swift in Sources */,
 				710655DB1DF26AC3003A1169 /* CGSize.swift in Sources */,
+				7145897C1EBF532B00B7DD09 /* LaneType.swift in Sources */,
 				71E6B7891E1695E600475846 /* CGPoint.swift in Sources */,
 				7127902E1E34DF6C00F0C5FE /* StartView.swift in Sources */,
 				7127902A1E34DDA600F0C5FE /* View.swift in Sources */,
 				7166A0071E2A7D3A00D1588C /* Bridge.swift in Sources */,
 				71CC19931E1B449B00391CAA /* InputEventNotifier.swift in Sources */,
+				714589801EBF53C000B7DD09 /* SideType.swift in Sources */,
 				71EA2C0D1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift in Sources */,
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
 				71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */,
 				7102178C1EBEEBC7002C73FB /* SharedSound.swift in Sources */,
+				714589781EBF52D700B7DD09 /* BMSChannelData.swift in Sources */,
 				E54295741EB72BFD00AAE250 /* Any.swift in Sources */,
 				710217781EBCE35A002C73FB /* SoundPlayerFactory.swift in Sources */,
 				71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */,
@@ -754,6 +793,7 @@
 				71CC198D1E1B2A0700391CAA /* Judge.swift in Sources */,
 				712790251E34C18E00F0C5FE /* DIContainer.swift in Sources */,
 				712790321E34DF8200F0C5FE /* StartController.swift in Sources */,
+				7145897A1EBF52FF00B7DD09 /* BMSBarData.swift in Sources */,
 				71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */,
 				71E6B78F1E16ABC600475846 /* SKView.swift in Sources */,
 				7127902C1E34DDB200F0C5FE /* Controller.swift in Sources */,
