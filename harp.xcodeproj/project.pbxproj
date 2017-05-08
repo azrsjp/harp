@@ -36,6 +36,7 @@
 		710217861EBDBE9F002C73FB /* SoundPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710217851EBDBE9F002C73FB /* SoundPlayer.swift */; };
 		7102178A1EBE037E002C73FB /* SoundSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710217891EBE037D002C73FB /* SoundSource.swift */; };
 		7102178C1EBEEBC7002C73FB /* SharedSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7102178B1EBEEBC7002C73FB /* SharedSound.swift */; };
+		710217931EBF3330002C73FB /* BMSChannelDataParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710217901EBF3330002C73FB /* BMSChannelDataParserTest.swift */; };
 		710217941EBF3330002C73FB /* BMSControlFlowParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710217911EBF3330002C73FB /* BMSControlFlowParserTest.swift */; };
 		710655DB1DF26AC3003A1169 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710655DA1DF26AC3003A1169 /* CGSize.swift */; };
 		712790191E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790181E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift */; };
@@ -72,6 +73,7 @@
 		71C273E81EB9D1490096A19D /* String+split.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273E71EB9D1490096A19D /* String+split.swift */; };
 		71C273EA1EB9D2840096A19D /* String+splitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273E91EB9D2840096A19D /* String+splitTest.swift */; };
 		71C273ED1EBAD8D30096A19D /* BMSControlFlowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273EC1EBAD8D30096A19D /* BMSControlFlowParser.swift */; };
+		71C273F11EBADB550096A19D /* BMSChannelDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */; };
 		71C273F31EBAF79D0096A19D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273F21EBAF79D0096A19D /* Math.swift */; };
 		71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */; };
 		71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */; };
@@ -119,6 +121,7 @@
 		710217851EBDBE9F002C73FB /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = sound/SoundPlayer.swift; sourceTree = "<group>"; };
 		710217891EBE037D002C73FB /* SoundSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundSource.swift; path = sound/SoundSource.swift; sourceTree = "<group>"; };
 		7102178B1EBEEBC7002C73FB /* SharedSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedSound.swift; path = sound/SharedSound.swift; sourceTree = "<group>"; };
+		710217901EBF3330002C73FB /* BMSChannelDataParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSChannelDataParserTest.swift; path = model/BMSChannelDataParserTest.swift; sourceTree = "<group>"; };
 		710217911EBF3330002C73FB /* BMSControlFlowParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSControlFlowParserTest.swift; path = model/BMSControlFlowParserTest.swift; sourceTree = "<group>"; };
 		710655DA1DF26AC3003A1169 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
 		712790181E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDInputConverterForInGame.swift; sourceTree = "<group>"; };
@@ -159,6 +162,7 @@
 		71C273E71EB9D1490096A19D /* String+split.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+split.swift"; sourceTree = "<group>"; };
 		71C273E91EB9D2840096A19D /* String+splitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+splitTest.swift"; path = "extension/String+splitTest.swift"; sourceTree = "<group>"; };
 		71C273EC1EBAD8D30096A19D /* BMSControlFlowParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSControlFlowParser.swift; path = model/parser/BMSControlFlowParser.swift; sourceTree = "<group>"; };
+		71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSChannelDataParser.swift; path = model/parser/BMSChannelDataParser.swift; sourceTree = "<group>"; };
 		71C273F21EBAF79D0096A19D /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugJudgeScene.swift; sourceTree = "<group>"; };
 		71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugInputKeysScene.swift; sourceTree = "<group>"; };
@@ -235,6 +239,7 @@
 		7102178F1EBF3324002C73FB /* model */ = {
 			isa = PBXGroup;
 			children = (
+				710217901EBF3330002C73FB /* BMSChannelDataParserTest.swift */,
 				710217911EBF3330002C73FB /* BMSControlFlowParserTest.swift */,
 			);
 			name = model;
@@ -412,6 +417,7 @@
 			isa = PBXGroup;
 			children = (
 				71C273EC1EBAD8D30096A19D /* BMSControlFlowParser.swift */,
+				71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */,
 			);
 			name = parser;
 			sourceTree = "<group>";
@@ -824,6 +830,7 @@
 				71CC198D1E1B2A0700391CAA /* Judge.swift in Sources */,
 				712790251E34C18E00F0C5FE /* DIContainer.swift in Sources */,
 				712790321E34DF8200F0C5FE /* StartController.swift in Sources */,
+				71C273F11EBADB550096A19D /* BMSChannelDataParser.swift in Sources */,
 				7145897A1EBF52FF00B7DD09 /* BMSBarData.swift in Sources */,
 				71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */,
 				71E6B78F1E16ABC600475846 /* SKView.swift in Sources */,
@@ -839,6 +846,7 @@
 				E54295761EB7301D00AAE250 /* AnyOperatorTest.swift in Sources */,
 				E54295721EB70A8100AAE250 /* Array+safeTest.swift in Sources */,
 				71E6B78C1E16970F00475846 /* CGPointOperatorTest.swift in Sources */,
+				710217931EBF3330002C73FB /* BMSChannelDataParserTest.swift in Sources */,
 				710217941EBF3330002C73FB /* BMSControlFlowParserTest.swift in Sources */,
 				717A12281E0FC740006A4B4B /* CGSizeOperatorTest.swift in Sources */,
 				E54295701EB7000800AAE250 /* String+trimTest.swift in Sources */,
