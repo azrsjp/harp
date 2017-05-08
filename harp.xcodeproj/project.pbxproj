@@ -38,6 +38,7 @@
 		7102178C1EBEEBC7002C73FB /* SharedSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7102178B1EBEEBC7002C73FB /* SharedSound.swift */; };
 		710217931EBF3330002C73FB /* BMSChannelDataParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710217901EBF3330002C73FB /* BMSChannelDataParserTest.swift */; };
 		710217941EBF3330002C73FB /* BMSControlFlowParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710217911EBF3330002C73FB /* BMSControlFlowParserTest.swift */; };
+		710217951EBF3330002C73FB /* BMSHeaderParserTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710217921EBF3330002C73FB /* BMSHeaderParserTest.swift */; };
 		710655DB1DF26AC3003A1169 /* CGSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 710655DA1DF26AC3003A1169 /* CGSize.swift */; };
 		712790191E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790181E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift */; };
 		712790251E34C18E00F0C5FE /* DIContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790241E34C18E00F0C5FE /* DIContainer.swift */; };
@@ -73,6 +74,7 @@
 		71C273E81EB9D1490096A19D /* String+split.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273E71EB9D1490096A19D /* String+split.swift */; };
 		71C273EA1EB9D2840096A19D /* String+splitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273E91EB9D2840096A19D /* String+splitTest.swift */; };
 		71C273ED1EBAD8D30096A19D /* BMSControlFlowParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273EC1EBAD8D30096A19D /* BMSControlFlowParser.swift */; };
+		71C273EF1EBADAD90096A19D /* BMSHeaderParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273EE1EBADAD90096A19D /* BMSHeaderParser.swift */; };
 		71C273F11EBADB550096A19D /* BMSChannelDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */; };
 		71C273F31EBAF79D0096A19D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273F21EBAF79D0096A19D /* Math.swift */; };
 		71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */; };
@@ -123,6 +125,7 @@
 		7102178B1EBEEBC7002C73FB /* SharedSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedSound.swift; path = sound/SharedSound.swift; sourceTree = "<group>"; };
 		710217901EBF3330002C73FB /* BMSChannelDataParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSChannelDataParserTest.swift; path = model/BMSChannelDataParserTest.swift; sourceTree = "<group>"; };
 		710217911EBF3330002C73FB /* BMSControlFlowParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSControlFlowParserTest.swift; path = model/BMSControlFlowParserTest.swift; sourceTree = "<group>"; };
+		710217921EBF3330002C73FB /* BMSHeaderParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSHeaderParserTest.swift; path = model/BMSHeaderParserTest.swift; sourceTree = "<group>"; };
 		710655DA1DF26AC3003A1169 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
 		712790181E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDInputConverterForInGame.swift; sourceTree = "<group>"; };
 		712790241E34C18E00F0C5FE /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
@@ -162,6 +165,7 @@
 		71C273E71EB9D1490096A19D /* String+split.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+split.swift"; sourceTree = "<group>"; };
 		71C273E91EB9D2840096A19D /* String+splitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+splitTest.swift"; path = "extension/String+splitTest.swift"; sourceTree = "<group>"; };
 		71C273EC1EBAD8D30096A19D /* BMSControlFlowParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSControlFlowParser.swift; path = model/parser/BMSControlFlowParser.swift; sourceTree = "<group>"; };
+		71C273EE1EBADAD90096A19D /* BMSHeaderParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSHeaderParser.swift; path = model/parser/BMSHeaderParser.swift; sourceTree = "<group>"; };
 		71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSChannelDataParser.swift; path = model/parser/BMSChannelDataParser.swift; sourceTree = "<group>"; };
 		71C273F21EBAF79D0096A19D /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugJudgeScene.swift; sourceTree = "<group>"; };
@@ -241,6 +245,7 @@
 			children = (
 				710217901EBF3330002C73FB /* BMSChannelDataParserTest.swift */,
 				710217911EBF3330002C73FB /* BMSControlFlowParserTest.swift */,
+				710217921EBF3330002C73FB /* BMSHeaderParserTest.swift */,
 			);
 			name = model;
 			sourceTree = "<group>";
@@ -417,6 +422,7 @@
 			isa = PBXGroup;
 			children = (
 				71C273EC1EBAD8D30096A19D /* BMSControlFlowParser.swift */,
+				71C273EE1EBADAD90096A19D /* BMSHeaderParser.swift */,
 				71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */,
 			);
 			name = parser;
@@ -786,6 +792,7 @@
 				71E6B7911E16AD1300475846 /* SKSpriteNode.swift in Sources */,
 				71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */,
 				7161837D1EC0B66F00D7B374 /* BMSNoteTraitData.swift in Sources */,
+				71C273EF1EBADAD90096A19D /* BMSHeaderParser.swift in Sources */,
 				718A5CFD1D4531F400B88A76 /* Common.swift in Sources */,
 				71CC19971E1BCF0B00391CAA /* Images.swift in Sources */,
 				71C273F31EBAF79D0096A19D /* Math.swift in Sources */,
@@ -843,6 +850,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				71C273EA1EB9D2840096A19D /* String+splitTest.swift in Sources */,
+				710217951EBF3330002C73FB /* BMSHeaderParserTest.swift in Sources */,
 				E54295761EB7301D00AAE250 /* AnyOperatorTest.swift in Sources */,
 				E54295721EB70A8100AAE250 /* Array+safeTest.swift in Sources */,
 				71E6B78C1E16970F00475846 /* CGPointOperatorTest.swift in Sources */,
