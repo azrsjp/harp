@@ -1,5 +1,6 @@
 import Foundation
 import OpenAL
+import RxSwift
 
 fileprivate let alTrue: ALboolean = Int8(AL_TRUE)
 fileprivate let alFalse: ALboolean = Int8(AL_FALSE)
@@ -35,15 +36,16 @@ final class SoundPlayerFactory {
 
   // MARK: - internal
 
-  func makePlayer<T>(keyAndFileFullPath: [T: String],
-                     onLoaded: @escaping ((SoundPlayer<T>, NSError?) -> Void)) {
-    DispatchQueue.global(qos: .background).async {
+  func makePlayer<T>(keyAndFileFullPath: [T: String]) -> Observable<SoundPlayer<T>> {
+
+    return Observable.create { observer in
+
       var keyAndSources = [T: ConcreteSoundSource]()
-      var errorToRead = [String]()
+      var errorToRead = [T: String]()
 
       keyAndFileFullPath.forEach {
         guard let source = ConcreteSoundSource(fullFilePath: $1) else {
-          errorToRead.append($1)
+          errorToRead[$0] = $1
           return
         }
 
@@ -52,15 +54,18 @@ final class SoundPlayerFactory {
 
       let player = SoundPlayer(keyAndSources: keyAndSources)
 
-      var error: NSError?
+      observer.onNext(player)
+
       if errorToRead.count > 0 {
-        error = NSError(domain: "harp.SoundPlayerFactory", code: 0,
-                        userInfo: [NSLocalizedDescriptionKey: "Failed to load \(errorToRead.count) files. \(errorToRead)"])
+        let error = NSError(domain: "harp.SoundPlayerFactory", code: 0,
+                            userInfo: [NSLocalizedDescriptionKey: "Failed to load \(errorToRead.count) files. \(errorToRead)"])
+        observer.onError(error)
       }
 
-      onLoaded(player, error)
+      return Disposables.create()
     }
   }
+
 }
 
 // MARK: - fileprivate
