@@ -102,6 +102,7 @@
 		E54295761EB7301D00AAE250 /* AnyOperatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54295751EB7301D00AAE250 /* AnyOperatorTest.swift */; };
 		E54B71721EBB604400266777 /* BMSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B71711EBB604400266777 /* BMSParser.swift */; };
 		E55784B51EC192D60039EDD9 /* Dictionary+mapValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */; };
+		E55784B81EC19BCD0039EDD9 /* BMSTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55784B71EC19BCD0039EDD9 /* BMSTick.swift */; };
 		E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38C1EB1BF5100A672AB /* String+preg.swift */; };
 		E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38F1EB1BF6800A672AB /* String+pregTest.swift */; };
 		E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F3951EB1CA6C00A672AB /* BMSData.swift */; };
@@ -198,6 +199,7 @@
 		E54295751EB7301D00AAE250 /* AnyOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyOperatorTest.swift; sourceTree = "<group>"; };
 		E54B71711EBB604400266777 /* BMSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSParser.swift; path = model/parser/BMSParser.swift; sourceTree = "<group>"; };
 		E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+mapValue.swift"; sourceTree = "<group>"; };
+		E55784B71EC19BCD0039EDD9 /* BMSTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSTick.swift; path = model/bms/BMSTick.swift; sourceTree = "<group>"; };
 		E592F38C1EB1BF5100A672AB /* String+preg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+preg.swift"; sourceTree = "<group>"; };
 		E592F38F1EB1BF6800A672AB /* String+pregTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+pregTest.swift"; path = "extension/String+pregTest.swift"; sourceTree = "<group>"; };
 		E592F3951EB1CA6C00A672AB /* BMSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSData.swift; path = data/BMSData.swift; sourceTree = "<group>"; };
@@ -506,6 +508,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E55784B61EC19BBA0039EDD9 /* BMS */ = {
+			isa = PBXGroup;
+			children = (
+				E55784B71EC19BCD0039EDD9 /* BMSTick.swift */,
+			);
+			name = BMS;
+			sourceTree = "<group>";
+		};
 		E592F38E1EB1BF5700A672AB /* extension */ = {
 			isa = PBXGroup;
 			children = (
@@ -520,6 +530,7 @@
 		E592F3911EB1BFB300A672AB /* model */ = {
 			isa = PBXGroup;
 			children = (
+				E55784B61EC19BBA0039EDD9 /* BMS */,
 				71C273EB1EBAD89F0096A19D /* parser */,
 			);
 			name = model;
@@ -844,6 +855,7 @@
 				718C06D91D241B6E002F6E68 /* AppDelegate.swift in Sources */,
 				71C273E51EB7A0760096A19D /* DebugUtil.swift in Sources */,
 				710217861EBDBE9F002C73FB /* SoundPlayer.swift in Sources */,
+				E55784B81EC19BCD0039EDD9 /* BMSTick.swift in Sources */,
 				71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */,
 				7102178A1EBE037E002C73FB /* SoundSource.swift in Sources */,
 				71CC198D1E1B2A0700391CAA /* Judge.swift in Sources */,
