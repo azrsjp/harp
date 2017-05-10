@@ -101,6 +101,7 @@
 		E54295741EB72BFD00AAE250 /* Any.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54295731EB72BFD00AAE250 /* Any.swift */; };
 		E54295761EB7301D00AAE250 /* AnyOperatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54295751EB7301D00AAE250 /* AnyOperatorTest.swift */; };
 		E54B71721EBB604400266777 /* BMSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B71711EBB604400266777 /* BMSParser.swift */; };
+		E55784B51EC192D60039EDD9 /* Dictionary+mapValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */; };
 		E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38C1EB1BF5100A672AB /* String+preg.swift */; };
 		E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38F1EB1BF6800A672AB /* String+pregTest.swift */; };
 		E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F3951EB1CA6C00A672AB /* BMSData.swift */; };
@@ -196,6 +197,7 @@
 		E54295731EB72BFD00AAE250 /* Any.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Any.swift; sourceTree = "<group>"; };
 		E54295751EB7301D00AAE250 /* AnyOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyOperatorTest.swift; sourceTree = "<group>"; };
 		E54B71711EBB604400266777 /* BMSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSParser.swift; path = model/parser/BMSParser.swift; sourceTree = "<group>"; };
+		E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+mapValue.swift"; sourceTree = "<group>"; };
 		E592F38C1EB1BF5100A672AB /* String+preg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+preg.swift"; sourceTree = "<group>"; };
 		E592F38F1EB1BF6800A672AB /* String+pregTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+pregTest.swift"; path = "extension/String+pregTest.swift"; sourceTree = "<group>"; };
 		E592F3951EB1CA6C00A672AB /* BMSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSData.swift; path = data/BMSData.swift; sourceTree = "<group>"; };
@@ -472,6 +474,7 @@
 				71BFD6FB1EB655E100658965 /* Array+safe.swift */,
 				E542956D1EB6FF9700AAE250 /* String+trim.swift */,
 				71C273E71EB9D1490096A19D /* String+split.swift */,
+				E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -820,6 +823,7 @@
 				71CC199B1E1BDF6B00391CAA /* Logger.swift in Sources */,
 				71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */,
 				7145897E1EBF537F00B7DD09 /* NoteType.swift in Sources */,
+				E55784B51EC192D60039EDD9 /* Dictionary+mapValue.swift in Sources */,
 				710655DB1DF26AC3003A1169 /* CGSize.swift in Sources */,
 				7145897C1EBF532B00B7DD09 /* LaneType.swift in Sources */,
 				71E6B7891E1695E600475846 /* CGPoint.swift in Sources */,
