@@ -49,7 +49,6 @@
 		712790301E34DF7700F0C5FE /* StartModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7127902F1E34DF7700F0C5FE /* StartModel.swift */; };
 		712790321E34DF8200F0C5FE /* StartController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790311E34DF8200F0C5FE /* StartController.swift */; };
 		712790341E34E47C00F0C5FE /* DebugScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790331E34E47C00F0C5FE /* DebugScene.swift */; };
-		714589741EBF37D200B7DD09 /* BMSBarDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589731EBF37D200B7DD09 /* BMSBarDataFactory.swift */; };
 		714589761EBF52B800B7DD09 /* BMSHeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589751EBF52B800B7DD09 /* BMSHeaderData.swift */; };
 		714589781EBF52D700B7DD09 /* BMSChannelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589771EBF52D700B7DD09 /* BMSChannelData.swift */; };
 		7145897A1EBF52FF00B7DD09 /* BMSBarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589791EBF52FF00B7DD09 /* BMSBarData.swift */; };
@@ -86,6 +85,7 @@
 		71CC19931E1B449B00391CAA /* InputEventNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19921E1B449B00391CAA /* InputEventNotifier.swift */; };
 		71CC19971E1BCF0B00391CAA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19961E1BCF0B00391CAA /* Images.swift */; };
 		71CC199B1E1BDF6B00391CAA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC199A1E1BDF6B00391CAA /* Logger.swift */; };
+		71D276721EC368DE0064D435 /* BMSBarDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D276711EC368DE0064D435 /* BMSBarDataFactory.swift */; };
 		71E6B7891E1695E600475846 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B7881E1695E600475846 /* CGPoint.swift */; };
 		71E6B78C1E16970F00475846 /* CGPointOperatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B78A1E16969100475846 /* CGPointOperatorTest.swift */; };
 		71E6B78F1E16ABC600475846 /* SKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B78E1E16ABC600475846 /* SKView.swift */; };
@@ -122,14 +122,14 @@
 /* Begin PBXFileReference section */
 		1BC48912B861C3D307876491 /* Pods-harp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harp.release.xcconfig"; path = "Pods/Target Support Files/Pods-harp/Pods-harp.release.xcconfig"; sourceTree = "<group>"; };
 		1F92FA1D5E2CCC3D4EB7FEDC /* Pods-harpTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harpTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-harpTests/Pods-harpTests.release.xcconfig"; sourceTree = "<group>"; };
-		710217771EBCE35A002C73FB /* SoundPlayerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundPlayerFactory.swift; path = sound/SoundPlayerFactory.swift; sourceTree = "<group>"; };
+		710217771EBCE35A002C73FB /* SoundPlayerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayerFactory.swift; sourceTree = "<group>"; };
 		7102177E1EBD83CE002C73FB /* Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Bridging-Header.h"; sourceTree = "<group>"; };
-		710217851EBDBE9F002C73FB /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundPlayer.swift; path = sound/SoundPlayer.swift; sourceTree = "<group>"; };
-		710217891EBE037D002C73FB /* SoundSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SoundSource.swift; path = sound/SoundSource.swift; sourceTree = "<group>"; };
-		7102178B1EBEEBC7002C73FB /* SharedSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SharedSound.swift; path = sound/SharedSound.swift; sourceTree = "<group>"; };
-		710217901EBF3330002C73FB /* BMSChannelDataParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSChannelDataParserTest.swift; path = model/BMSChannelDataParserTest.swift; sourceTree = "<group>"; };
-		710217911EBF3330002C73FB /* BMSControlFlowParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSControlFlowParserTest.swift; path = model/BMSControlFlowParserTest.swift; sourceTree = "<group>"; };
-		710217921EBF3330002C73FB /* BMSHeaderParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSHeaderParserTest.swift; path = model/BMSHeaderParserTest.swift; sourceTree = "<group>"; };
+		710217851EBDBE9F002C73FB /* SoundPlayer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundPlayer.swift; sourceTree = "<group>"; };
+		710217891EBE037D002C73FB /* SoundSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundSource.swift; sourceTree = "<group>"; };
+		7102178B1EBEEBC7002C73FB /* SharedSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharedSound.swift; sourceTree = "<group>"; };
+		710217901EBF3330002C73FB /* BMSChannelDataParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSChannelDataParserTest.swift; sourceTree = "<group>"; };
+		710217911EBF3330002C73FB /* BMSControlFlowParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSControlFlowParserTest.swift; sourceTree = "<group>"; };
+		710217921EBF3330002C73FB /* BMSHeaderParserTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSHeaderParserTest.swift; sourceTree = "<group>"; };
 		710655DA1DF26AC3003A1169 /* CGSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSize.swift; sourceTree = "<group>"; };
 		712790181E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDInputConverterForInGame.swift; sourceTree = "<group>"; };
 		712790241E34C18E00F0C5FE /* DIContainer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIContainer.swift; sourceTree = "<group>"; };
@@ -140,15 +140,14 @@
 		7127902F1E34DF7700F0C5FE /* StartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartModel.swift; sourceTree = "<group>"; };
 		712790311E34DF8200F0C5FE /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
 		712790331E34E47C00F0C5FE /* DebugScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugScene.swift; sourceTree = "<group>"; };
-		714589731EBF37D200B7DD09 /* BMSBarDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSBarDataFactory.swift; path = model/bms/BMSBarDataFactory.swift; sourceTree = "<group>"; };
-		714589751EBF52B800B7DD09 /* BMSHeaderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSHeaderData.swift; path = data/BMSHeaderData.swift; sourceTree = "<group>"; };
-		714589771EBF52D700B7DD09 /* BMSChannelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSChannelData.swift; path = data/BMSChannelData.swift; sourceTree = "<group>"; };
-		714589791EBF52FF00B7DD09 /* BMSBarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSBarData.swift; path = data/BMSBarData.swift; sourceTree = "<group>"; };
+		714589751EBF52B800B7DD09 /* BMSHeaderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSHeaderData.swift; sourceTree = "<group>"; };
+		714589771EBF52D700B7DD09 /* BMSChannelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSChannelData.swift; sourceTree = "<group>"; };
+		714589791EBF52FF00B7DD09 /* BMSBarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSBarData.swift; sourceTree = "<group>"; };
 		7145897B1EBF532B00B7DD09 /* LaneType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaneType.swift; sourceTree = "<group>"; };
 		7145897D1EBF537F00B7DD09 /* NoteType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteType.swift; sourceTree = "<group>"; };
 		7145897F1EBF53C000B7DD09 /* SideType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideType.swift; sourceTree = "<group>"; };
 		716140281E1FE54600034402 /* HIDInputData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDInputData.swift; sourceTree = "<group>"; };
-		7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSNoteTraitData.swift; path = data/BMSNoteTraitData.swift; sourceTree = "<group>"; };
+		7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSNoteTraitData.swift; sourceTree = "<group>"; };
 		7161AF0C1E0FBEE4002286CD /* CGSizeOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeOperatorTest.swift; sourceTree = "<group>"; };
 		7166A0061E2A7D3A00D1588C /* Bridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMenuScene.swift; sourceTree = "<group>"; };
@@ -166,12 +165,12 @@
 		71A2A1E51E1ABEA8000C885A /* BasicScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicScene.swift; sourceTree = "<group>"; };
 		71BFD6F91EB638DA00658965 /* String+ReadFile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+ReadFile.swift"; sourceTree = "<group>"; };
 		71BFD6FB1EB655E100658965 /* Array+safe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+safe.swift"; sourceTree = "<group>"; };
-		71C273E41EB7A0760096A19D /* DebugUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugUtil.swift; path = core/DebugUtil.swift; sourceTree = "<group>"; };
+		71C273E41EB7A0760096A19D /* DebugUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugUtil.swift; sourceTree = "<group>"; };
 		71C273E71EB9D1490096A19D /* String+split.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+split.swift"; sourceTree = "<group>"; };
-		71C273E91EB9D2840096A19D /* String+splitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+splitTest.swift"; path = "extension/String+splitTest.swift"; sourceTree = "<group>"; };
-		71C273EC1EBAD8D30096A19D /* BMSControlFlowParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSControlFlowParser.swift; path = model/parser/BMSControlFlowParser.swift; sourceTree = "<group>"; };
-		71C273EE1EBADAD90096A19D /* BMSHeaderParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSHeaderParser.swift; path = model/parser/BMSHeaderParser.swift; sourceTree = "<group>"; };
-		71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSChannelDataParser.swift; path = model/parser/BMSChannelDataParser.swift; sourceTree = "<group>"; };
+		71C273E91EB9D2840096A19D /* String+splitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+splitTest.swift"; sourceTree = "<group>"; };
+		71C273EC1EBAD8D30096A19D /* BMSControlFlowParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSControlFlowParser.swift; sourceTree = "<group>"; };
+		71C273EE1EBADAD90096A19D /* BMSHeaderParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSHeaderParser.swift; sourceTree = "<group>"; };
+		71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSChannelDataParser.swift; sourceTree = "<group>"; };
 		71C273F21EBAF79D0096A19D /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugJudgeScene.swift; sourceTree = "<group>"; };
 		71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugInputKeysScene.swift; sourceTree = "<group>"; };
@@ -181,6 +180,7 @@
 		71CC19921E1B449B00391CAA /* InputEventNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputEventNotifier.swift; sourceTree = "<group>"; };
 		71CC19961E1BCF0B00391CAA /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		71CC199A1E1BDF6B00391CAA /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		71D276711EC368DE0064D435 /* BMSBarDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSBarDataFactory.swift; sourceTree = "<group>"; };
 		71E6B7881E1695E600475846 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		71E6B78A1E16969100475846 /* CGPointOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointOperatorTest.swift; sourceTree = "<group>"; };
 		71E6B78E1E16ABC600475846 /* SKView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKView.swift; sourceTree = "<group>"; };
@@ -193,16 +193,16 @@
 		8314DF37622C99C638799F2F /* Pods_harp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_harp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		84B598A602A9F503F31E01D4 /* Pods_harpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_harpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E542956D1EB6FF9700AAE250 /* String+trim.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+trim.swift"; sourceTree = "<group>"; };
-		E542956F1EB7000800AAE250 /* String+trimTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+trimTest.swift"; path = "extension/String+trimTest.swift"; sourceTree = "<group>"; };
-		E54295711EB70A8100AAE250 /* Array+safeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Array+safeTest.swift"; path = "extension/Array+safeTest.swift"; sourceTree = "<group>"; };
+		E542956F1EB7000800AAE250 /* String+trimTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+trimTest.swift"; sourceTree = "<group>"; };
+		E54295711EB70A8100AAE250 /* Array+safeTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+safeTest.swift"; sourceTree = "<group>"; };
 		E54295731EB72BFD00AAE250 /* Any.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Any.swift; sourceTree = "<group>"; };
 		E54295751EB7301D00AAE250 /* AnyOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyOperatorTest.swift; sourceTree = "<group>"; };
-		E54B71711EBB604400266777 /* BMSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSParser.swift; path = model/parser/BMSParser.swift; sourceTree = "<group>"; };
+		E54B71711EBB604400266777 /* BMSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSParser.swift; sourceTree = "<group>"; };
 		E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+mapValue.swift"; sourceTree = "<group>"; };
-		E55784B71EC19BCD0039EDD9 /* BMSTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSTick.swift; path = model/bms/BMSTick.swift; sourceTree = "<group>"; };
+		E55784B71EC19BCD0039EDD9 /* BMSTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSTick.swift; sourceTree = "<group>"; };
 		E592F38C1EB1BF5100A672AB /* String+preg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+preg.swift"; sourceTree = "<group>"; };
-		E592F38F1EB1BF6800A672AB /* String+pregTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "String+pregTest.swift"; path = "extension/String+pregTest.swift"; sourceTree = "<group>"; };
-		E592F3951EB1CA6C00A672AB /* BMSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSData.swift; path = data/BMSData.swift; sourceTree = "<group>"; };
+		E592F38F1EB1BF6800A672AB /* String+pregTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+pregTest.swift"; sourceTree = "<group>"; };
+		E592F3951EB1CA6C00A672AB /* BMSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSData.swift; sourceTree = "<group>"; };
 		F21D0D7C81FFDE80F912DDA1 /* Pods-harpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harpTests/Pods-harpTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -245,7 +245,7 @@
 				710217891EBE037D002C73FB /* SoundSource.swift */,
 				7102178B1EBEEBC7002C73FB /* SharedSound.swift */,
 			);
-			name = sound;
+			path = sound;
 			sourceTree = "<group>";
 		};
 		7102178F1EBF3324002C73FB /* model */ = {
@@ -255,7 +255,7 @@
 				710217911EBF3330002C73FB /* BMSControlFlowParserTest.swift */,
 				710217921EBF3330002C73FB /* BMSHeaderParserTest.swift */,
 			);
-			name = model;
+			path = model;
 			sourceTree = "<group>";
 		};
 		710655DC1DF26ADD003A1169 /* operator */ = {
@@ -290,8 +290,8 @@
 				E592F3941EB1CA5300A672AB /* data */,
 				7110D2431D45162800A11D76 /* ui */,
 				718C06D81D241B6E002F6E68 /* AppDelegate.swift */,
-				718C06E01D241B6E002F6E68 /* MainMenu.xib */,
 				7102177E1EBD83CE002C73FB /* Bridging-Header.h */,
+				718C06E01D241B6E002F6E68 /* MainMenu.xib */,
 			);
 			path = src;
 			sourceTree = "<group>";
@@ -423,7 +423,7 @@
 			children = (
 				71C273E41EB7A0760096A19D /* DebugUtil.swift */,
 			);
-			name = core;
+			path = core;
 			sourceTree = "<group>";
 		};
 		71C273EB1EBAD89F0096A19D /* parser */ = {
@@ -433,9 +433,9 @@
 				71C273EC1EBAD8D30096A19D /* BMSControlFlowParser.swift */,
 				71C273EE1EBADAD90096A19D /* BMSHeaderParser.swift */,
 				71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */,
-				714589731EBF37D200B7DD09 /* BMSBarDataFactory.swift */,
+				71D276711EC368DE0064D435 /* BMSBarDataFactory.swift */,
 			);
-			name = parser;
+			path = parser;
 			sourceTree = "<group>";
 		};
 		71C9DB9F1D45344C00C7EEF0 /* core */ = {
@@ -448,9 +448,9 @@
 				710655DC1DF26ADD003A1169 /* operator */,
 				71CC199A1E1BDF6B00391CAA /* Logger.swift */,
 				7166A0061E2A7D3A00D1588C /* Bridge.swift */,
+				71C273F21EBAF79D0096A19D /* Math.swift */,
 				712790241E34C18E00F0C5FE /* DIContainer.swift */,
 				71EA2C0C1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift */,
-				71C273F21EBAF79D0096A19D /* Math.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -513,7 +513,7 @@
 			children = (
 				E55784B71EC19BCD0039EDD9 /* BMSTick.swift */,
 			);
-			name = BMS;
+			path = BMS;
 			sourceTree = "<group>";
 		};
 		E592F38E1EB1BF5700A672AB /* extension */ = {
@@ -524,7 +524,7 @@
 				71C273E91EB9D2840096A19D /* String+splitTest.swift */,
 				E54295711EB70A8100AAE250 /* Array+safeTest.swift */,
 			);
-			name = extension;
+			path = extension;
 			sourceTree = "<group>";
 		};
 		E592F3911EB1BFB300A672AB /* model */ = {
@@ -533,7 +533,7 @@
 				E55784B61EC19BBA0039EDD9 /* BMS */,
 				71C273EB1EBAD89F0096A19D /* parser */,
 			);
-			name = model;
+			path = model;
 			sourceTree = "<group>";
 		};
 		E592F3941EB1CA5300A672AB /* data */ = {
@@ -545,7 +545,7 @@
 				714589791EBF52FF00B7DD09 /* BMSBarData.swift */,
 				7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */,
 			);
-			name = data;
+			path = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -828,7 +828,6 @@
 				E542956E1EB6FF9700AAE250 /* String+trim.swift in Sources */,
 				71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */,
 				E54B71721EBB604400266777 /* BMSParser.swift in Sources */,
-				714589741EBF37D200B7DD09 /* BMSBarDataFactory.swift in Sources */,
 				E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */,
 				71C273ED1EBAD8D30096A19D /* BMSControlFlowParser.swift in Sources */,
 				71CC199B1E1BDF6B00391CAA /* Logger.swift in Sources */,
@@ -842,6 +841,7 @@
 				7127902A1E34DDA600F0C5FE /* View.swift in Sources */,
 				7166A0071E2A7D3A00D1588C /* Bridge.swift in Sources */,
 				71CC19931E1B449B00391CAA /* InputEventNotifier.swift in Sources */,
+				71D276721EC368DE0064D435 /* BMSBarDataFactory.swift in Sources */,
 				714589801EBF53C000B7DD09 /* SideType.swift in Sources */,
 				71EA2C0D1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift in Sources */,
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
