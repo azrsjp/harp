@@ -24,17 +24,21 @@ struct BMSBarData {
   var stopPlay = [BMSBarEventData]()
 }
 
-struct BMSBarEventData {
+protocol BMSTimeSeries {
+  var tick: Int { get set }
+}
+
+struct BMSBarEventData: BMSTimeSeries {
   var tick: Int = 0
   var key: Int = 0
 }
 
-struct BMSBarBPMEventData {
+struct BMSBarBPMEventData: BMSTimeSeries {
   var tick: Int = 0
   var value: Double = 0
 }
 
-struct BMSBarNoteData {
+struct BMSBarNoteData: BMSTimeSeries {
   var tick: Int = 0
   var key: Int = 0
   var trait: BMSNoteTraitData
