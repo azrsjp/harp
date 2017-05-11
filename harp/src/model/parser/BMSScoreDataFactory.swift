@@ -1,92 +1,79 @@
 import Foundation
 
-final class BMSBarDataFactory {
+final class BMSScoreDataFactory {
 
   // MARK: - internal
 
   static func makeFrom(headerData: BMSHeaderData,
-                       channelData: [BMSChannelData]) -> [BMSBarData] {
+                       channelData: [BMSChannelData]) -> BMSScoreData {
 
     let barLength = channelData.count
-    var barData = [BMSBarData](repeating: BMSBarData(), count: barLength)
-
-    var currentTick = 0
+    var scoreData = BMSScoreData()
 
     for bar in 0..<barLength {
-      let barTickCount
-        = Int(Double(Config.BMS.baseBarTick) * channelData[bar].barScale)
-
-      barData[bar].barScale ?= channelData[bar].barScale
-      barData[bar].startTick = currentTick
-      barData[bar].barTickCount = barTickCount
 
       channelData[bar].playWav.forEach {
-        storeEventData(to: &(barData[bar].playWav),
-                       baseTick: currentTick,
-                       barTickCount: barTickCount,
+        storeEventData(to: &(scoreData.playWav),
+                       baseTick: channelData[bar].startTick,
+                       barTickCount: channelData[bar].barTickCount,
                        data: $0,
                        maker: { BMSBarEventData(tick: $0, key: $1) })
       }
 
-      storeChangeBpmData(to: &(barData[bar].changeExBpm),
-                         baseTick: currentTick,
-                         barTickCount: barTickCount,
+      storeChangeBpmData(to: &(scoreData.changeExBpm),
+                         baseTick: channelData[bar].startTick,
+                         barTickCount: channelData[bar].barTickCount,
                          data: channelData[bar].changeBpm)
 
-      storeEventData(to: &(barData[bar].changeBaseLayer),
-                     baseTick: currentTick,
-                     barTickCount: barTickCount,
+      storeEventData(to: &(scoreData.changeBaseLayer),
+                     baseTick: channelData[bar].startTick,
+                     barTickCount: channelData[bar].barTickCount,
                      data: channelData[bar].changeBaseLayer,
                      maker: { BMSBarEventData(tick: $0, key: $1) })
 
-      storeEventData(to: &(barData[bar].changePoorLayer),
-                     baseTick: currentTick,
-                     barTickCount: barTickCount,
+      storeEventData(to: &(scoreData.changePoorLayer),
+                     baseTick: channelData[bar].startTick,
+                     barTickCount: channelData[bar].barTickCount,
                      data: channelData[bar].changePoorLayer,
                      maker: { BMSBarEventData(tick: $0, key: $1) })
 
-      storeChangeExBpmData(to: &(barData[bar].changeExBpm),
+      storeChangeExBpmData(to: &(scoreData.changeExBpm),
                            header: headerData,
-                           baseTick: currentTick,
-                           barTickCount: barTickCount,
+                           baseTick: channelData[bar].startTick,
+                           barTickCount: channelData[bar].barTickCount,
                            data: channelData[bar].changeExBpm)
 
-      storeEventData(to: &(barData[bar].stopPlay),
-                     baseTick: currentTick,
-                     barTickCount: barTickCount,
+      storeEventData(to: &(scoreData.stopPlay),
+                     baseTick: channelData[bar].startTick,
+                     barTickCount: channelData[bar].barTickCount,
                      data: channelData[bar].stopPlay,
                      maker: { BMSBarEventData(tick: $0, key: $1) })
 
       channelData[bar].notes.forEach { k, v in
-        storeEventData(to: &(barData[bar].notes),
-                       baseTick: currentTick,
-                       barTickCount: barTickCount,
+        storeEventData(to: &(scoreData.notes),
+                       baseTick: channelData[bar].startTick,
+                       barTickCount: channelData[bar].barTickCount,
                        data: v,
                        maker: { BMSBarNoteData(tick: $0, key: $1,
                                                trait: k) })
       }
-
-      // Means next startTick
-      currentTick += barTickCount
     }
 
-    sortBarDataOrderByTickAsc(&barData)
+    sortBarDataOrderByTickAsc(&scoreData)
 
-    return barData
+    return scoreData
   }
 
   // MARK: - private
 
-  static private func sortBarDataOrderByTickAsc(_ barData: inout [BMSBarData]) {
+  static private func sortBarDataOrderByTickAsc(_ scoreData: inout BMSScoreData) {
 
-    for (i, v) in barData.enumerated() {
-      barData[i].notes = v.notes.sorted { $0.0.tick < $0.1.tick }
-      barData[i].playWav = v.playWav.sorted { $0.0.tick < $0.1.tick }
-      barData[i].changeExBpm = v.changeExBpm.sorted { $0.0.tick < $0.1.tick }
-      barData[i].changeBaseLayer = v.changeBaseLayer.sorted { $0.0.tick < $0.1.tick }
-      barData[i].changePoorLayer = v.changePoorLayer.sorted { $0.0.tick < $0.1.tick }
-      barData[i].stopPlay = v.stopPlay.sorted { $0.0.tick < $0.1.tick }
-    }
+    scoreData.notes.sort { $0.0.tick < $0.1.tick }
+    scoreData.playWav.sort { $0.0.tick < $0.1.tick }
+    scoreData.changeExBpm.sort { $0.0.tick < $0.1.tick }
+    scoreData.changeBaseLayer.sort { $0.0.tick < $0.1.tick }
+    scoreData.changePoorLayer.sort { $0.0.tick < $0.1.tick }
+    scoreData.stopPlay.sort { $0.0.tick < $0.1.tick }
   }
 
   static private func storeChangeBpmData(to target: inout [BMSBarBPMEventData],

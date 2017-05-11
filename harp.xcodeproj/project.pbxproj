@@ -85,7 +85,7 @@
 		71CC19931E1B449B00391CAA /* InputEventNotifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19921E1B449B00391CAA /* InputEventNotifier.swift */; };
 		71CC19971E1BCF0B00391CAA /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19961E1BCF0B00391CAA /* Images.swift */; };
 		71CC199B1E1BDF6B00391CAA /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC199A1E1BDF6B00391CAA /* Logger.swift */; };
-		71D276721EC368DE0064D435 /* BMSBarDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D276711EC368DE0064D435 /* BMSBarDataFactory.swift */; };
+		71D276721EC368DE0064D435 /* BMSScoreDataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71D276711EC368DE0064D435 /* BMSScoreDataFactory.swift */; };
 		71E6B7891E1695E600475846 /* CGPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B7881E1695E600475846 /* CGPoint.swift */; };
 		71E6B78C1E16970F00475846 /* CGPointOperatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B78A1E16969100475846 /* CGPointOperatorTest.swift */; };
 		71E6B78F1E16ABC600475846 /* SKView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B78E1E16ABC600475846 /* SKView.swift */; };
@@ -180,7 +180,7 @@
 		71CC19921E1B449B00391CAA /* InputEventNotifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputEventNotifier.swift; sourceTree = "<group>"; };
 		71CC19961E1BCF0B00391CAA /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		71CC199A1E1BDF6B00391CAA /* Logger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
-		71D276711EC368DE0064D435 /* BMSBarDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSBarDataFactory.swift; sourceTree = "<group>"; };
+		71D276711EC368DE0064D435 /* BMSScoreDataFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSScoreDataFactory.swift; sourceTree = "<group>"; };
 		71E6B7881E1695E600475846 /* CGPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPoint.swift; sourceTree = "<group>"; };
 		71E6B78A1E16969100475846 /* CGPointOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGPointOperatorTest.swift; sourceTree = "<group>"; };
 		71E6B78E1E16ABC600475846 /* SKView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKView.swift; sourceTree = "<group>"; };
@@ -433,7 +433,7 @@
 				71C273EC1EBAD8D30096A19D /* BMSControlFlowParser.swift */,
 				71C273EE1EBADAD90096A19D /* BMSHeaderParser.swift */,
 				71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */,
-				71D276711EC368DE0064D435 /* BMSBarDataFactory.swift */,
+				71D276711EC368DE0064D435 /* BMSScoreDataFactory.swift */,
 			);
 			path = parser;
 			sourceTree = "<group>";
@@ -841,7 +841,7 @@
 				7127902A1E34DDA600F0C5FE /* View.swift in Sources */,
 				7166A0071E2A7D3A00D1588C /* Bridge.swift in Sources */,
 				71CC19931E1B449B00391CAA /* InputEventNotifier.swift in Sources */,
-				71D276721EC368DE0064D435 /* BMSBarDataFactory.swift in Sources */,
+				71D276721EC368DE0064D435 /* BMSScoreDataFactory.swift in Sources */,
 				714589801EBF53C000B7DD09 /* SideType.swift in Sources */,
 				71EA2C0D1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift in Sources */,
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,

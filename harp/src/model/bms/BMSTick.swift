@@ -41,34 +41,28 @@ final class BMSTick {
 
   private func calculateTimingFrom(_ data: BMSData) -> [BMSBpmChangeTimingData] {
 
+    let merged = mergeChangeBpmAndStopPlay(changeExBpm: data.score.changeExBpm,
+                                           stopPlay: data.score.stopPlay)
+    let sorted = merged.sorted { $0.0.tick < $0.1.tick }
+    
     var result = [BMSBpmChangeTimingData(elapsedAt: 0.0, tick: 0, bpm: data.header.bpm)]
-
-    data.bars
-      .filter { $0.changeExBpm.count > 0 || $0.stopPlay.count > 0 }
-      .forEach { barEvents in
-
-        let mergedAndSorted
-          = mergeChangeBpmAndStopPlay(changeExBpm: barEvents.changeExBpm,
-                                      stopPlay: barEvents.stopPlay)
-          .sorted { $0.0.tick < $0.1.tick }
-
-        mergedAndSorted.forEach {
-          if let changeBpm = $0 as? BMSBarBPMEventData {
-            let timingData = makeDataFrom(changeBpm: changeBpm,
-                                          previous: result.last!)
-            result.append(timingData)
-          }
-          if let stop = $0 as? BMSBarEventData {
-            guard let stopLength = data.header.stop[stop.key] else {
-              return
-            }
-
-            let timingDataArray = makeDataFrom(stopAtTick: stop.tick,
-                                               stopLength: stopLength,
-                                               previous: result.last!)
-            result.append(contentsOf: timingDataArray)
-          }
+    
+    sorted.forEach {
+      if let changeBpm = $0 as? BMSBarBPMEventData {
+        let timingData = makeDataFrom(changeBpm: changeBpm,
+                                      previous: result.last!)
+        result.append(timingData)
+      }
+      if let stop = $0 as? BMSBarEventData {
+        guard let stopLength = data.header.stop[stop.key] else {
+          return
         }
+
+        let timingDataArray = makeDataFrom(stopAtTick: stop.tick,
+                                           stopLength: stopLength,
+                                           previous: result.last!)
+        result.append(contentsOf: timingDataArray)
+      }
     }
 
     return result
