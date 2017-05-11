@@ -5,7 +5,7 @@ enum NoteType: Int {
   case invisible = 2
   case long = 3
   
-  // Note channel 11-59 will be note type
+  // Note channel 11-69 will be note type
   
   init?(channel: Int) {
     guard let side = SideType(channel: channel) else {
