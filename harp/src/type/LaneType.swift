@@ -12,6 +12,9 @@ enum LaneType: Int {
   case key6 = 8
   case key7 = 9
   
+  static let values: [LaneType]
+    = [.scratch, .key1, .key2, .key3, .key4, .key5, .key6, .key7]
+  
   // Note channel 11-69 will be lane type
   
   init?(channel: Int) {
