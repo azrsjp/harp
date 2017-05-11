@@ -59,6 +59,10 @@ final class BMSScoreDataFactory {
       }
     }
 
+    // Apply long notes(can specify long notes with 2 way)
+    applyChannelLongNoteData(score: &scoreData)
+    applyLnobjLongNoteData(score: &scoreData, lnobjMark: headerData.lnobj)
+
     sortBarDataOrderByTickAsc(&scoreData)
 
     return scoreData
@@ -161,5 +165,83 @@ final class BMSScoreDataFactory {
 
       target.append(maker(tick, key))
     }
+  }
+  
+  static private func applyChannelLongNoteData(score: inout BMSScoreData) {
+    score.notes.sort { $0.0.tick < $0.1.tick }
+    
+    var applied = [BMSBarNoteData]()
+    
+    LaneType.values.forEach { lane in
+
+      var inLongObjRange = false
+
+      score.notes
+        .filter { $0.trait.lane == lane }.forEach {
+
+        if $0.trait.type == .longStart {
+          // Open or close long notes
+          var longNote = $0
+          longNote.trait.type = inLongObjRange ? .longEnd : .longStart
+          applied.append(longNote)
+          
+          inLongObjRange = !inLongObjRange
+          return
+        }
+        
+        // Through notes in range of long notes
+        if !inLongObjRange {
+          applied.append($0)
+        }
+      }
+    }
+    
+    score.notes = applied.sorted { $0.0.tick < $0.1.tick }
+  }
+  
+  static private func applyLnobjLongNoteData(score: inout BMSScoreData, lnobjMark: Int?) {
+    guard let longEndMark = lnobjMark else {
+      return
+    }
+
+    score.notes.sort { $0.0.tick < $0.1.tick }
+    
+    var applied = [BMSBarNoteData]()
+    
+    LaneType.values.forEach { lane in
+      
+      var inLongObjRange = false
+
+      score.notes
+        .filter { $0.trait.lane == lane }
+        .sorted { $0.0.tick > $0.1.tick }.forEach {
+
+          // Time series is reversed to detect end mark first
+          if !inLongObjRange && $0.key == longEndMark {
+            var longEndNote = $0
+            longEndNote.trait.type = .longEnd
+            applied.append(longEndNote)
+            
+            inLongObjRange = true
+            return
+          }
+          
+          if inLongObjRange && $0.trait.type == .visible {
+            var longStartNote = $0
+            longStartNote.trait.type = .longStart
+            applied.append(longStartNote)
+
+            inLongObjRange = false
+            return
+          }
+
+          // Through notes in range of long notes
+          if !inLongObjRange {
+            applied.append($0)
+          }
+      }
+    }
+
+    score.notes = applied.sorted { $0.0.tick < $0.1.tick }
   }
 }
