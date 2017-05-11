@@ -39,7 +39,7 @@ final class BMSChannelDataParser {
     case 6: return addNoteFeaturedData(body, &(channelData[bar].changePoorLayer))
     case 8: return addNoteFeaturedData(body, &(channelData[bar].changeExBpm))
     case 9: return addNoteFeaturedData(body, &(channelData[bar].stopPlay))
-    case 11...59: return addNoteData(channel, body, &(channelData[bar].notes))
+    case 11...69: return addNoteData(channel, body, &(channelData[bar].notes))
     default: break
     }
 
