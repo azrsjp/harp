@@ -12,7 +12,7 @@ enum LaneType: Int {
   case key6 = 8
   case key7 = 9
   
-  // Note channel 11-59 will be lane type
+  // Note channel 11-69 will be lane type
   
   init?(channel: Int) {
     self.init(rawValue: channel % 10)
