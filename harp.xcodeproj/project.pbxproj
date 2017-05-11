@@ -51,7 +51,7 @@
 		712790341E34E47C00F0C5FE /* DebugScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712790331E34E47C00F0C5FE /* DebugScene.swift */; };
 		714589761EBF52B800B7DD09 /* BMSHeaderData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589751EBF52B800B7DD09 /* BMSHeaderData.swift */; };
 		714589781EBF52D700B7DD09 /* BMSChannelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589771EBF52D700B7DD09 /* BMSChannelData.swift */; };
-		7145897A1EBF52FF00B7DD09 /* BMSBarData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589791EBF52FF00B7DD09 /* BMSBarData.swift */; };
+		7145897A1EBF52FF00B7DD09 /* BMSScoreData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714589791EBF52FF00B7DD09 /* BMSScoreData.swift */; };
 		7145897C1EBF532B00B7DD09 /* LaneType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145897B1EBF532B00B7DD09 /* LaneType.swift */; };
 		7145897E1EBF537F00B7DD09 /* NoteType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145897D1EBF537F00B7DD09 /* NoteType.swift */; };
 		714589801EBF53C000B7DD09 /* SideType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7145897F1EBF53C000B7DD09 /* SideType.swift */; };
@@ -142,7 +142,7 @@
 		712790331E34E47C00F0C5FE /* DebugScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugScene.swift; sourceTree = "<group>"; };
 		714589751EBF52B800B7DD09 /* BMSHeaderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSHeaderData.swift; sourceTree = "<group>"; };
 		714589771EBF52D700B7DD09 /* BMSChannelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSChannelData.swift; sourceTree = "<group>"; };
-		714589791EBF52FF00B7DD09 /* BMSBarData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSBarData.swift; sourceTree = "<group>"; };
+		714589791EBF52FF00B7DD09 /* BMSScoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSScoreData.swift; sourceTree = "<group>"; };
 		7145897B1EBF532B00B7DD09 /* LaneType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaneType.swift; sourceTree = "<group>"; };
 		7145897D1EBF537F00B7DD09 /* NoteType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteType.swift; sourceTree = "<group>"; };
 		7145897F1EBF53C000B7DD09 /* SideType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideType.swift; sourceTree = "<group>"; };
@@ -542,7 +542,7 @@
 				E592F3951EB1CA6C00A672AB /* BMSData.swift */,
 				714589751EBF52B800B7DD09 /* BMSHeaderData.swift */,
 				714589771EBF52D700B7DD09 /* BMSChannelData.swift */,
-				714589791EBF52FF00B7DD09 /* BMSBarData.swift */,
+				714589791EBF52FF00B7DD09 /* BMSScoreData.swift */,
 				7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */,
 			);
 			path = data;
@@ -862,7 +862,7 @@
 				712790251E34C18E00F0C5FE /* DIContainer.swift in Sources */,
 				712790321E34DF8200F0C5FE /* StartController.swift in Sources */,
 				71C273F11EBADB550096A19D /* BMSChannelDataParser.swift in Sources */,
-				7145897A1EBF52FF00B7DD09 /* BMSBarData.swift in Sources */,
+				7145897A1EBF52FF00B7DD09 /* BMSScoreData.swift in Sources */,
 				71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */,
 				71E6B78F1E16ABC600475846 /* SKView.swift in Sources */,
 				7127902C1E34DDB200F0C5FE /* Controller.swift in Sources */,

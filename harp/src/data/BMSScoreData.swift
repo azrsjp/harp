@@ -1,10 +1,6 @@
 import Foundation
 
-struct BMSBarData {
-  var startTick: Int = 0
-  var barTickCount: Int = 0
-  var barScale: Double = 1.0
-
+struct BMSScoreData {
   // Refer to BMSHeaderData.wav[XX]
   var notes = [BMSBarNoteData]()
 
