@@ -49,8 +49,8 @@ final class BMSParser {
     let bmsData = BMSData()
     bmsData.header = headerParser.getParsedData()
     bmsData.channel = channelDataParser.getParsedData()
-    bmsData.bars = BMSBarDataFactory.makeFrom(headerData: bmsData.header,
-                                              channelData: bmsData.channel)
+    bmsData.score = BMSScoreDataFactory.makeFrom(headerData: bmsData.header,
+                                                 channelData: bmsData.channel)
 
     return bmsData
   }
