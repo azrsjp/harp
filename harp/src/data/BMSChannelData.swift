@@ -1,8 +1,11 @@
 import Foundation
 
 struct BMSChannelData {
+  var startTick: Int = 0
+  var barTickCount: Int = 0
+  var barScale: Double = 1.0
+
   var playWav = [String]()
-  var changeScale: Double?
   var changeBpm: String?
   var changeBaseLayer: String?
   var changePoorLayer: String?

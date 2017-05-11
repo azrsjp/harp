@@ -22,6 +22,8 @@ final class BMSChannelDataParser {
   }
 
   func getParsedData() -> [BMSChannelData] {
+    calcTick()
+
     return channelData
   }
 
@@ -106,7 +108,7 @@ final class BMSChannelDataParser {
         return false
     }
 
-    channelData[bar].changeScale = scale
+    channelData[bar].barScale = scale
 
     return true
   }
@@ -142,5 +144,24 @@ final class BMSChannelDataParser {
     }
 
     return merged.joined()
+  }
+  
+  // Calculate each bar's start timing and length.
+  
+  private func calcTick() {
+
+    let barLength = channelData.count
+    var currentTick = 0
+
+    for bar in 0..<barLength {
+      let barTickCount
+        = Int(Double(Config.BMS.baseBarTick) * channelData[bar].barScale)
+      
+      channelData[bar].startTick = currentTick
+      channelData[bar].barTickCount = barTickCount
+
+      // Means next startTick
+      currentTick += barTickCount
+    }
   }
 }

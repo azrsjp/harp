@@ -14,9 +14,9 @@ final class BMSBarDataFactory {
 
     for bar in 0..<barLength {
       let barTickCount
-        = Int(Double(Config.BMS.baseBarTick) * (channelData[bar].changeScale ?? 1.0))
+        = Int(Double(Config.BMS.baseBarTick) * channelData[bar].barScale)
 
-      barData[bar].barScale ?= channelData[bar].changeScale
+      barData[bar].barScale ?= channelData[bar].barScale
       barData[bar].startTick = currentTick
       barData[bar].barTickCount = barTickCount
 
