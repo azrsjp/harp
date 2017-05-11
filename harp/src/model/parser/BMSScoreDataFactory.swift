@@ -174,7 +174,7 @@ final class BMSScoreDataFactory {
     
     LaneType.values.forEach { lane in
 
-      var inLongObjRange = false
+      var inLongNoteRange = false
 
       score.notes
         .filter { $0.trait.lane == lane }.forEach {
@@ -182,15 +182,15 @@ final class BMSScoreDataFactory {
         if $0.trait.type == .longStart {
           // Open or close long notes
           var longNote = $0
-          longNote.trait.type = inLongObjRange ? .longEnd : .longStart
+          longNote.trait.type = inLongNoteRange ? .longEnd : .longStart
           applied.append(longNote)
           
-          inLongObjRange = !inLongObjRange
+          inLongNoteRange = !inLongNoteRange
           return
         }
         
         // Through notes in range of long notes
-        if !inLongObjRange {
+        if !inLongNoteRange {
           applied.append($0)
         }
       }
@@ -203,40 +203,38 @@ final class BMSScoreDataFactory {
     guard let longEndMark = lnobjMark else {
       return
     }
-
-    score.notes.sort { $0.0.tick < $0.1.tick }
     
     var applied = [BMSBarNoteData]()
     
     LaneType.values.forEach { lane in
       
-      var inLongObjRange = false
+      var inLongNoteRange = false
 
       score.notes
         .filter { $0.trait.lane == lane }
         .sorted { $0.0.tick > $0.1.tick }.forEach {
 
           // Time series is reversed to detect end mark first
-          if !inLongObjRange && $0.key == longEndMark {
+          if !inLongNoteRange && $0.key == longEndMark {
             var longEndNote = $0
             longEndNote.trait.type = .longEnd
             applied.append(longEndNote)
             
-            inLongObjRange = true
+            inLongNoteRange = true
             return
           }
           
-          if inLongObjRange && $0.trait.type == .visible {
+          if inLongNoteRange && $0.trait.type == .visible {
             var longStartNote = $0
             longStartNote.trait.type = .longStart
             applied.append(longStartNote)
 
-            inLongObjRange = false
+            inLongNoteRange = false
             return
           }
 
           // Through notes in range of long notes
-          if !inLongObjRange {
+          if !inLongNoteRange {
             applied.append($0)
           }
       }
