@@ -13,5 +13,6 @@ struct Config {
     static let resolution: Int = 480 * 14
     static let baseBarTick: Int = resolution * 4
     static let keyForRest: String = "00"
+    static let defaultBarHeight: Double = 480.0
   }
 }
