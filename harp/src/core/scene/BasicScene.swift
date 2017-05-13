@@ -3,7 +3,7 @@ import SpriteKit
 // Fundamental class for scene in harp project
 // Every scene should inherit BasicScene
 
-class BasicScene<M: Model, V: View, C>: SKScene {
+class BasicScene<M: Model, V: View, C:Controller<M, V>>: SKScene {
   let m: M?
   let v: V?
   let c: C?
@@ -43,6 +43,8 @@ class BasicScene<M: Model, V: View, C>: SKScene {
     
     // Setup root view
     rootView = v
+    
+    c?.initialize()
 
     #if DEBUG
       putButtonToDebugScene()
