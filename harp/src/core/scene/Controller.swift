@@ -8,4 +8,6 @@ class Controller<M: Model, V: View> {
     self.model = model
     self.view = view
   }
+  
+  func initialize() {}
 }
