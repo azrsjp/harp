@@ -92,6 +92,7 @@
 		71E6B7911E16AD1300475846 /* SKSpriteNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B7901E16AD1300475846 /* SKSpriteNode.swift */; };
 		71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B7921E16C76C00475846 /* HIDDeviceManager.swift */; };
 		71EA2C0D1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA2C0C1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift */; };
+		71FA797D1EC68535008FCE82 /* BMSNoteCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA797C1EC68535008FCE82 /* BMSNoteCoordinate.swift */; };
 		71FD1E3F1DF2D6800081E1B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */; };
 		71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD1E451DF2D9060081E1B1 /* Strings.swift */; };
 		80E8F7F6D865896580BADDD0 /* Pods_harp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8314DF37622C99C638799F2F /* Pods_harp.framework */; };
@@ -187,6 +188,7 @@
 		71E6B7901E16AD1300475846 /* SKSpriteNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKSpriteNode.swift; sourceTree = "<group>"; };
 		71E6B7921E16C76C00475846 /* HIDDeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDDeviceManager.swift; sourceTree = "<group>"; };
 		71EA2C0C1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMJudgeTextEncodingOfData.swift; sourceTree = "<group>"; };
+		71FA797C1EC68535008FCE82 /* BMSNoteCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSNoteCoordinate.swift; sourceTree = "<group>"; };
 		71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		71FD1E451DF2D9060081E1B1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		81DDCDB21F14871B9B5A301B /* Pods-harp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harp/Pods-harp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -512,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				E55784B71EC19BCD0039EDD9 /* BMSTick.swift */,
+				71FA797C1EC68535008FCE82 /* BMSNoteCoordinate.swift */,
 			);
 			path = BMS;
 			sourceTree = "<group>";
@@ -861,6 +864,7 @@
 				71CC198D1E1B2A0700391CAA /* Judge.swift in Sources */,
 				712790251E34C18E00F0C5FE /* DIContainer.swift in Sources */,
 				712790321E34DF8200F0C5FE /* StartController.swift in Sources */,
+				71FA797D1EC68535008FCE82 /* BMSNoteCoordinate.swift in Sources */,
 				71C273F11EBADB550096A19D /* BMSChannelDataParser.swift in Sources */,
 				7145897A1EBF52FF00B7DD09 /* BMSScoreData.swift in Sources */,
 				71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */,
