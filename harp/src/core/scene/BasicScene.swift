@@ -4,9 +4,9 @@ import SpriteKit
 // Every scene should inherit BasicScene
 
 class BasicScene<M: Model, V: View, C:Controller<M, V>>: SKScene {
-  let m: M?
-  let v: V?
-  let c: C?
+  let m: M
+  let v: V
+  let c: C
   
   var rootView: View? {
     willSet {
@@ -22,7 +22,7 @@ class BasicScene<M: Model, V: View, C:Controller<M, V>>: SKScene {
     }
   }
 
-  init(model: M?, view: V?, controller: C?) {
+  init(model: M, view: V, controller: C) {
     m = model
     v = view
     c = controller
@@ -44,7 +44,7 @@ class BasicScene<M: Model, V: View, C:Controller<M, V>>: SKScene {
     // Setup root view
     rootView = v
     
-    c?.initialize()
+    c.initialize()
 
     #if DEBUG
       putButtonToDebugScene()

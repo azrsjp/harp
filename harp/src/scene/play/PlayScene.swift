@@ -6,4 +6,8 @@ class PlayScene: BasicScene<PlayModel, PlayView, PlayController> {
     
     backgroundColor = .white
   }
+  
+  func loadBMSFile(fullFilePath: String) {
+    m.loadBMSFileAndIntialize(fullFilePath: fullFilePath)
+  }
 }
