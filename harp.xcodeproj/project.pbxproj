@@ -93,6 +93,10 @@
 		71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E6B7921E16C76C00475846 /* HIDDeviceManager.swift */; };
 		71EA2C0D1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71EA2C0C1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift */; };
 		71FA797D1EC68535008FCE82 /* BMSNoteCoordinate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA797C1EC68535008FCE82 /* BMSNoteCoordinate.swift */; };
+		71FA79801EC7CA5F008FCE82 /* PlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA797F1EC7CA5F008FCE82 /* PlayScene.swift */; };
+		71FA79821EC7CA73008FCE82 /* PlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79811EC7CA73008FCE82 /* PlayController.swift */; };
+		71FA79841EC7CA82008FCE82 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79831EC7CA82008FCE82 /* PlayView.swift */; };
+		71FA79861EC7CA8E008FCE82 /* PlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79851EC7CA8E008FCE82 /* PlayModel.swift */; };
 		71FD1E3F1DF2D6800081E1B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */; };
 		71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD1E451DF2D9060081E1B1 /* Strings.swift */; };
 		80E8F7F6D865896580BADDD0 /* Pods_harp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8314DF37622C99C638799F2F /* Pods_harp.framework */; };
@@ -189,6 +193,10 @@
 		71E6B7921E16C76C00475846 /* HIDDeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDDeviceManager.swift; sourceTree = "<group>"; };
 		71EA2C0C1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMJudgeTextEncodingOfData.swift; sourceTree = "<group>"; };
 		71FA797C1EC68535008FCE82 /* BMSNoteCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSNoteCoordinate.swift; sourceTree = "<group>"; };
+		71FA797F1EC7CA5F008FCE82 /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayScene.swift; path = play/PlayScene.swift; sourceTree = "<group>"; };
+		71FA79811EC7CA73008FCE82 /* PlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayController.swift; path = play/PlayController.swift; sourceTree = "<group>"; };
+		71FA79831EC7CA82008FCE82 /* PlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayView.swift; path = play/PlayView.swift; sourceTree = "<group>"; };
+		71FA79851EC7CA8E008FCE82 /* PlayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayModel.swift; path = play/PlayModel.swift; sourceTree = "<group>"; };
 		71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		71FD1E451DF2D9060081E1B1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		81DDCDB21F14871B9B5A301B /* Pods-harp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harp/Pods-harp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -301,6 +309,7 @@
 		7110D2421D45153200A11D76 /* scene */ = {
 			isa = PBXGroup;
 			children = (
+				71FA797E1EC7CA37008FCE82 /* play */,
 				71C9DBA01D453EA100C7EEF0 /* start */,
 			);
 			path = scene;
@@ -481,6 +490,17 @@
 				E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */,
 			);
 			path = extension;
+			sourceTree = "<group>";
+		};
+		71FA797E1EC7CA37008FCE82 /* play */ = {
+			isa = PBXGroup;
+			children = (
+				71FA797F1EC7CA5F008FCE82 /* PlayScene.swift */,
+				71FA79811EC7CA73008FCE82 /* PlayController.swift */,
+				71FA79831EC7CA82008FCE82 /* PlayView.swift */,
+				71FA79851EC7CA8E008FCE82 /* PlayModel.swift */,
+			);
+			name = play;
 			sourceTree = "<group>";
 		};
 		71FD1E421DF2D7A70081E1B1 /* constants */ = {
@@ -810,7 +830,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */,
+				71FA79801EC7CA5F008FCE82 /* PlayScene.swift in Sources */,
 				712790341E34E47C00F0C5FE /* DebugScene.swift in Sources */,
+				71FA79861EC7CA8E008FCE82 /* PlayModel.swift in Sources */,
 				714589761EBF52B800B7DD09 /* BMSHeaderData.swift in Sources */,
 				71E6B7911E16AD1300475846 /* SKSpriteNode.swift in Sources */,
 				71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */,
@@ -826,6 +848,7 @@
 				71BFD6FA1EB638DA00658965 /* String+ReadFile.swift in Sources */,
 				71CC19911E1B384200391CAA /* DebugUIComponentsScene.swift in Sources */,
 				71A2A1E21E1ABE41000C885A /* Clickable.swift in Sources */,
+				71FA79841EC7CA82008FCE82 /* PlayView.swift in Sources */,
 				718C06DB1D241B6E002F6E68 /* StartScene.swift in Sources */,
 				712790191E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift in Sources */,
 				E542956E1EB6FF9700AAE250 /* String+trim.swift in Sources */,
@@ -848,6 +871,7 @@
 				714589801EBF53C000B7DD09 /* SideType.swift in Sources */,
 				71EA2C0D1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift in Sources */,
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
+				71FA79821EC7CA73008FCE82 /* PlayController.swift in Sources */,
 				71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */,
 				7102178C1EBEEBC7002C73FB /* SharedSound.swift in Sources */,
 				714589781EBF52D700B7DD09 /* BMSChannelData.swift in Sources */,

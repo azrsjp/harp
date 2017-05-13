@@ -17,4 +17,13 @@ fileprivate let container = Container { c in
     
     return scene
   }
+  
+  c.register(PlayScene.self) { _ in
+    let m = PlayModel()
+    let v = PlayView()
+    let c = PlayController(model: m, view: v)
+    let scene = PlayScene(model: m, view: v, controller: c)
+    
+    return scene
+  }
 }

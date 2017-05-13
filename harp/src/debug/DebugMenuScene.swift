@@ -11,7 +11,8 @@ fileprivate let debugs: [(String, () -> SKScene)] = [
 
 // Viewgroup for on product
 fileprivate let views: [(String, () -> SKScene)] = [
-  ("Start", { DIContainer.scene(StartScene.self) })
+  ("Start", { DIContainer.scene(StartScene.self) }),
+  ("Play", { DIContainer.scene(PlayScene.self) })
 ]
 
 final class DebugMenuScene: DebugScene {
