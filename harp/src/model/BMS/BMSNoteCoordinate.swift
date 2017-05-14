@@ -21,4 +21,10 @@ final class BMSNoteCoordinate {
 
     return y
   }
+  
+  func tickRangeInLane(startTick: Int) -> ClosedRange<Int> {
+    let endTick = Int(Config.BMS.defaultLaneHeight / (basePixelPerTick * hiSpeed))
+    
+    return startTick...(startTick + endTick)
+  }
 }
