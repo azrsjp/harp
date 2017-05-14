@@ -14,5 +14,6 @@ struct Config {
     static let baseBarTick: Int = resolution * 4
     static let keyForRest: String = "00"
     static let defaultBarHeight: Double = 480.0
+    static let defaultLaneHeight: Double = 720.0
   }
 }
