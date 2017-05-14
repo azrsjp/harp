@@ -98,6 +98,7 @@
 		71FA79841EC7CA82008FCE82 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79831EC7CA82008FCE82 /* PlayView.swift */; };
 		71FA79861EC7CA8E008FCE82 /* PlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79851EC7CA8E008FCE82 /* PlayModel.swift */; };
 		71FA79881EC7E6CA008FCE82 /* ElapsedBasedThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79871EC7E6CA008FCE82 /* ElapsedBasedThread.swift */; };
+		71FA798C1EC7F501008FCE82 /* BMSSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA798B1EC7F501008FCE82 /* BMSSound.swift */; };
 		71FD1E3F1DF2D6800081E1B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */; };
 		71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD1E451DF2D9060081E1B1 /* Strings.swift */; };
 		80E8F7F6D865896580BADDD0 /* Pods_harp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8314DF37622C99C638799F2F /* Pods_harp.framework */; };
@@ -199,6 +200,7 @@
 		71FA79831EC7CA82008FCE82 /* PlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayView.swift; path = play/PlayView.swift; sourceTree = "<group>"; };
 		71FA79851EC7CA8E008FCE82 /* PlayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayModel.swift; path = play/PlayModel.swift; sourceTree = "<group>"; };
 		71FA79871EC7E6CA008FCE82 /* ElapsedBasedThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElapsedBasedThread.swift; sourceTree = "<group>"; };
+		71FA798B1EC7F501008FCE82 /* BMSSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSSound.swift; sourceTree = "<group>"; };
 		71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		71FD1E451DF2D9060081E1B1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		81DDCDB21F14871B9B5A301B /* Pods-harp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harp/Pods-harp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -538,6 +540,7 @@
 			children = (
 				E55784B71EC19BCD0039EDD9 /* BMSTick.swift */,
 				71FA797C1EC68535008FCE82 /* BMSNoteCoordinate.swift */,
+				71FA798B1EC7F501008FCE82 /* BMSSound.swift */,
 			);
 			path = BMS;
 			sourceTree = "<group>";
@@ -881,6 +884,7 @@
 				714589781EBF52D700B7DD09 /* BMSChannelData.swift in Sources */,
 				E54295741EB72BFD00AAE250 /* Any.swift in Sources */,
 				710217781EBCE35A002C73FB /* SoundPlayerFactory.swift in Sources */,
+				71FA798C1EC7F501008FCE82 /* BMSSound.swift in Sources */,
 				71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */,
 				712790281E34DD9F00F0C5FE /* Model.swift in Sources */,
 				718C06D91D241B6E002F6E68 /* AppDelegate.swift in Sources */,
