@@ -75,6 +75,12 @@ class BasicScene<M: Model, V: View, C:Controller<M, V>>: SKScene {
     }
   }
   
+  override func rightMouseDown(with event: NSEvent) {
+    guard !c.rightMouseDown(with: event) else {
+      return
+    }
+  }
+  
   override func update(_ currentTime: TimeInterval) {
     super.update(currentTime)
     
