@@ -51,7 +51,17 @@ class BasicScene<M: Model, V: View, C:Controller<M, V>>: SKScene {
     #endif
   }
   
+  override func keyDown(with event: NSEvent) {
+    guard !c.keyDown(with: event) else {
+      return
+    }
+  }
+  
   override func mouseDown(with event: NSEvent) {
+    guard !c.mouseDown(with: event) else {
+      return
+    }
+
     let location = event.location(in: self)
     let clickedNodes = nodes(at: location)
 
