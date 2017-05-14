@@ -1,4 +1,5 @@
 import Foundation
+import SpriteKit
 
 class Controller<M: Model, V: View> {
   let model: M
@@ -10,4 +11,12 @@ class Controller<M: Model, V: View> {
   }
   
   func initialize() {}
+  
+  func keyDown(with event: NSEvent) -> Bool {
+    return false
+  }
+  
+  func mouseDown(with event: NSEvent) -> Bool {
+    return false
+  }
 }
