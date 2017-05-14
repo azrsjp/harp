@@ -19,4 +19,8 @@ class Controller<M: Model, V: View> {
   func mouseDown(with event: NSEvent) -> Bool {
     return false
   }
+  
+  func rightMouseDown(with event: NSEvent) -> Bool {
+    return false
+  }
 }
