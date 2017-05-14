@@ -97,6 +97,7 @@
 		71FA79821EC7CA73008FCE82 /* PlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79811EC7CA73008FCE82 /* PlayController.swift */; };
 		71FA79841EC7CA82008FCE82 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79831EC7CA82008FCE82 /* PlayView.swift */; };
 		71FA79861EC7CA8E008FCE82 /* PlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79851EC7CA8E008FCE82 /* PlayModel.swift */; };
+		71FA79881EC7E6CA008FCE82 /* ElapsedBasedThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79871EC7E6CA008FCE82 /* ElapsedBasedThread.swift */; };
 		71FD1E3F1DF2D6800081E1B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */; };
 		71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD1E451DF2D9060081E1B1 /* Strings.swift */; };
 		80E8F7F6D865896580BADDD0 /* Pods_harp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8314DF37622C99C638799F2F /* Pods_harp.framework */; };
@@ -197,6 +198,7 @@
 		71FA79811EC7CA73008FCE82 /* PlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayController.swift; path = play/PlayController.swift; sourceTree = "<group>"; };
 		71FA79831EC7CA82008FCE82 /* PlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayView.swift; path = play/PlayView.swift; sourceTree = "<group>"; };
 		71FA79851EC7CA8E008FCE82 /* PlayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayModel.swift; path = play/PlayModel.swift; sourceTree = "<group>"; };
+		71FA79871EC7E6CA008FCE82 /* ElapsedBasedThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElapsedBasedThread.swift; sourceTree = "<group>"; };
 		71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		71FD1E451DF2D9060081E1B1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
 		81DDCDB21F14871B9B5A301B /* Pods-harp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harp.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harp/Pods-harp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -462,6 +464,7 @@
 				71C273F21EBAF79D0096A19D /* Math.swift */,
 				712790241E34C18E00F0C5FE /* DIContainer.swift */,
 				71EA2C0C1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift */,
+				71FA79871EC7E6CA008FCE82 /* ElapsedBasedThread.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -869,6 +872,7 @@
 				71CC19931E1B449B00391CAA /* InputEventNotifier.swift in Sources */,
 				71D276721EC368DE0064D435 /* BMSScoreDataFactory.swift in Sources */,
 				714589801EBF53C000B7DD09 /* SideType.swift in Sources */,
+				71FA79881EC7E6CA008FCE82 /* ElapsedBasedThread.swift in Sources */,
 				71EA2C0D1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift in Sources */,
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
 				71FA79821EC7CA73008FCE82 /* PlayController.swift in Sources */,
