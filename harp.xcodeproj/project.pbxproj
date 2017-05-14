@@ -98,6 +98,7 @@
 		71FA79841EC7CA82008FCE82 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79831EC7CA82008FCE82 /* PlayView.swift */; };
 		71FA79861EC7CA8E008FCE82 /* PlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79851EC7CA8E008FCE82 /* PlayModel.swift */; };
 		71FA79881EC7E6CA008FCE82 /* ElapsedBasedThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79871EC7E6CA008FCE82 /* ElapsedBasedThread.swift */; };
+		71FA798A1EC7EECA008FCE82 /* String+isFilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79891EC7EECA008FCE82 /* String+isFilePath.swift */; };
 		71FA798C1EC7F501008FCE82 /* BMSSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA798B1EC7F501008FCE82 /* BMSSound.swift */; };
 		71FD1E3F1DF2D6800081E1B1 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */; };
 		71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FD1E451DF2D9060081E1B1 /* Strings.swift */; };
@@ -200,6 +201,7 @@
 		71FA79831EC7CA82008FCE82 /* PlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayView.swift; path = play/PlayView.swift; sourceTree = "<group>"; };
 		71FA79851EC7CA8E008FCE82 /* PlayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayModel.swift; path = play/PlayModel.swift; sourceTree = "<group>"; };
 		71FA79871EC7E6CA008FCE82 /* ElapsedBasedThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElapsedBasedThread.swift; sourceTree = "<group>"; };
+		71FA79891EC7EECA008FCE82 /* String+isFilePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isFilePath.swift"; sourceTree = "<group>"; };
 		71FA798B1EC7F501008FCE82 /* BMSSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSSound.swift; sourceTree = "<group>"; };
 		71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		71FD1E451DF2D9060081E1B1 /* Strings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Strings.swift; sourceTree = "<group>"; };
@@ -493,6 +495,7 @@
 				E542956D1EB6FF9700AAE250 /* String+trim.swift */,
 				71C273E71EB9D1490096A19D /* String+split.swift */,
 				E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */,
+				71FA79891EC7EECA008FCE82 /* String+isFilePath.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -875,6 +878,7 @@
 				71CC19931E1B449B00391CAA /* InputEventNotifier.swift in Sources */,
 				71D276721EC368DE0064D435 /* BMSScoreDataFactory.swift in Sources */,
 				714589801EBF53C000B7DD09 /* SideType.swift in Sources */,
+				71FA798A1EC7EECA008FCE82 /* String+isFilePath.swift in Sources */,
 				71FA79881EC7E6CA008FCE82 /* ElapsedBasedThread.swift in Sources */,
 				71EA2C0D1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift in Sources */,
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
