@@ -7,4 +7,5 @@ enum Judge: String {
   case bad            = "Bad"
   case negativePoor   = "negativePoor" // arise when through keys
   case positivePoor   = "positivePoor" // arise when pushing keys ahead of timing or in late
+  case notYet         = "notYet"
 }
