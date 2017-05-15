@@ -32,11 +32,29 @@ final class BMSTick {
 
     return previousBpmChange.tick + tickFromLastBpmChanged
   }
+  
+  func elapsedAt(tick: Int) -> Double {
+    
+    guard tick > 0,
+      let previousBpmChange = getPreviousBpmChangeDataFrom(tick) else {
+        return 0
+    }
+    
+    // Memo: elapsed = (tick * (60.0 / bpm)) / resolution
+    let elapsedFromLastBpmChanged
+      = (Double(tick) * (60.0 / previousBpmChange.bpm)) / Double(Config.BMS.resolution)
+
+    return previousBpmChange.elapsedAt + elapsedFromLastBpmChanged
+  }
 
   // MARK: - private
 
   private func getPreviousBpmChangeDataFrom(_ elapsedSec: Double) -> BMSBpmChangeTimingData? {
     return bpmChangeTimings.first(where: { elapsedSec >= $0.elapsedAt })
+  }
+  
+  private func getPreviousBpmChangeDataFrom(_ tick: Int) -> BMSBpmChangeTimingData? {
+    return bpmChangeTimings.first(where: { tick >= $0.tick })
   }
 
   private func calculateTimingFrom(_ data: BMSData) -> [BMSBpmChangeTimingData] {
