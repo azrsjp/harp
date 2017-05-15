@@ -34,8 +34,20 @@ struct BMSBarBPMEventData: BMSTimeSeries {
   var value: Double = 0
 }
 
-struct BMSBarNoteData: BMSTimeSeries {
+struct BMSBarNoteData: BMSTimeSeries, Equatable, Hashable {
   var tick: Int = 0
   var key: Int = 0
   var trait: BMSNoteTraitData
+  
+  var hashValue: Int {
+    return (String(tick) + "/" + String(key) + "/" + String(trait.hashValue)).hashValue
+  }
+  
+  static func == (lhs: BMSBarNoteData,
+                  rhs: BMSBarNoteData) -> Bool {
+    return
+      lhs.tick == rhs.tick &&
+      lhs.key == rhs.key &&
+      lhs.trait == rhs.trait
+  }
 }
