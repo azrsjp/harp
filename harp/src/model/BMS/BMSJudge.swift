@@ -102,8 +102,6 @@ final class BMSJudge {
     }
 
     updateComboAndCurrentJudge(judge: .negativePoor)
-    
-    print("missedAt: \(elapsed)")
   }
 
   func getLastJudge() -> Judge {
