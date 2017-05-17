@@ -7,6 +7,11 @@ final class ElapsedBasedThread: Thread {
   private var info = mach_timebase_info_data_t()
   
   func start(interval: TimeInterval = 0.00001, process: @escaping (Double) -> Void) {
+    guard KERN_SUCCESS == mach_timebase_info(&info) else {
+      cancel()
+      return
+    }
+
     self.interval = interval
     self.process = process
     startTime = mach_absolute_time()
@@ -15,11 +20,6 @@ final class ElapsedBasedThread: Thread {
   }
   
   override func main() {
-    guard KERN_SUCCESS == mach_timebase_info(&info) else {
-      cancel()
-      return
-    }
-    
     while !isCancelled {
       process(calcElapsed())
       Thread.sleep(forTimeInterval: interval)

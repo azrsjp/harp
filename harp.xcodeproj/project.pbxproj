@@ -97,7 +97,6 @@
 		71FA79821EC7CA73008FCE82 /* PlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79811EC7CA73008FCE82 /* PlayController.swift */; };
 		71FA79841EC7CA82008FCE82 /* PlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79831EC7CA82008FCE82 /* PlayView.swift */; };
 		71FA79861EC7CA8E008FCE82 /* PlayModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79851EC7CA8E008FCE82 /* PlayModel.swift */; };
-		71FA79881EC7E6CA008FCE82 /* ElapsedBasedThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79871EC7E6CA008FCE82 /* ElapsedBasedThread.swift */; };
 		71FA798A1EC7EECA008FCE82 /* String+isFilePath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA79891EC7EECA008FCE82 /* String+isFilePath.swift */; };
 		71FA798C1EC7F501008FCE82 /* BMSSound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA798B1EC7F501008FCE82 /* BMSSound.swift */; };
 		71FA798E1EC9DD7D008FCE82 /* BMSJudge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FA798D1EC9DD7D008FCE82 /* BMSJudge.swift */; };
@@ -115,6 +114,7 @@
 		E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38C1EB1BF5100A672AB /* String+preg.swift */; };
 		E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38F1EB1BF6800A672AB /* String+pregTest.swift */; };
 		E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F3951EB1CA6C00A672AB /* BMSData.swift */; };
+		E5FC96951ECC1F9900535FC6 /* ElapsedBasedThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC96941ECC1F9900535FC6 /* ElapsedBasedThread.swift */; };
 		FF77D49430DC4714EF2EFC36 /* Pods_harpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B598A602A9F503F31E01D4 /* Pods_harpTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -201,7 +201,6 @@
 		71FA79811EC7CA73008FCE82 /* PlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayController.swift; path = play/PlayController.swift; sourceTree = "<group>"; };
 		71FA79831EC7CA82008FCE82 /* PlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayView.swift; path = play/PlayView.swift; sourceTree = "<group>"; };
 		71FA79851EC7CA8E008FCE82 /* PlayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayModel.swift; path = play/PlayModel.swift; sourceTree = "<group>"; };
-		71FA79871EC7E6CA008FCE82 /* ElapsedBasedThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElapsedBasedThread.swift; sourceTree = "<group>"; };
 		71FA79891EC7EECA008FCE82 /* String+isFilePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isFilePath.swift"; sourceTree = "<group>"; };
 		71FA798B1EC7F501008FCE82 /* BMSSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSSound.swift; sourceTree = "<group>"; };
 		71FA798D1EC9DD7D008FCE82 /* BMSJudge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSJudge.swift; sourceTree = "<group>"; };
@@ -221,6 +220,7 @@
 		E592F38C1EB1BF5100A672AB /* String+preg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+preg.swift"; sourceTree = "<group>"; };
 		E592F38F1EB1BF6800A672AB /* String+pregTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+pregTest.swift"; sourceTree = "<group>"; };
 		E592F3951EB1CA6C00A672AB /* BMSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSData.swift; sourceTree = "<group>"; };
+		E5FC96941ECC1F9900535FC6 /* ElapsedBasedThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ElapsedBasedThread.swift; path = timer/ElapsedBasedThread.swift; sourceTree = "<group>"; };
 		F21D0D7C81FFDE80F912DDA1 /* Pods-harpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harpTests/Pods-harpTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -460,6 +460,7 @@
 		71C9DB9F1D45344C00C7EEF0 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				E5FC96931ECC1F5700535FC6 /* timer */,
 				710217761EBCE33C002C73FB /* sound */,
 				712790261E34DD4800F0C5FE /* scene */,
 				71A2A1E01E1A96C4000C885A /* Input */,
@@ -470,7 +471,6 @@
 				71C273F21EBAF79D0096A19D /* Math.swift */,
 				712790241E34C18E00F0C5FE /* DIContainer.swift */,
 				71EA2C0C1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift */,
-				71FA79871EC7E6CA008FCE82 /* ElapsedBasedThread.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -581,6 +581,14 @@
 				7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */,
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		E5FC96931ECC1F5700535FC6 /* timer */ = {
+			isa = PBXGroup;
+			children = (
+				E5FC96941ECC1F9900535FC6 /* ElapsedBasedThread.swift */,
+			);
+			name = timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -863,6 +871,7 @@
 				71FA79841EC7CA82008FCE82 /* PlayView.swift in Sources */,
 				718C06DB1D241B6E002F6E68 /* StartScene.swift in Sources */,
 				712790191E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift in Sources */,
+				E5FC96951ECC1F9900535FC6 /* ElapsedBasedThread.swift in Sources */,
 				E542956E1EB6FF9700AAE250 /* String+trim.swift in Sources */,
 				71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */,
 				E54B71721EBB604400266777 /* BMSParser.swift in Sources */,
@@ -882,7 +891,6 @@
 				71D276721EC368DE0064D435 /* BMSScoreDataFactory.swift in Sources */,
 				714589801EBF53C000B7DD09 /* SideType.swift in Sources */,
 				71FA798A1EC7EECA008FCE82 /* String+isFilePath.swift in Sources */,
-				71FA79881EC7E6CA008FCE82 /* ElapsedBasedThread.swift in Sources */,
 				71EA2C0D1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift in Sources */,
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
 				71FA79821EC7CA73008FCE82 /* PlayController.swift in Sources */,
