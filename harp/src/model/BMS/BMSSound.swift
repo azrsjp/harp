@@ -51,44 +51,33 @@ final class BMSSound {
     let lookBehindTick = 10000
     let lookRange = (tick-lookBehindTick)...tick
 
-    var result = [Int]()
+    let inRangeSounds = Array(playSoundList.prefix(while: { lookRange ~= $0.tick })).map { $0.key }
+    
+    playSoundList = Array(playSoundList.drop(while: { $0.tick <= tick }))
 
-    let soundCount = playSoundList.count
-
-    for i in 0..<soundCount {
-      if lookRange ~= playSoundList[i].tick {
-        result.append(playSoundList[i].key)
-      } else {
-        // Remove sounds has alredy plyaed
-        playSoundList.removeSubrange(0..<i)
-        break
-      }
-    }
-
-    return result
+    return inRangeSounds
   }
   
   func keySoundKeyToPlay(side: SideType, lane: LaneType) -> Int? {
     return keyAssignedSound[BMSKeyAssignedKey(side: side, lane: lane)]
   }
 
-  func updateKeyAssignAt(tick: Int, lookAheadTickCount: Int? = nil) {
+  func updateKeyAssignAt(tick: Int, lookAheadTickCount: Int? = nil, lookBehindTickCount: Int? = nil) {
     let lookAhead = lookAheadTickCount ?? NSIntegerMax
-    let lookRange = tick...(tick + lookAhead)
+    let lookBehind = lookBehindTickCount ?? 0
+    let lookRange = (tick - lookBehind)...(tick + lookAhead)
 
-    let keySoundCount = keySoundList.count
+    keySoundList = Array(keySoundList.drop(while: { $0.tick < (tick - lookBehind) }))
 
-    for i in 0..<keySoundCount {
-      if lookRange ~= keySoundList[i].tick {
-        let trait = keySoundList[i].trait
-        let soundKey = keySoundList[i].key
-        let assignedKey = BMSKeyAssignedKey(side: trait.side, lane: trait.lane)
+    let inRangeNotes = Array(keySoundList.prefix(while: { lookRange ~= $0.tick }))
 
-        keyAssignedSound[assignedKey] = soundKey
-      } else {
-        // Remove sounds has alredy plyaed
-        keySoundList.removeSubrange(0..<i)
-        break
+    SideType.values.forEach { side in
+      LaneType.values.forEach { lane in
+        if let note = inRangeNotes.first(where: { $0.trait.lane == lane && $0.trait.side == side }) {
+          let assignedKey = BMSKeyAssignedKey(side: note.trait.side, lane: note.trait.lane)
+
+          keyAssignedSound[assignedKey] = note.key
+        }
       }
     }
   }
