@@ -114,7 +114,8 @@
 		E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38C1EB1BF5100A672AB /* String+preg.swift */; };
 		E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38F1EB1BF6800A672AB /* String+pregTest.swift */; };
 		E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F3951EB1CA6C00A672AB /* BMSData.swift */; };
-		E5FC969B1ECC462F00535FC6 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC969A1ECC462F00535FC6 /* Timer.swift */; };
+		E5FC96A01ECC4B7400535FC6 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC969F1ECC4B7400535FC6 /* Timer.swift */; };
+		E5FC96A21ECC4B8700535FC6 /* TimerThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC96A11ECC4B8700535FC6 /* TimerThread.swift */; };
 		FF77D49430DC4714EF2EFC36 /* Pods_harpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B598A602A9F503F31E01D4 /* Pods_harpTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -220,7 +221,8 @@
 		E592F38C1EB1BF5100A672AB /* String+preg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+preg.swift"; sourceTree = "<group>"; };
 		E592F38F1EB1BF6800A672AB /* String+pregTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+pregTest.swift"; sourceTree = "<group>"; };
 		E592F3951EB1CA6C00A672AB /* BMSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSData.swift; sourceTree = "<group>"; };
-		E5FC969A1ECC462F00535FC6 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		E5FC969F1ECC4B7400535FC6 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = Timer/Timer.swift; sourceTree = "<group>"; };
+		E5FC96A11ECC4B8700535FC6 /* TimerThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerThread.swift; path = Timer/TimerThread.swift; sourceTree = "<group>"; };
 		F21D0D7C81FFDE80F912DDA1 /* Pods-harpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harpTests/Pods-harpTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -460,6 +462,7 @@
 		71C9DB9F1D45344C00C7EEF0 /* core */ = {
 			isa = PBXGroup;
 			children = (
+				E5FC969C1ECC4B1500535FC6 /* Timer */,
 				710217761EBCE33C002C73FB /* sound */,
 				712790261E34DD4800F0C5FE /* scene */,
 				71A2A1E01E1A96C4000C885A /* Input */,
@@ -470,7 +473,6 @@
 				71C273F21EBAF79D0096A19D /* Math.swift */,
 				712790241E34C18E00F0C5FE /* DIContainer.swift */,
 				71EA2C0C1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift */,
-				E5FC969A1ECC462F00535FC6 /* Timer.swift */,
 			);
 			path = core;
 			sourceTree = "<group>";
@@ -581,6 +583,15 @@
 				7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */,
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		E5FC969C1ECC4B1500535FC6 /* Timer */ = {
+			isa = PBXGroup;
+			children = (
+				E5FC969F1ECC4B7400535FC6 /* Timer.swift */,
+				E5FC96A11ECC4B8700535FC6 /* TimerThread.swift */,
+			);
+			name = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -841,7 +852,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E5FC969B1ECC462F00535FC6 /* Timer.swift in Sources */,
+				E5FC96A01ECC4B7400535FC6 /* Timer.swift in Sources */,
 				E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */,
 				71FA79801EC7CA5F008FCE82 /* PlayScene.swift in Sources */,
 				712790341E34E47C00F0C5FE /* DebugScene.swift in Sources */,
@@ -908,6 +919,7 @@
 				71C273F11EBADB550096A19D /* BMSChannelDataParser.swift in Sources */,
 				7145897A1EBF52FF00B7DD09 /* BMSScoreData.swift in Sources */,
 				71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */,
+				E5FC96A21ECC4B8700535FC6 /* TimerThread.swift in Sources */,
 				71E6B78F1E16ABC600475846 /* SKView.swift in Sources */,
 				7127902C1E34DDB200F0C5FE /* Controller.swift in Sources */,
 			);
