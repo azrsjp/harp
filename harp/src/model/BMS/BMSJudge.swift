@@ -24,6 +24,7 @@ fileprivate let eventToLane: [GameEvent: LaneType]
 final class BMSJudge {
 
   static private let comobChainer: [Judge] = [.perfectGreat, .great, .good]
+  private let lock = NSLock()
 
   private let tick: BMSTick
   private var notYetJudgedNotes = [BMSBarNoteData]()
@@ -42,6 +43,9 @@ final class BMSJudge {
   // MARK: - internal
 
   func judge(event: GameEvent, elapsed: Double) {
+    lock.lock()
+    defer { lock.unlock() }
+    
     guard let lane = eventToLane[event] else {
       return
     }
@@ -87,6 +91,8 @@ final class BMSJudge {
   }
 
   func judgeMissedNotesAt(elapsed: Double) {
+    lock.lock()
+    defer { lock.unlock() }
 
     let missedNotes
       = notYetJudgedNotes.filter { isInMissRange(elpased: elapsed,
