@@ -59,6 +59,7 @@
 		7161837D1EC0B66F00D7B374 /* BMSNoteTraitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */; };
 		7166A0071E2A7D3A00D1588C /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7166A0061E2A7D3A00D1588C /* Bridge.swift */; };
 		717A12281E0FC740006A4B4B /* CGSizeOperatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7161AF0C1E0FBEE4002286CD /* CGSizeOperatorTest.swift */; };
+		718408351ECF3DC400F5A9B1 /* BMSNotesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718408341ECF3DC400F5A9B1 /* BMSNotesState.swift */; };
 		718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */; };
 		718A5CFD1D4531F400B88A76 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A5CFC1D4531F400B88A76 /* Common.swift */; };
 		718C06D91D241B6E002F6E68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C06D81D241B6E002F6E68 /* AppDelegate.swift */; };
@@ -162,6 +163,7 @@
 		7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSNoteTraitData.swift; sourceTree = "<group>"; };
 		7161AF0C1E0FBEE4002286CD /* CGSizeOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeOperatorTest.swift; sourceTree = "<group>"; };
 		7166A0061E2A7D3A00D1588C /* Bridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
+		718408341ECF3DC400F5A9B1 /* BMSNotesState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSNotesState.swift; sourceTree = "<group>"; };
 		718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMenuScene.swift; sourceTree = "<group>"; };
 		718A5CFC1D4531F400B88A76 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		718C06D51D241B6E002F6E68 /* harp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = harp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -907,6 +909,7 @@
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
 				71FA79821EC7CA73008FCE82 /* PlayController.swift in Sources */,
 				71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */,
+				718408351ECF3DC400F5A9B1 /* BMSNotesState.swift in Sources */,
 				7102178C1EBEEBC7002C73FB /* SharedSound.swift in Sources */,
 				714589781EBF52D700B7DD09 /* BMSChannelData.swift in Sources */,
 				E54295741EB72BFD00AAE250 /* Any.swift in Sources */,
