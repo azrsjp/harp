@@ -29,4 +29,50 @@ enum GameEvent: String {
   case switchLift       = "SwitchLift"
   case switchSuddenPlus = "SwitchSuddenPlus"
   case exit             = "Exit"
+
+  var isKeyDownEvent: Bool {
+    switch self {
+    case .noteOn1: fallthrough
+    case .noteOn2: fallthrough
+    case .noteOn3: fallthrough
+    case .noteOn4: fallthrough
+    case .noteOn5: fallthrough
+    case .noteOn6: fallthrough
+    case .noteOn7: fallthrough
+    case .scrachLeft: fallthrough
+    case .scrachRight: return true
+    case .noteOff1: fallthrough
+    case .noteOff2: fallthrough
+    case .noteOff3: fallthrough
+    case .noteOff4: fallthrough
+    case .noteOff5: fallthrough
+    case .noteOff6: fallthrough
+    case .noteOff7: fallthrough
+    case .scrachEnd: return false
+    default: return false
+    }
+  }
+
+  var sideAndLane: (LaneType, SideType)? {
+    switch self {
+    case .noteOn1: fallthrough
+    case .noteOff1: return (.key1, .player1)
+    case .noteOn2: fallthrough
+    case .noteOff2:  return (.key2, .player1)
+    case .noteOn3: fallthrough
+    case .noteOff3:  return (.key3, .player1)
+    case .noteOn4: fallthrough
+    case .noteOff4:  return (.key4, .player1)
+    case .noteOn5: fallthrough
+    case .noteOff5:  return (.key5, .player1)
+    case .noteOn6: fallthrough
+    case .noteOff6:  return (.key6, .player1)
+    case .noteOn7: fallthrough
+    case .noteOff7:  return (.key7, .player1)
+    case .scrachLeft: fallthrough
+    case .scrachRight: fallthrough
+    case .scrachEnd: return (.scratch, .player1)
+    default: return nil
+    }
+  }
 }
