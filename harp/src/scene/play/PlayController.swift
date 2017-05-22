@@ -24,7 +24,6 @@ class PlayController: Controller<PlayModel, PlayView> {
       guard let self_ = self else {
         return
       }
-      Logger.debug(event)
       
       self_.handleGameEvent(event)
     }).addDisposableTo(disposeBag)
@@ -37,15 +36,25 @@ class PlayController: Controller<PlayModel, PlayView> {
   }
   
   private func handleGameEvent(_ event: GameEvent) {
+    model.judge(event: event)
+
     switch event {
-    case .noteOn1: model.playKeySound(side: .player1, lane: .key1)
-    case .noteOn2: model.playKeySound(side: .player1, lane: .key2)
-    case .noteOn3: model.playKeySound(side: .player1, lane: .key3)
-    case .noteOn4: model.playKeySound(side: .player1, lane: .key4)
-    case .noteOn5: model.playKeySound(side: .player1, lane: .key5)
-    case .noteOn6: model.playKeySound(side: .player1, lane: .key6)
-    case .noteOn7: model.playKeySound(side: .player1, lane: .key7)
-    case .scrachLeft: model.playKeySound(side: .player1, lane: .scratch)
+    case .noteOn1:
+      model.playKeySound(side: .player1, lane: .key1)
+    case .noteOn2:
+      model.playKeySound(side: .player1, lane: .key2)
+    case .noteOn3:
+      model.playKeySound(side: .player1, lane: .key3)
+    case .noteOn4:
+      model.playKeySound(side: .player1, lane: .key4)
+    case .noteOn5:
+      model.playKeySound(side: .player1, lane: .key5)
+    case .noteOn6:
+      model.playKeySound(side: .player1, lane: .key6)
+    case .noteOn7:
+      model.playKeySound(side: .player1, lane: .key7)
+    case .scrachLeft:
+      model.playKeySound(side: .player1, lane: .scratch)
     default:
       break
     }
