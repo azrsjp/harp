@@ -11,25 +11,11 @@ fileprivate struct BMSKeySoundData {
   var trait: BMSNoteTraitData
 }
 
-fileprivate struct BMSKeyAssignedKey: Hashable {
-
-  var side: SideType
-  var lane: LaneType
-  
-  var hashValue: Int {
-    return side.rawValue * 10 + lane.rawValue
-  }
-  
-  static func == (lhs: BMSKeyAssignedKey, rhs: BMSKeyAssignedKey) -> Bool {
-    return lhs.lane == rhs.lane && lhs.side == rhs.side
-  }
-}
-
 final class BMSSound {
 
   private var playSoundList = [BMSSoundData]()
   private var keySoundList = [BMSKeySoundData]()
-  private var keyAssignedSound = [BMSKeyAssignedKey:Int]()
+  private var keyAssignedSound = [Int: Int]()
   
   // MARK: - internal
   
@@ -59,7 +45,9 @@ final class BMSSound {
   }
   
   func keySoundKeyToPlay(side: SideType, lane: LaneType) -> Int? {
-    return keyAssignedSound[BMSKeyAssignedKey(side: side, lane: lane)]
+    let laneHash = BMSNoteTraitData.laneHash(lane: lane, side: side)
+
+    return keyAssignedSound[laneHash]
   }
 
   func updateKeyAssignAt(tick: Int, lookAheadTickCount: Int? = nil, lookBehindTickCount: Int? = nil) {
@@ -74,9 +62,9 @@ final class BMSSound {
     SideType.values.forEach { side in
       LaneType.values.forEach { lane in
         if let note = inRangeNotes.first(where: { $0.trait.lane == lane && $0.trait.side == side }) {
-          let assignedKey = BMSKeyAssignedKey(side: note.trait.side, lane: note.trait.lane)
+          let laneHash = BMSNoteTraitData.laneHash(lane: note.trait.lane, side: note.trait.side)
 
-          keyAssignedSound[assignedKey] = note.key
+          keyAssignedSound[laneHash] = note.key
         }
       }
     }
