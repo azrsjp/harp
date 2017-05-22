@@ -117,6 +117,7 @@
 		E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38C1EB1BF5100A672AB /* String+preg.swift */; };
 		E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38F1EB1BF6800A672AB /* String+pregTest.swift */; };
 		E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F3951EB1CA6C00A672AB /* BMSData.swift */; };
+		E5A868D51ECA95BC0068222D /* BMSCoordData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A868D41ECA95BC0068222D /* BMSCoordData.swift */; };
 		E5FC96A01ECC4B7400535FC6 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC969F1ECC4B7400535FC6 /* Timer.swift */; };
 		E5FC96A21ECC4B8700535FC6 /* TimerThread.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5FC96A11ECC4B8700535FC6 /* TimerThread.swift */; };
 		FF77D49430DC4714EF2EFC36 /* Pods_harpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 84B598A602A9F503F31E01D4 /* Pods_harpTests.framework */; };
@@ -227,6 +228,7 @@
 		E592F38C1EB1BF5100A672AB /* String+preg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+preg.swift"; sourceTree = "<group>"; };
 		E592F38F1EB1BF6800A672AB /* String+pregTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+pregTest.swift"; sourceTree = "<group>"; };
 		E592F3951EB1CA6C00A672AB /* BMSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSData.swift; sourceTree = "<group>"; };
+		E5A868D41ECA95BC0068222D /* BMSCoordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSCoordData.swift; sourceTree = "<group>"; };
 		E5FC969F1ECC4B7400535FC6 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = Timer/Timer.swift; sourceTree = "<group>"; };
 		E5FC96A11ECC4B8700535FC6 /* TimerThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerThread.swift; path = Timer/TimerThread.swift; sourceTree = "<group>"; };
 		F21D0D7C81FFDE80F912DDA1 /* Pods-harpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harpTests/Pods-harpTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -589,6 +591,7 @@
 				714589771EBF52D700B7DD09 /* BMSChannelData.swift */,
 				714589791EBF52FF00B7DD09 /* BMSScoreData.swift */,
 				7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */,
+				E5A868D41ECA95BC0068222D /* BMSCoordData.swift */,
 				E59219D41ED2D2400097E76B /* BMSLongNoteState.swift */,
 			);
 			path = data;
@@ -930,6 +933,7 @@
 				71FA797D1EC68535008FCE82 /* BMSNoteCoordinate.swift in Sources */,
 				71C273F11EBADB550096A19D /* BMSChannelDataParser.swift in Sources */,
 				7145897A1EBF52FF00B7DD09 /* BMSScoreData.swift in Sources */,
+				E5A868D51ECA95BC0068222D /* BMSCoordData.swift in Sources */,
 				71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */,
 				E5FC96A21ECC4B8700535FC6 /* TimerThread.swift in Sources */,
 				71E6B78F1E16ABC600475846 /* SKView.swift in Sources */,
