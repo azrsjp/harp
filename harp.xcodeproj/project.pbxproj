@@ -111,6 +111,7 @@
 		E54B71721EBB604400266777 /* BMSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B71711EBB604400266777 /* BMSParser.swift */; };
 		E55784B51EC192D60039EDD9 /* Dictionary+mapValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */; };
 		E55784B81EC19BCD0039EDD9 /* BMSTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55784B71EC19BCD0039EDD9 /* BMSTick.swift */; };
+		E59219D51ED2D2400097E76B /* BMSLongNoteState.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59219D41ED2D2400097E76B /* BMSLongNoteState.swift */; };
 		E59219D71ED2EF8B0097E76B /* Array+associate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59219D61ED2EF8B0097E76B /* Array+associate.swift */; };
 		E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38C1EB1BF5100A672AB /* String+preg.swift */; };
 		E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38F1EB1BF6800A672AB /* String+pregTest.swift */; };
@@ -219,6 +220,7 @@
 		E54B71711EBB604400266777 /* BMSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSParser.swift; sourceTree = "<group>"; };
 		E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+mapValue.swift"; sourceTree = "<group>"; };
 		E55784B71EC19BCD0039EDD9 /* BMSTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSTick.swift; sourceTree = "<group>"; };
+		E59219D41ED2D2400097E76B /* BMSLongNoteState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSLongNoteState.swift; sourceTree = "<group>"; };
 		E59219D61ED2EF8B0097E76B /* Array+associate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+associate.swift"; sourceTree = "<group>"; };
 		E592F38C1EB1BF5100A672AB /* String+preg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+preg.swift"; sourceTree = "<group>"; };
 		E592F38F1EB1BF6800A672AB /* String+pregTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+pregTest.swift"; sourceTree = "<group>"; };
@@ -552,6 +554,7 @@
 				71FA797C1EC68535008FCE82 /* BMSNoteCoordinate.swift */,
 				71FA798B1EC7F501008FCE82 /* BMSSound.swift */,
 				71FA798D1EC9DD7D008FCE82 /* BMSJudge.swift */,
+				718408341ECF3DC400F5A9B1 /* BMSNotesState.swift */,
 			);
 			path = BMS;
 			sourceTree = "<group>";
@@ -584,6 +587,7 @@
 				714589771EBF52D700B7DD09 /* BMSChannelData.swift */,
 				714589791EBF52FF00B7DD09 /* BMSScoreData.swift */,
 				7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */,
+				E59219D41ED2D2400097E76B /* BMSLongNoteState.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -898,6 +902,7 @@
 				71D276721EC368DE0064D435 /* BMSScoreDataFactory.swift in Sources */,
 				714589801EBF53C000B7DD09 /* SideType.swift in Sources */,
 				71FA798A1EC7EECA008FCE82 /* String+isFilePath.swift in Sources */,
+				E59219D51ED2D2400097E76B /* BMSLongNoteState.swift in Sources */,
 				71EA2C0D1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift in Sources */,
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
 				71FA79821EC7CA73008FCE82 /* PlayController.swift in Sources */,
