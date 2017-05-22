@@ -111,6 +111,7 @@
 		E54B71721EBB604400266777 /* BMSParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E54B71711EBB604400266777 /* BMSParser.swift */; };
 		E55784B51EC192D60039EDD9 /* Dictionary+mapValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */; };
 		E55784B81EC19BCD0039EDD9 /* BMSTick.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55784B71EC19BCD0039EDD9 /* BMSTick.swift */; };
+		E59219D71ED2EF8B0097E76B /* Array+associate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59219D61ED2EF8B0097E76B /* Array+associate.swift */; };
 		E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38C1EB1BF5100A672AB /* String+preg.swift */; };
 		E592F3901EB1BF6800A672AB /* String+pregTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F38F1EB1BF6800A672AB /* String+pregTest.swift */; };
 		E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E592F3951EB1CA6C00A672AB /* BMSData.swift */; };
@@ -218,6 +219,7 @@
 		E54B71711EBB604400266777 /* BMSParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSParser.swift; sourceTree = "<group>"; };
 		E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dictionary+mapValue.swift"; sourceTree = "<group>"; };
 		E55784B71EC19BCD0039EDD9 /* BMSTick.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSTick.swift; sourceTree = "<group>"; };
+		E59219D61ED2EF8B0097E76B /* Array+associate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+associate.swift"; sourceTree = "<group>"; };
 		E592F38C1EB1BF5100A672AB /* String+preg.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+preg.swift"; sourceTree = "<group>"; };
 		E592F38F1EB1BF6800A672AB /* String+pregTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+pregTest.swift"; sourceTree = "<group>"; };
 		E592F3951EB1CA6C00A672AB /* BMSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSData.swift; sourceTree = "<group>"; };
@@ -500,6 +502,7 @@
 				71C273E71EB9D1490096A19D /* String+split.swift */,
 				E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */,
 				71FA79891EC7EECA008FCE82 /* String+isFilePath.swift */,
+				E59219D61ED2EF8B0097E76B /* Array+associate.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -879,6 +882,7 @@
 				71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */,
 				E54B71721EBB604400266777 /* BMSParser.swift in Sources */,
 				E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */,
+				E59219D71ED2EF8B0097E76B /* Array+associate.swift in Sources */,
 				71C273ED1EBAD8D30096A19D /* BMSControlFlowParser.swift in Sources */,
 				71CC199B1E1BDF6B00391CAA /* Logger.swift in Sources */,
 				71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */,
