@@ -33,7 +33,8 @@ final class BMSJudge {
       return
     }
 
-    guard event.isKeyDownEvent else {
+    guard event.isKeyDownEvent ||
+      (!event.isKeyDownEvent && noteToJudge.trait.type == .longEnd) else {
       return
     }
 
@@ -50,7 +51,7 @@ final class BMSJudge {
 
     let missedNotes = notes.alive.prefix { isInMissRange(elpased: elapsed,
                                                          justTiming: tick.elapsedAt(tick: $0.tick)) }
-
+    
     // If only inActive long note judges, continue combo.
     var shouldRecordJudged = false
 
