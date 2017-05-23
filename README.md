@@ -6,11 +6,16 @@ The name of harp project comes from harp seal.
 This application will be BMS Player for macOS (10.10 or newer). Currently work in progress.
 
 # Roadmap
-- [ ] InGame UI (skelton)
-- [ ] BMS file Loader
-- [ ] Accuracy of Judging
-- [ ] Adopt to conventional HID controller for BMS
-- [ ] Adopt to Infinitas(Official) Controller
+- [x] Adopt to conventional HID controller for BMS
+- [x] BMS file Loader
+- [x] Accuracy of Judging
+- [ ] Hi-Speed, lift, hid+ options
+- [ ] Normal, Easy, Hard, Ex-Hard Gauge type
+- [ ] Random, S-Random options
+- [ ] KeyConfig
+- [ ] InGame UI (default theme)
+- [ ] BMSFileManager(localDB)
+- [ ] BMSSelector(MainMenu)
 - [ ] Sound Effects System
 
 # Environments
