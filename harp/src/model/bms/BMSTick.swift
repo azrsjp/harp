@@ -41,8 +41,9 @@ final class BMSTick {
     }
     
     // Memo: elapsed = (tick * (60.0 / bpm)) / resolution
-    let elapsedFromLastBpmChanged
-      = (Double(tick - previousBpmChange.tick) * (60.0 / previousBpmChange.bpm)) / Double(Config.BMS.resolution)
+    // Consider zero division because bpm can be 0.0 for stop.
+    let elapsedFromLastBpmChanged = previousBpmChange.bpm > 0.0 ?
+        (Double(tick - previousBpmChange.tick) * (60.0 / previousBpmChange.bpm)) / Double(Config.BMS.resolution) : 0.0
 
     return previousBpmChange.elapsedAt + elapsedFromLastBpmChanged
   }
@@ -54,7 +55,11 @@ final class BMSTick {
   }
   
   private func getPreviousBpmChangeDataFrom(_ tick: Int) -> BMSBpmChangeTimingData? {
-    return bpmChangeTimings.first(where: { tick >= $0.tick })
+    return
+      // Stop start and stop end event indicate same tick.(because bms timeline is stopped)
+      // So should pick up stop start event by special conditions otherwise always stop end event will be picked up .
+      bpmChangeTimings.first(where: { tick == $0.tick && $0.bpm == 0.0 }) ??
+        bpmChangeTimings.first(where: { tick >= $0.tick })
   }
 
   private func calculateTimingFrom(_ data: BMSData) -> [BMSBpmChangeTimingData] {
