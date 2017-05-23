@@ -52,16 +52,16 @@ final class BMSJudge {
     let missedNotes = notes.alive.prefix { isInMissRange(elpased: elapsed,
                                                          justTiming: tick.elapsedAt(tick: $0.tick)) }
     
-    // If only inActive long note judges, continue combo.
-    var shouldRecordJudged = false
+    // On coming inActive(already dead) long note end judges, continue combo.
+    var shouldBreakCombo = false
 
     missedNotes.forEach {
       let judgeSuccess = notes.markNoteAsDead($0, judge: .negativePoor)
 
-      shouldRecordJudged = judgeSuccess || shouldRecordJudged
+      shouldBreakCombo = judgeSuccess || shouldBreakCombo
     }
 
-    if shouldRecordJudged {
+    if shouldBreakCombo {
       updateComboAndCurrentJudge(judge: .negativePoor)
     }
   }
