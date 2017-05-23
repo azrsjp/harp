@@ -42,7 +42,7 @@ final class BMSTick {
     
     // Memo: elapsed = (tick * (60.0 / bpm)) / resolution
     let elapsedFromLastBpmChanged
-      = (Double(tick) * (60.0 / previousBpmChange.bpm)) / Double(Config.BMS.resolution)
+      = (Double(tick - previousBpmChange.tick) * (60.0 / previousBpmChange.bpm)) / Double(Config.BMS.resolution)
 
     return previousBpmChange.elapsedAt + elapsedFromLastBpmChanged
   }
