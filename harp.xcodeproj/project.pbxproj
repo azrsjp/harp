@@ -60,6 +60,7 @@
 		7166A0071E2A7D3A00D1588C /* Bridge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7166A0061E2A7D3A00D1588C /* Bridge.swift */; };
 		717A12281E0FC740006A4B4B /* CGSizeOperatorTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7161AF0C1E0FBEE4002286CD /* CGSizeOperatorTest.swift */; };
 		718408351ECF3DC400F5A9B1 /* BMSNotesState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718408341ECF3DC400F5A9B1 /* BMSNotesState.swift */; };
+		718408371ED3666C00F5A9B1 /* BMSModelSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718408361ED3666C00F5A9B1 /* BMSModelSystem.swift */; };
 		718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */; };
 		718A5CFD1D4531F400B88A76 /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718A5CFC1D4531F400B88A76 /* Common.swift */; };
 		718C06D91D241B6E002F6E68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C06D81D241B6E002F6E68 /* AppDelegate.swift */; };
@@ -165,6 +166,7 @@
 		7161AF0C1E0FBEE4002286CD /* CGSizeOperatorTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSizeOperatorTest.swift; sourceTree = "<group>"; };
 		7166A0061E2A7D3A00D1588C /* Bridge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bridge.swift; sourceTree = "<group>"; };
 		718408341ECF3DC400F5A9B1 /* BMSNotesState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSNotesState.swift; sourceTree = "<group>"; };
+		718408361ED3666C00F5A9B1 /* BMSModelSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSModelSystem.swift; sourceTree = "<group>"; };
 		718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMenuScene.swift; sourceTree = "<group>"; };
 		718A5CFC1D4531F400B88A76 /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		718C06D51D241B6E002F6E68 /* harp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = harp.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -559,6 +561,7 @@
 				71FA798B1EC7F501008FCE82 /* BMSSound.swift */,
 				71FA798D1EC9DD7D008FCE82 /* BMSJudge.swift */,
 				718408341ECF3DC400F5A9B1 /* BMSNotesState.swift */,
+				718408361ED3666C00F5A9B1 /* BMSModelSystem.swift */,
 			);
 			path = BMS;
 			sourceTree = "<group>";
@@ -868,6 +871,7 @@
 				E592F38D1EB1BF5100A672AB /* String+preg.swift in Sources */,
 				71FA79801EC7CA5F008FCE82 /* PlayScene.swift in Sources */,
 				712790341E34E47C00F0C5FE /* DebugScene.swift in Sources */,
+				718408371ED3666C00F5A9B1 /* BMSModelSystem.swift in Sources */,
 				71FA79861EC7CA8E008FCE82 /* PlayModel.swift in Sources */,
 				714589761EBF52B800B7DD09 /* BMSHeaderData.swift in Sources */,
 				71E6B7911E16AD1300475846 /* SKSpriteNode.swift in Sources */,
