@@ -79,6 +79,7 @@
 		71C273EF1EBADAD90096A19D /* BMSHeaderParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273EE1EBADAD90096A19D /* BMSHeaderParser.swift */; };
 		71C273F11EBADB550096A19D /* BMSChannelDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */; };
 		71C273F31EBAF79D0096A19D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273F21EBAF79D0096A19D /* Math.swift */; };
+		71C406501ED723F6003A9248 /* BMSJudgeableRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C4064F1ED723F6003A9248 /* BMSJudgeableRange.swift */; };
 		71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */; };
 		71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */; };
 		71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19881E1B21BD00391CAA /* GameEvent.swift */; };
@@ -189,6 +190,7 @@
 		71C273EE1EBADAD90096A19D /* BMSHeaderParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSHeaderParser.swift; sourceTree = "<group>"; };
 		71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSChannelDataParser.swift; sourceTree = "<group>"; };
 		71C273F21EBAF79D0096A19D /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
+		71C4064F1ED723F6003A9248 /* BMSJudgeableRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSJudgeableRange.swift; path = harp/src/model/bms/BMSJudgeableRange.swift; sourceTree = SOURCE_ROOT; };
 		71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugJudgeScene.swift; sourceTree = "<group>"; };
 		71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugInputKeysScene.swift; sourceTree = "<group>"; };
 		71CC19881E1B21BD00391CAA /* GameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEvent.swift; sourceTree = "<group>"; };
@@ -562,6 +564,7 @@
 				71FA798D1EC9DD7D008FCE82 /* BMSJudge.swift */,
 				718408341ECF3DC400F5A9B1 /* BMSNotesState.swift */,
 				718408361ED3666C00F5A9B1 /* BMSModelSystem.swift */,
+				71C4064F1ED723F6003A9248 /* BMSJudgeableRange.swift */,
 			);
 			path = BMS;
 			sourceTree = "<group>";
@@ -904,6 +907,7 @@
 				710655DB1DF26AC3003A1169 /* CGSize.swift in Sources */,
 				7145897C1EBF532B00B7DD09 /* LaneType.swift in Sources */,
 				71E6B7891E1695E600475846 /* CGPoint.swift in Sources */,
+				71C406501ED723F6003A9248 /* BMSJudgeableRange.swift in Sources */,
 				7127902E1E34DF6C00F0C5FE /* StartView.swift in Sources */,
 				7127902A1E34DDA600F0C5FE /* View.swift in Sources */,
 				7166A0071E2A7D3A00D1588C /* Bridge.swift in Sources */,
