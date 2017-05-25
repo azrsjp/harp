@@ -33,7 +33,7 @@ final class BMSNoteCoordinate {
   func getNotesInLaneAt(tick: Int) -> [BMSNoteCoordData] {
     let tickRange = tickRangeInLane(startTick: tick)
 
-    return notes.alive
+    return notes.all
       .filter { tickRange ~= $0.tick && ($0.trait.type == .visible) }
       .flatMap {
           let noteId = $0.hashValue
