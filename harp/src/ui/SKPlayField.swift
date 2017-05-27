@@ -21,7 +21,7 @@ final class SKPlayField: SKSpriteNode {
       = SKNote.NoteType.white.size.width * CGFloat(4.0) +
         SKNote.NoteType.black.size.width * CGFloat(3.0) +
         SKNote.NoteType.scratch.size.width * CGFloat(1.0) +
-        laneSeparatorSize.width * CGFloat(6.0)
+        laneSeparatorSize.width * CGFloat(7.0)
 
     super.init(texture: nil, color: .black,
                size: CGSize(width: width, height: CGFloat(Config.BMS.defaultLaneHeight)))
