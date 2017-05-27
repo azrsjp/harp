@@ -83,6 +83,7 @@
 		71C406521ED9566B003A9248 /* SKPlayField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C406511ED9566B003A9248 /* SKPlayField.swift */; };
 		71C406541ED97DB8003A9248 /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 71C406531ED97DB8003A9248 /* Colors.json */; };
 		71C406561ED97F05003A9248 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C406551ED97F05003A9248 /* Colors.swift */; };
+		71C406581ED98D62003A9248 /* DebugPlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C406571ED98D62003A9248 /* DebugPlayScene.swift */; };
 		71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */; };
 		71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */; };
 		71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19881E1B21BD00391CAA /* GameEvent.swift */; };
@@ -198,6 +199,7 @@
 		71C406511ED9566B003A9248 /* SKPlayField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPlayField.swift; sourceTree = "<group>"; };
 		71C406531ED97DB8003A9248 /* Colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
 		71C406551ED97F05003A9248 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		71C406571ED98D62003A9248 /* DebugPlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugPlayScene.swift; sourceTree = "<group>"; };
 		71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugJudgeScene.swift; sourceTree = "<group>"; };
 		71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugInputKeysScene.swift; sourceTree = "<group>"; };
 		71CC19881E1B21BD00391CAA /* GameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEvent.swift; sourceTree = "<group>"; };
@@ -407,6 +409,7 @@
 				71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */,
 				71CC19901E1B384200391CAA /* DebugUIComponentsScene.swift */,
 				712790331E34E47C00F0C5FE /* DebugScene.swift */,
+				71C406571ED98D62003A9248 /* DebugPlayScene.swift */,
 			);
 			path = debug;
 			sourceTree = "<group>";
@@ -895,6 +898,7 @@
 				71E6B7911E16AD1300475846 /* SKSpriteNode.swift in Sources */,
 				71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */,
 				7161837D1EC0B66F00D7B374 /* BMSNoteTraitData.swift in Sources */,
+				71C406581ED98D62003A9248 /* DebugPlayScene.swift in Sources */,
 				71C273EF1EBADAD90096A19D /* BMSHeaderParser.swift in Sources */,
 				718A5CFD1D4531F400B88A76 /* Common.swift in Sources */,
 				71CC19971E1BCF0B00391CAA /* Images.swift in Sources */,

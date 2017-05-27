@@ -6,7 +6,8 @@ import SpriteKit
 fileprivate let debugs: [(String, () -> SKScene)] = [
   ("UI Components", { DebugUIComponentsScene() }),
   ("Judge", { DebugJudgeScene() }),
-  ("InputKeys", { DebugInputKeysScene() })
+  ("InputKeys", { DebugInputKeysScene() }),
+  ("Play", { DebugPlayScene() })
 ]
 
 // Viewgroup for on product
