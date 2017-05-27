@@ -9,14 +9,6 @@ struct DIContainer {
 }
 
 fileprivate let container = Container { c in
-  c.register(StartScene.self) { _ in
-    let m = StartModel()
-    let v = StartView()
-    let c = StartController(model: m, view: v)
-    let scene = StartScene(model: m, view: v, controller: c)
-    
-    return scene
-  }
   
   c.register(PlayScene.self) { _ in
     let m = PlayModel()
