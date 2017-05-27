@@ -19,6 +19,8 @@ final class HIDInputConverterForInGame: HIDInputConverter {
       case .key2: return input.value == .on ? .suddenPlusDown : .none
       case .key3: return input.value == .on ? .liftUp   : .none
       case .key4: return input.value == .on ? .liftDown : .none
+      case .key5: return input.value == .on ? .hispeedUp   : .none
+      case .key6: return input.value == .on ? .hispeedDown: .none
 
       // for PS2 IIDX controler
       case .button4: return input.value == .on ? .noteOn1 : .noteOff1
