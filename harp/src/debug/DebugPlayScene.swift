@@ -3,17 +3,69 @@ import SpriteKit
 
 class DebugPlayScene: DebugScene {
   
-  private let playScene = DIContainer.scene(PlayScene.self)
-  private let textField = NSTextField()
+  private var playScene = DIContainer.scene(PlayScene.self)
+  private let bmsPathField = NSTextField()
+  private let loadButton = NSButton()
+  private let slider = NSSlider()
 
   override func didMove(to view: SKView) {
+    super.didMove(to: view)
+
     playScene.didMove(to: view)
     addChild(playScene)
+
+    bmsPathField.stringValue = "/Absolute/Path/to/BMSfile"
+    bmsPathField.frame.size = NSSize(width: 400.0, height: 30.0)
+    bmsPathField.frame.origin = NSPoint(x: 400.0, y: view.frame.height - 40.0)
+    view.addSubview(bmsPathField)
     
-    super.didMove(to: view)
+    loadButton.title = "Start"
+    loadButton.frame.size = NSSize(width: 80.0, height: 30.0)
+    loadButton.frame.origin = NSPoint(x: 800.0, y: view.frame.height - 40.0)
+    loadButton.action = #selector(onClickLoad)
+    loadButton.target = self
+    view.addSubview(loadButton)
+    
+    slider.rotate(byDegrees: 90.0)
+    slider.isContinuous = true
+    slider.target = self
+    slider.action = #selector(onSliderChanged)
+    slider.frame.size = NSSize(width: 30.0, height: 550.0)
+    slider.frame.origin = NSPoint(x: 350.0, y: view.frame.height - 565.0)
+    view.addSubview(slider)
+  }
+
+  @objc private func onClickLoad() {
+    let startSec = playScene.m.duration * playScene.m.progress
+    playScene.removeFromParent()
+    playScene = DIContainer.scene(PlayScene.self)
+    playScene.didMove(to: view!)
+    addChild(playScene)
+    
+    Logger.info("Try to load \(self.bmsPathField.stringValue)")
+
+    playScene.m.loadBMSFileAndIntialize(fullFilePath: bmsPathField.stringValue,
+                                        originSec: startSec)
   }
   
+  @objc private func onSliderChanged(sender: NSSlider) {
+    playScene.m.stop()
+    playScene.m.controlledProgress = sender.doubleValue
+  }
+  
+  override func willMove(from view: SKView) {
+    bmsPathField.removeFromSuperview()
+    loadButton.removeFromSuperview()
+    slider.removeFromSuperview()
+  }
+
   override func update(_ currentTime: TimeInterval) {
     playScene.update(currentTime)
+
+    slider.doubleValue = playScene.m.progress
+  }
+  
+  override func keyDown(with event: NSEvent) {
+    
   }
 }
