@@ -32,8 +32,13 @@ final class BMSNoteCoordinate {
 
   // MARK: - internal
 
-  func setHiSpeed(_ hiSpeed: Double) {
-    self.hiSpeed = hiSpeed
+  func addHiSpeedCount(_ value: Double) {
+    let validRange = 0.5...(5.0)
+    let newValue = hiSpeed + value
+    
+    if validRange ~= newValue {
+      hiSpeed = newValue
+    }
   }
   
   func addCoverCount(_ value: Double) {

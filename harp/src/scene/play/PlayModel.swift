@@ -75,6 +75,12 @@ class PlayModel: Model {
     
     model.coord.addLiftCount(value)
   }
+  
+  func addHiSpeedCount(_ value: Double) {
+    guard isInitialized else { return }
+    
+    model.coord.addHiSpeedCount(value)
+  }
 
   func judge(event: GameEvent) {
     guard isInitialized else { return }
