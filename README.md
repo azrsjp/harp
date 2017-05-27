@@ -5,6 +5,13 @@ The name of harp project comes from harp seal.
 
 This application will be BMS Player for macOS (10.10 or newer). Currently work in progress.
 
+# Try to play
+0. Build this project
+1. Launch Harp app
+2. Click `Play` under `InputKeys` menu
+3. Input absolute path for bms file to TextBox
+4. Click `Start` button
+
 # Roadmap
 - [x] Adopt to conventional HID controller for BMS
 - [x] BMS file Loader
@@ -20,6 +27,10 @@ This application will be BMS Player for macOS (10.10 or newer). Currently work i
 
 # Environments
 Clone this repository, and build under following Environments.
-- Swift3 (Xcode8)
+- Swift3.1 (Xcode8.3.2)
 - SpriteKit
 - CocoaPods
+
+## Dependencies
+- [ALURE v1.2](http://kcat.strangesoft.net/alure.html)
+- And see Podfile
