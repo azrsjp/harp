@@ -63,6 +63,18 @@ class PlayModel: Model {
         self_.startBMSPlayer(at: originSec)
       }).addDisposableTo(disposeBag)
   }
+  
+  func addCoverCount(_ value: Double) {
+    guard isInitialized else { return }
+    
+    model.coord.addCoverCount(value)
+  }
+  
+  func addLiftCount(_ value: Double) {
+    guard isInitialized else { return }
+    
+    model.coord.addLiftCount(value)
+  }
 
   func judge(event: GameEvent) {
     guard isInitialized else { return }
@@ -86,6 +98,8 @@ class PlayModel: Model {
 
     return BMSCoordData(judge: model.judge.getLastJudge().rawValue,
                         combo: model.judge.getCombo(),
+                        coverHeight: model.coord.coverHeight,
+                        liftHeight: model.coord.liftHeight,
                         notes: model.coord.getNotesInLaneAt(tick: currentTick),
                         longNotes: model.coord.getLongNotesInLaneAt(tick: currentTick),
                         barLines: model.coord.getBarLinesInLaneAt(tick: currentTick))

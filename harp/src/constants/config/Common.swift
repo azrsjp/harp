@@ -25,5 +25,7 @@ struct Config {
     static let goodRange: Double = 0.105
     static let badRange: Double = 0.150
     static let poorRange: Double = 1.0
+    
+    static let laneHeightDivideCount: Double = 999.0
   }
 }
