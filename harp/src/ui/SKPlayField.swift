@@ -105,7 +105,6 @@ final class SKPlayField: SKSpriteNode {
       if let note = targetNoteGroup[$0.noteId] {
         placeNote(coord: $0, note: note)
       } else {
-        guard $0.judge == .notYet else { return }
         
         let newNote = noteFactory(lane: $0.trait.lane)
         
