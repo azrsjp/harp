@@ -46,6 +46,14 @@ class PlayController: Controller<PlayModel, PlayView> {
         model.playKeySound(side: side, lane: lane)
       }
     }
+    
+    switch event {
+    case .suddenPlusUp: model.addCoverCount(10.0)
+    case .suddenPlusDown: model.addCoverCount(-10.0)
+    case .liftUp: model.addLiftCount(10.0)
+    case .liftDown: model.addLiftCount(-10.0)
+    default: break
+    }
   }
   
   override func rightMouseDown(with event: NSEvent) -> Bool {

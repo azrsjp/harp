@@ -29,6 +29,7 @@ enum GameEvent: String {
   case switchLift       = "SwitchLift"
   case switchSuddenPlus = "SwitchSuddenPlus"
   case exit             = "Exit"
+  case none             = "none"
 
   var isKeyDownEvent: Bool {
     switch self {
