@@ -80,6 +80,10 @@ final class SKPlayField: SKSpriteNode {
     }
   }
   
+  func setkeyBeamActive(_ isActive: Bool, lane: LaneType) {
+    lanes[lane]?.setKeyBeamActive(isActive)
+  }
+  
   func setLaneCoverValue(_ value: Int) {
   
   }
@@ -165,6 +169,7 @@ final class SKPlayField: SKSpriteNode {
 
 fileprivate final class SKLane: SKSpriteNode {
   let width: CGFloat
+  let keyBeam = SKSpriteNode(imageNamed: "KeyBeam")
 
   init(noteTypeToHold: SKNote.NoteType) {
     width = noteTypeToHold.size.width
@@ -174,9 +179,26 @@ fileprivate final class SKLane: SKSpriteNode {
       NSColor(named: .laneBgGray) : NSColor(named: .laneBgBlack)
 
     super.init(texture: nil, color: color, size: size)
+    
+    keyBeam.anchorPoint = CGPoint(x: 0.5, y: 0.0)
+    keyBeam.size.width = size.width
+    keyBeam.position = CGPoint(x: size.width * 0.5, y: 0.0)
+    keyBeam.isHidden = true
+    addChild(keyBeam)
   }
   
   required init?(coder aDecoder: NSCoder) {
     fatalError("init(coder:) has not been implemented")
+  }
+  
+  func setKeyBeamActive(_ isActive: Bool) {
+    keyBeam.isHidden = !isActive
+    
+    if isActive {
+      let action = SKAction.resize(toWidth: size.width, duration: 0.05)
+      keyBeam.removeAllActions()
+      keyBeam.size.width = size.width - 8.0
+      keyBeam.run(action)
+    }
   }
 }

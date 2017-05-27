@@ -23,6 +23,10 @@ class PlayView: View {
     judge.horizontalAlignmentMode = .right
     field.addChild(judge)
   }
+  
+  func setKeyBeamActive(_ isActive: Bool, lane: LaneType) {
+    field.setkeyBeamActive(isActive, lane: lane)
+  }
 
   override func update(_ currentTime: TimeInterval) {
     guard let model = model, let coords = model.currentCoordData() else {
