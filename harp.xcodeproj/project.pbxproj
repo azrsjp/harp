@@ -80,6 +80,7 @@
 		71C273F11EBADB550096A19D /* BMSChannelDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */; };
 		71C273F31EBAF79D0096A19D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273F21EBAF79D0096A19D /* Math.swift */; };
 		71C406501ED723F6003A9248 /* BMSJudgeableRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C4064F1ED723F6003A9248 /* BMSJudgeableRange.swift */; };
+		71C406521ED9566B003A9248 /* SKPlayField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C406511ED9566B003A9248 /* SKPlayField.swift */; };
 		71C406541ED97DB8003A9248 /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 71C406531ED97DB8003A9248 /* Colors.json */; };
 		71C406561ED97F05003A9248 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C406551ED97F05003A9248 /* Colors.swift */; };
 		71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */; };
@@ -194,6 +195,7 @@
 		71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSChannelDataParser.swift; sourceTree = "<group>"; };
 		71C273F21EBAF79D0096A19D /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		71C4064F1ED723F6003A9248 /* BMSJudgeableRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSJudgeableRange.swift; path = harp/src/model/bms/BMSJudgeableRange.swift; sourceTree = SOURCE_ROOT; };
+		71C406511ED9566B003A9248 /* SKPlayField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPlayField.swift; sourceTree = "<group>"; };
 		71C406531ED97DB8003A9248 /* Colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
 		71C406551ED97F05003A9248 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugJudgeScene.swift; sourceTree = "<group>"; };
@@ -350,6 +352,7 @@
 				71A2A1E11E1ABE41000C885A /* Clickable.swift */,
 				71A2A1E31E1ABE68000C885A /* TextButton.swift */,
 				E5AECB9F1ECABBBC00F1E34C /* SKNote.swift */,
+				71C406511ED9566B003A9248 /* SKPlayField.swift */,
 			);
 			path = ui;
 			sourceTree = "<group>";
@@ -937,6 +940,7 @@
 				7102178C1EBEEBC7002C73FB /* SharedSound.swift in Sources */,
 				714589781EBF52D700B7DD09 /* BMSChannelData.swift in Sources */,
 				E54295741EB72BFD00AAE250 /* Any.swift in Sources */,
+				71C406521ED9566B003A9248 /* SKPlayField.swift in Sources */,
 				710217781EBCE35A002C73FB /* SoundPlayerFactory.swift in Sources */,
 				71FA798C1EC7F501008FCE82 /* BMSSound.swift in Sources */,
 				71FA798E1EC9DD7D008FCE82 /* BMSJudge.swift in Sources */,
