@@ -4,12 +4,15 @@ final class TimerThread: Thread {
   private var block: ((_ elapsedSec: Double) -> Void)?
   private var interval = 0.00001
   private var timer = Timer()
+  private var origin: Double = 0.0
 
   var elapsedSec: Double {
-    return timer.elapsedSec
+    return origin + timer.elapsedSec
   }
 
-  func start(interval: Double = 0.00001, block: @escaping ((_ elapsedSec: Double) -> Void)) {
+  func start(interval: Double = 0.00001, origin: Double,
+             block: @escaping ((_ elapsedSec: Double) -> Void)) {
+    self.origin = origin
     self.block = block
 
     start()
@@ -28,7 +31,7 @@ final class TimerThread: Thread {
     }
 
     while isExecuting {
-      block(timer.elapsedSec)
+      block(elapsedSec)
       Thread.sleep(forTimeInterval: interval)
     }
   }
