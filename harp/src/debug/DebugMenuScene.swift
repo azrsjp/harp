@@ -5,14 +5,12 @@ import SpriteKit
 // Viewgroup for experiments
 fileprivate let debugs: [(String, () -> SKScene)] = [
   ("UI Components", { DebugUIComponentsScene() }),
-  ("Judge", { DebugJudgeScene() }),
   ("InputKeys", { DebugInputKeysScene() }),
   ("Play", { DebugPlayScene() })
 ]
 
 // Viewgroup for on product
 fileprivate let views: [(String, () -> SKScene)] = [
-  ("Start", { DIContainer.scene(StartScene.self) }),
   ("Play", { DIContainer.scene(PlayScene.self) })
 ]
 
