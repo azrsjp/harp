@@ -53,6 +53,7 @@ class PlayController: Controller<PlayModel, PlayView> {
       model.playKeySound(side: .player1, lane: .key6)
     case .noteOn7:
       model.playKeySound(side: .player1, lane: .key7)
+    case .scrachRight: fallthrough
     case .scrachLeft:
       model.playKeySound(side: .player1, lane: .scratch)
     default:
