@@ -4,13 +4,15 @@ fileprivate let laneSeparatorSize = CGSize(width: 2.0, height: CGFloat(Config.BM
 fileprivate let barLineZPosition: CGFloat = 1.0
 fileprivate let judgeLineZPosition: CGFloat = 2.0
 fileprivate let noteZPosition: CGFloat = 3.0
+fileprivate let coverZPosition: CGFloat = 4.0
+fileprivate let liftZPosition: CGFloat = 4.0
 
 final class SKPlayField: SKSpriteNode {
 
   private var lanes = [LaneType: SKLane]()
-  private let laneCover = SKSpriteNode()
   private let judgeLine = SKSpriteNode()
   private let lift = SKSpriteNode()
+  private let laneCover = SKSpriteNode()
   
   private var barLines = [SKSpriteNode]()
   private var normalNotes = [Int: SKNote]()
@@ -36,6 +38,20 @@ final class SKPlayField: SKSpriteNode {
     setupLanes(laneOrder: (type == .player1) ?
       [.scratch, .key1, .key2, .key3, .key4, .key5, .key6, .key7] :
       [.key1, .key2, .key3, .key4, .key5, .key6, .key7, .scratch])
+    
+    lift.anchorPoint = CGPoint.zero
+    lift.position = CGPoint.zero
+    lift.size = CGSize(width: size.width, height: 0.0)
+    lift.color = .gray
+    lift.zPosition = liftZPosition
+    addChild(lift)
+    
+    laneCover.anchorPoint = CGPoint(x: 0.0, y: 1.0)
+    laneCover.position = CGPoint(x: 0.0, y: size.height)
+    laneCover.size = CGSize(width: size.width, height: 0.0)
+    laneCover.color = .gray
+    laneCover.zPosition = coverZPosition
+    addChild(laneCover)
   }
   
   required init?(coder aDecoder: NSCoder) {
@@ -84,12 +100,17 @@ final class SKPlayField: SKSpriteNode {
     lanes[lane]?.setKeyBeamActive(isActive)
   }
   
-  func setLaneCoverValue(_ value: Int) {
-  
+  func setLaneCoverHeight(_ height: CGFloat) {
+    laneCover.isHidden = height <= 0.0
+    laneCover.size.height = height
   }
   
-  func setLiftValue(_ value: Int) {
-
+  func setLiftHeight(_ height: CGFloat) {
+    lift.isHidden = height <= 0.0
+    lift.size.height = height
+    
+    lanes.forEach { $0.value.position.y = height }
+    judgeLine.position.y = height
   }
   
   // MARK: - private

@@ -3,6 +3,9 @@ import Foundation
 struct BMSCoordData {
   let judge: String
   let combo: Int
+  
+  let coverHeight: CGFloat
+  let liftHeight: CGFloat
 
   let notes: [BMSNoteCoordData]
   let longNotes: [BMSLongNoteCoordData]

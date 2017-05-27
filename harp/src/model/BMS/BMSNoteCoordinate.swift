@@ -3,9 +3,23 @@ import Foundation
 final class BMSNoteCoordinate {
 
   private var hiSpeed: Double = 4.0
+  private var coverCount: Double = 0.0
+  private var liftCount: Double = 0.0
   private var basePixelPerTick: Double
   private var barStartTicks = [Int]()
   private let notes: BMSNotesState
+  
+  private var pixelPerTick: Double {
+    return basePixelPerTick * (1.0 - (coverCount + liftCount) / Config.BMS.laneHeightDivideCount)
+  }
+  
+  var coverHeight: CGFloat {
+    return CGFloat(Config.BMS.defaultLaneHeight * (coverCount / Config.BMS.laneHeightDivideCount))
+  }
+  
+  var liftHeight: CGFloat {
+    return CGFloat(Config.BMS.defaultLaneHeight * (liftCount / Config.BMS.laneHeightDivideCount))
+  }
 
   // MARK: - internal
 
@@ -21,7 +35,25 @@ final class BMSNoteCoordinate {
   func setHiSpeed(_ hiSpeed: Double) {
     self.hiSpeed = hiSpeed
   }
-
+  
+  func addCoverCount(_ value: Double) {
+    let validRange = 0.0...(Config.BMS.laneHeightDivideCount - liftCount)
+    let newValue = coverCount + value
+    
+    if validRange ~= newValue {
+      coverCount = newValue
+    }
+  }
+  
+  func addLiftCount(_ value: Double) {
+    let validRange = 0.0...(Config.BMS.laneHeightDivideCount - coverCount)
+    let newValue = liftCount + value
+    
+    if validRange ~= newValue {
+      liftCount = newValue
+    }
+  }
+  
   func getBarLinesInLaneAt(tick: Int) -> [BMSBarLineCoordData] {
     let tickRange = tickRangeInLane(startTick: tick)
 
@@ -73,13 +105,13 @@ final class BMSNoteCoordinate {
   // MARK: - private
 
   private func calcLengthBy(tickCount: Int) -> Double {
-    let length = basePixelPerTick * hiSpeed * Double(tickCount)
+    let length = pixelPerTick * hiSpeed * Double(tickCount)
 
     return length
   }
   
   private func tickRangeInLane(startTick: Int) -> ClosedRange<Int> {
-    let endTick = Int(Config.BMS.defaultLaneHeight / (basePixelPerTick * hiSpeed))
+    let endTick = Int(Config.BMS.defaultLaneHeight / (pixelPerTick * hiSpeed))
     
     return startTick...(startTick + endTick)
   }

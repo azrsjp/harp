@@ -36,6 +36,8 @@ class PlayView: View {
     field.updateBarLineCoords(coords.barLines)
     field.updateNormalNoteCoords(coords.notes)
     field.updateLongNoteCoords(coords.longNotes)
+    field.setLaneCoverHeight(coords.coverHeight)
+    field.setLiftHeight(coords.liftHeight)
 
     combo.text = String(coords.combo)
     judge.text = String(coords.judge)
