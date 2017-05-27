@@ -52,6 +52,8 @@ class PlayController: Controller<PlayModel, PlayView> {
     case .suddenPlusDown: model.addCoverCount(-10.0)
     case .liftUp: model.addLiftCount(10.0)
     case .liftDown: model.addLiftCount(-10.0)
+    case .hispeedUp: model.addHiSpeedCount(0.5)
+    case .hispeedDown: model.addHiSpeedCount(-0.5)
     default: break
     }
   }
