@@ -80,6 +80,8 @@
 		71C273F11EBADB550096A19D /* BMSChannelDataParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */; };
 		71C273F31EBAF79D0096A19D /* Math.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C273F21EBAF79D0096A19D /* Math.swift */; };
 		71C406501ED723F6003A9248 /* BMSJudgeableRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C4064F1ED723F6003A9248 /* BMSJudgeableRange.swift */; };
+		71C406541ED97DB8003A9248 /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 71C406531ED97DB8003A9248 /* Colors.json */; };
+		71C406561ED97F05003A9248 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C406551ED97F05003A9248 /* Colors.swift */; };
 		71CC19851E1AF3BA00391CAA /* DebugJudgeScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */; };
 		71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */; };
 		71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19881E1B21BD00391CAA /* GameEvent.swift */; };
@@ -191,6 +193,8 @@
 		71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSChannelDataParser.swift; sourceTree = "<group>"; };
 		71C273F21EBAF79D0096A19D /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
 		71C4064F1ED723F6003A9248 /* BMSJudgeableRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSJudgeableRange.swift; path = harp/src/model/bms/BMSJudgeableRange.swift; sourceTree = SOURCE_ROOT; };
+		71C406531ED97DB8003A9248 /* Colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
+		71C406551ED97F05003A9248 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugJudgeScene.swift; sourceTree = "<group>"; };
 		71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugInputKeysScene.swift; sourceTree = "<group>"; };
 		71CC19881E1B21BD00391CAA /* GameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEvent.swift; sourceTree = "<group>"; };
@@ -306,6 +310,7 @@
 				718C06DE1D241B6E002F6E68 /* Images.xcassets */,
 				718C06E31D241B6E002F6E68 /* Info.plist */,
 				71FD1E3E1DF2D6800081E1B1 /* Localizable.strings */,
+				71C406531ED97DB8003A9248 /* Colors.json */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -542,6 +547,7 @@
 			children = (
 				71CC19961E1BCF0B00391CAA /* Images.swift */,
 				71FD1E451DF2D9060081E1B1 /* Strings.swift */,
+				71C406551ED97F05003A9248 /* Colors.swift */,
 			);
 			path = resources;
 			sourceTree = "<group>";
@@ -712,6 +718,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				718C06DF1D241B6E002F6E68 /* Images.xcassets in Resources */,
+				71C406541ED97DB8003A9248 /* Colors.json in Resources */,
 				71FD1E3F1DF2D6800081E1B1 /* Localizable.strings in Resources */,
 				718C06E21D241B6E002F6E68 /* MainMenu.xib in Resources */,
 			);
@@ -808,15 +815,17 @@
 			inputPaths = (
 				"$(SRCROOT)/harp/resources/Images.xcassets",
 				"$(SRCROOT)/harp/resources/Localizable.strings",
+				"$(SRCROOT)/harp/resources/Colors.json",
 			);
 			name = "Run SwiftGen";
 			outputPaths = (
 				"$(SRCROOT)/harp/src/constants/resources/Images.swift",
 				"$(SRCROOT)/harp/src/constants/resources/Strings.swift",
+				"$(SRCROOT)/harp/src/constants/resources/Colors.swift",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "SWIFT_GEN=\"${SRCROOT}/Pods/SwiftGen/bin/swiftgen\"\n\nif which ${SWIFT_GEN} >/dev/null; then\n    ${SWIFT_GEN} images ${SCRIPT_INPUT_FILE_0} --output ${SCRIPT_OUTPUT_FILE_0} --template swift3\n    ${SWIFT_GEN} strings ${SCRIPT_INPUT_FILE_1} --output ${SCRIPT_OUTPUT_FILE_1} --template swift3\nelse\n    echo \"warning: SwiftGen not installed.\"\nfi";
+			shellScript = "SWIFT_GEN=\"${SRCROOT}/Pods/SwiftGen/bin/swiftgen\"\n\nif which ${SWIFT_GEN} >/dev/null; then\n    ${SWIFT_GEN} images ${SCRIPT_INPUT_FILE_0} --output ${SCRIPT_OUTPUT_FILE_0} --template swift3\n    ${SWIFT_GEN} strings ${SCRIPT_INPUT_FILE_1} --output ${SCRIPT_OUTPUT_FILE_1} --template swift3\n    ${SWIFT_GEN} colors ${SCRIPT_INPUT_FILE_2} --output ${SCRIPT_OUTPUT_FILE_2} --template swift3\nelse\n    echo \"warning: SwiftGen not installed.\"\nfi";
 		};
 		962069121753EEA308718EB8 /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -890,6 +899,7 @@
 				71C273E81EB9D1490096A19D /* String+split.swift in Sources */,
 				71BFD6FA1EB638DA00658965 /* String+ReadFile.swift in Sources */,
 				71CC19911E1B384200391CAA /* DebugUIComponentsScene.swift in Sources */,
+				71C406561ED97F05003A9248 /* Colors.swift in Sources */,
 				71A2A1E21E1ABE41000C885A /* Clickable.swift in Sources */,
 				71FA79841EC7CA82008FCE82 /* PlayView.swift in Sources */,
 				718C06DB1D241B6E002F6E68 /* StartScene.swift in Sources */,
