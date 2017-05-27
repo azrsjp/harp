@@ -160,7 +160,7 @@
 		7127902D1E34DF6C00F0C5FE /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		7127902F1E34DF7700F0C5FE /* StartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartModel.swift; sourceTree = "<group>"; };
 		712790311E34DF8200F0C5FE /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
-		712790331E34E47C00F0C5FE /* DebugScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugScene.swift; path = ../DebugScene.swift; sourceTree = "<group>"; };
+		712790331E34E47C00F0C5FE /* DebugScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugScene.swift; path = DebugScene.swift; sourceTree = "<group>"; };
 		714589751EBF52B800B7DD09 /* BMSHeaderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSHeaderData.swift; sourceTree = "<group>"; };
 		714589771EBF52D700B7DD09 /* BMSChannelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSChannelData.swift; sourceTree = "<group>"; };
 		714589791EBF52FF00B7DD09 /* BMSScoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSScoreData.swift; sourceTree = "<group>"; };
@@ -195,7 +195,7 @@
 		71C273EE1EBADAD90096A19D /* BMSHeaderParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSHeaderParser.swift; sourceTree = "<group>"; };
 		71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSChannelDataParser.swift; sourceTree = "<group>"; };
 		71C273F21EBAF79D0096A19D /* Math.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Math.swift; sourceTree = "<group>"; };
-		71C4064F1ED723F6003A9248 /* BMSJudgeableRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSJudgeableRange.swift; path = harp/src/model/bms/BMSJudgeableRange.swift; sourceTree = SOURCE_ROOT; };
+		71C4064F1ED723F6003A9248 /* BMSJudgeableRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSJudgeableRange.swift; path = BMSJudgeableRange.swift; sourceTree = "<group>"; };
 		71C406511ED9566B003A9248 /* SKPlayField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKPlayField.swift; sourceTree = "<group>"; };
 		71C406531ED97DB8003A9248 /* Colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
 		71C406551ED97F05003A9248 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -216,10 +216,10 @@
 		71E6B7921E16C76C00475846 /* HIDDeviceManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HIDDeviceManager.swift; sourceTree = "<group>"; };
 		71EA2C0C1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DMJudgeTextEncodingOfData.swift; sourceTree = "<group>"; };
 		71FA797C1EC68535008FCE82 /* BMSNoteCoordinate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSNoteCoordinate.swift; sourceTree = "<group>"; };
-		71FA797F1EC7CA5F008FCE82 /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayScene.swift; path = play/PlayScene.swift; sourceTree = "<group>"; };
-		71FA79811EC7CA73008FCE82 /* PlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayController.swift; path = play/PlayController.swift; sourceTree = "<group>"; };
-		71FA79831EC7CA82008FCE82 /* PlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayView.swift; path = play/PlayView.swift; sourceTree = "<group>"; };
-		71FA79851EC7CA8E008FCE82 /* PlayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayModel.swift; path = play/PlayModel.swift; sourceTree = "<group>"; };
+		71FA797F1EC7CA5F008FCE82 /* PlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayScene.swift; path = PlayScene.swift; sourceTree = "<group>"; };
+		71FA79811EC7CA73008FCE82 /* PlayController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayController.swift; path = PlayController.swift; sourceTree = "<group>"; };
+		71FA79831EC7CA82008FCE82 /* PlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayView.swift; path = PlayView.swift; sourceTree = "<group>"; };
+		71FA79851EC7CA8E008FCE82 /* PlayModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PlayModel.swift; path = PlayModel.swift; sourceTree = "<group>"; };
 		71FA79891EC7EECA008FCE82 /* String+isFilePath.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+isFilePath.swift"; sourceTree = "<group>"; };
 		71FA798B1EC7F501008FCE82 /* BMSSound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSSound.swift; sourceTree = "<group>"; };
 		71FA798D1EC9DD7D008FCE82 /* BMSJudge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSJudge.swift; sourceTree = "<group>"; };
@@ -243,8 +243,8 @@
 		E592F3951EB1CA6C00A672AB /* BMSData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSData.swift; sourceTree = "<group>"; };
 		E5A868D41ECA95BC0068222D /* BMSCoordData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSCoordData.swift; sourceTree = "<group>"; };
 		E5AECB9F1ECABBBC00F1E34C /* SKNote.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SKNote.swift; sourceTree = "<group>"; };
-		E5FC969F1ECC4B7400535FC6 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = Timer/Timer.swift; sourceTree = "<group>"; };
-		E5FC96A11ECC4B8700535FC6 /* TimerThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerThread.swift; path = Timer/TimerThread.swift; sourceTree = "<group>"; };
+		E5FC969F1ECC4B7400535FC6 /* Timer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Timer.swift; path = Timer.swift; sourceTree = "<group>"; };
+		E5FC96A11ECC4B8700535FC6 /* TimerThread.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TimerThread.swift; path = TimerThread.swift; sourceTree = "<group>"; };
 		F21D0D7C81FFDE80F912DDA1 /* Pods-harpTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-harpTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-harpTests/Pods-harpTests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -540,6 +540,7 @@
 				71FA79851EC7CA8E008FCE82 /* PlayModel.swift */,
 			);
 			name = play;
+			path = play;
 			sourceTree = "<group>";
 		};
 		71FD1E421DF2D7A70081E1B1 /* constants */ = {
@@ -625,6 +626,7 @@
 				E5FC96A11ECC4B8700535FC6 /* TimerThread.swift */,
 			);
 			name = Timer;
+			path = Timer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
