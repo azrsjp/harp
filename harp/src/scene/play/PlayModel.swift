@@ -10,14 +10,33 @@ class PlayModel: Model {
   private var model: BMSModelSystem!
 
   private var isInitialized = false
+  var controlledProgress: Double?
 
   deinit {
     timer.cancel()
   }
 
   // MARK: - internal
+  
+  var progress: Double {
+    guard isInitialized else { return 0.0 }
+    
+    return min((elapsedSec / duration), 1.0)
+  }
+  
+  var duration: Double {
+    guard isInitialized, let tick = model.notes.all.last?.tick else {
+      return 0.0
+    }
+    
+    return model.tick.elapsedAt(tick: tick)
+  }
+  
+  func stop() {
+    timer.cancel()
+  }
 
-  func loadBMSFileAndIntialize(fullFilePath: String) {
+  func loadBMSFileAndIntialize(fullFilePath: String, originSec: Double = 0.0) {
     guard
       let lines = String(unknownEncodingContentsOfFile: fullFilePath),
       let playerFactory = SoundPlayerFactory.shared,
@@ -41,14 +60,14 @@ class PlayModel: Model {
         self_.soundPlayer = player
         self_.isInitialized = true
 
-        self_.startBMSPlayer()
+        self_.startBMSPlayer(at: originSec)
       }).addDisposableTo(disposeBag)
   }
 
   func judge(event: GameEvent) {
     guard isInitialized else { return }
 
-    model.judge.judge(event: event, elapsed: timer.elapsedSec)
+    model.judge.judge(event: event, elapsed: elapsedSec)
   }
 
   func playKeySound(side: SideType, lane: LaneType) {
@@ -63,7 +82,7 @@ class PlayModel: Model {
   func currentCoordData() -> BMSCoordData? {
     guard isInitialized else { return nil }
 
-    let currentTick = model.tick.tickAt(elapsedSec: timer.elapsedSec)
+    let currentTick = model.tick.tickAt(elapsedSec: elapsedSec)
 
     return BMSCoordData(judge: model.judge.getLastJudge().rawValue,
                         combo: model.judge.getCombo(),
@@ -71,15 +90,22 @@ class PlayModel: Model {
                         longNotes: model.coord.getLongNotesInLaneAt(tick: currentTick),
                         barLines: model.coord.getBarLinesInLaneAt(tick: currentTick))
   }
+  
+  private var elapsedSec: Double {
+    guard isInitialized else { return 0.0 }
+    
+    return controlledProgress == nil ?
+      timer.elapsedSec : duration * controlledProgress!
+  }
 
   // MARK: - private
 
-  private func startBMSPlayer() {
+  private func startBMSPlayer(at: Double = 0.0) {
     guard isInitialized else { return }
 
     model.sound.updateKeyAssignAt(tick: 0)
     
-    timer.start {[weak self] in
+    timer.start(origin: at) {[weak self] in
       self?.update(elapsedSec: $0)
     }
   }
