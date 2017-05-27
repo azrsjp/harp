@@ -16,6 +16,10 @@ struct Config {
     static let defaultBarHeight: Double = 320.0
     static let defaultLaneHeight: Double = 578.0
     
+    static let scratchNoteSize = CGSize(width: 72.0, height: 8.0)
+    static let whiteNoteSize = CGSize(width: 40.0, height: 8.0)
+    static let blackNoteSize = CGSize(width: 30.0, height: 8.0)
+    
     static let pGreatRange: Double = 0.020
     static let greatRange: Double = 0.040
     static let goodRange: Double = 0.105
