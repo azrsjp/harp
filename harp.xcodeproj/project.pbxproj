@@ -160,7 +160,7 @@
 		7127902D1E34DF6C00F0C5FE /* StartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
 		7127902F1E34DF7700F0C5FE /* StartModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartModel.swift; sourceTree = "<group>"; };
 		712790311E34DF8200F0C5FE /* StartController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartController.swift; sourceTree = "<group>"; };
-		712790331E34E47C00F0C5FE /* DebugScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugScene.swift; sourceTree = "<group>"; };
+		712790331E34E47C00F0C5FE /* DebugScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DebugScene.swift; path = ../DebugScene.swift; sourceTree = "<group>"; };
 		714589751EBF52B800B7DD09 /* BMSHeaderData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSHeaderData.swift; sourceTree = "<group>"; };
 		714589771EBF52D700B7DD09 /* BMSChannelData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSChannelData.swift; sourceTree = "<group>"; };
 		714589791EBF52FF00B7DD09 /* BMSScoreData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BMSScoreData.swift; sourceTree = "<group>"; };
@@ -408,7 +408,6 @@
 				71CC19841E1AF3BA00391CAA /* DebugJudgeScene.swift */,
 				71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */,
 				71CC19901E1B384200391CAA /* DebugUIComponentsScene.swift */,
-				712790331E34E47C00F0C5FE /* DebugScene.swift */,
 				71C406571ED98D62003A9248 /* DebugPlayScene.swift */,
 			);
 			path = debug;
@@ -468,6 +467,7 @@
 		71C273E31EB79FEE0096A19D /* core */ = {
 			isa = PBXGroup;
 			children = (
+				712790331E34E47C00F0C5FE /* DebugScene.swift */,
 				71C273E41EB7A0760096A19D /* DebugUtil.swift */,
 			);
 			path = core;
