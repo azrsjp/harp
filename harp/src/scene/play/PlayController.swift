@@ -36,28 +36,15 @@ class PlayController: Controller<PlayModel, PlayView> {
   }
   
   private func handleGameEvent(_ event: GameEvent) {
-    model.judge(event: event)
+    
+    if let (lane, side) = event.sideAndLane {
+      view.setKeyBeamActive(event.isKeyDownEvent, lane: lane)
+      
+      model.judge(event: event)
 
-    switch event {
-    case .noteOn1:
-      model.playKeySound(side: .player1, lane: .key1)
-    case .noteOn2:
-      model.playKeySound(side: .player1, lane: .key2)
-    case .noteOn3:
-      model.playKeySound(side: .player1, lane: .key3)
-    case .noteOn4:
-      model.playKeySound(side: .player1, lane: .key4)
-    case .noteOn5:
-      model.playKeySound(side: .player1, lane: .key5)
-    case .noteOn6:
-      model.playKeySound(side: .player1, lane: .key6)
-    case .noteOn7:
-      model.playKeySound(side: .player1, lane: .key7)
-    case .scrachRight: fallthrough
-    case .scrachLeft:
-      model.playKeySound(side: .player1, lane: .scratch)
-    default:
-      break
+      if event.isKeyDownEvent {
+        model.playKeySound(side: side, lane: lane)
+      }
     }
   }
   
