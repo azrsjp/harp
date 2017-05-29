@@ -80,6 +80,7 @@
 		71C406541ED97DB8003A9248 /* Colors.json in Resources */ = {isa = PBXBuildFile; fileRef = 71C406531ED97DB8003A9248 /* Colors.json */; };
 		71C406561ED97F05003A9248 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C406551ED97F05003A9248 /* Colors.swift */; };
 		71C406581ED98D62003A9248 /* DebugPlayScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C406571ED98D62003A9248 /* DebugPlayScene.swift */; };
+		71C4065C1EDAD46A003A9248 /* GameOptionData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C4065B1EDAD46A003A9248 /* GameOptionData.swift */; };
 		71CC19871E1B134E00391CAA /* DebugInputKeysScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */; };
 		71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC19881E1B21BD00391CAA /* GameEvent.swift */; };
 		71CC198D1E1B2A0700391CAA /* Judge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71CC198C1E1B2A0700391CAA /* Judge.swift */; };
@@ -191,6 +192,7 @@
 		71C406531ED97DB8003A9248 /* Colors.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Colors.json; sourceTree = "<group>"; };
 		71C406551ED97F05003A9248 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		71C406571ED98D62003A9248 /* DebugPlayScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugPlayScene.swift; sourceTree = "<group>"; };
+		71C4065B1EDAD46A003A9248 /* GameOptionData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameOptionData.swift; sourceTree = "<group>"; };
 		71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugInputKeysScene.swift; sourceTree = "<group>"; };
 		71CC19881E1B21BD00391CAA /* GameEvent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameEvent.swift; sourceTree = "<group>"; };
 		71CC198C1E1B2A0700391CAA /* Judge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Judge.swift; sourceTree = "<group>"; };
@@ -591,6 +593,7 @@
 				7161837C1EC0B66F00D7B374 /* BMSNoteTraitData.swift */,
 				E5A868D41ECA95BC0068222D /* BMSCoordData.swift */,
 				E59219D41ED2D2400097E76B /* BMSLongNoteState.swift */,
+				71C4065B1EDAD46A003A9248 /* GameOptionData.swift */,
 			);
 			path = data;
 			sourceTree = "<group>";
@@ -882,6 +885,7 @@
 				71C273F31EBAF79D0096A19D /* Math.swift in Sources */,
 				716140291E1FE54600034402 /* HIDInputData.swift in Sources */,
 				71BFD6FC1EB655E100658965 /* Array+safe.swift in Sources */,
+				71C4065C1EDAD46A003A9248 /* GameOptionData.swift in Sources */,
 				71C273E81EB9D1490096A19D /* String+split.swift in Sources */,
 				71BFD6FA1EB638DA00658965 /* String+ReadFile.swift in Sources */,
 				71CC19911E1B384200391CAA /* DebugUIComponentsScene.swift in Sources */,
