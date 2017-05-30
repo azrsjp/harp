@@ -9,15 +9,11 @@ final class BMSNoteCoordinate {
   private var barStartTicks = [Int]()
   private let notes: BMSNotesState
   
-  private var pixelPerTick: Double {
-    return basePixelPerTick * (1.0 - (coverCount + liftCount) / Config.BMS.laneHeightDivideCount)
-  }
-  
-  var coverHeight: CGFloat {
+  static func coverHeight(coverCount: Double) -> CGFloat {
     return CGFloat(Config.BMS.defaultLaneHeight * (coverCount / Config.BMS.laneHeightDivideCount))
   }
   
-  var liftHeight: CGFloat {
+  static func liftHeight(liftCount: Double) -> CGFloat {
     return CGFloat(Config.BMS.defaultLaneHeight * (liftCount / Config.BMS.laneHeightDivideCount))
   }
 
@@ -32,31 +28,16 @@ final class BMSNoteCoordinate {
 
   // MARK: - internal
 
-  func addHiSpeedCount(_ value: Double) {
-    let validRange = 0.5...(5.0)
-    let newValue = hiSpeed + value
-    
-    if validRange ~= newValue {
-      hiSpeed = newValue
-    }
+  func setHiSpeedCount(_ value: Double) {
+    hiSpeed = value
   }
   
-  func addCoverCount(_ value: Double) {
-    let validRange = 0.0...(Config.BMS.laneHeightDivideCount - liftCount)
-    let newValue = coverCount + value
-    
-    if validRange ~= newValue {
-      coverCount = newValue
-    }
+  func setCoverCount(_ value: Double) {
+    coverCount = value
   }
   
-  func addLiftCount(_ value: Double) {
-    let validRange = 0.0...(Config.BMS.laneHeightDivideCount - coverCount)
-    let newValue = liftCount + value
-    
-    if validRange ~= newValue {
-      liftCount = newValue
-    }
+  func setLiftCount(_ value: Double) {
+    liftCount = value
   }
   
   func getBarLinesInLaneAt(tick: Int) -> [BMSBarLineCoordData] {
@@ -108,6 +89,10 @@ final class BMSNoteCoordinate {
   }
 
   // MARK: - private
+  
+  private var pixelPerTick: Double {
+    return basePixelPerTick * (1.0 - (coverCount + liftCount) / Config.BMS.laneHeightDivideCount)
+  }
 
   private func calcLengthBy(tickCount: Int) -> Double {
     let length = pixelPerTick * hiSpeed * Double(tickCount)
@@ -116,7 +101,12 @@ final class BMSNoteCoordinate {
   }
   
   private func tickRangeInLane(startTick: Int) -> ClosedRange<Int> {
-    let endTick = Int(Config.BMS.defaultLaneHeight / (pixelPerTick * hiSpeed))
+    let currentLaneHeight
+      = Config.BMS.defaultLaneHeight
+        - Double(BMSNoteCoordinate.coverHeight(coverCount: coverCount))
+        - Double(BMSNoteCoordinate.liftHeight(liftCount: liftCount))
+
+    let endTick = Int(currentLaneHeight / (pixelPerTick * hiSpeed))
     
     return startTick...(startTick + endTick)
   }
