@@ -6,11 +6,16 @@ class PlayModel: Model {
   private let disposeBag = DisposeBag()
 
   private var soundPlayer: SoundPlayer<Int>!
-  private var bmsData: BMSData!
-  private var model: BMSModelSystem!
+  private let model: BMSModelSystem
 
-  private var isInitialized = false
   var controlledProgress: Double?
+  
+  override init() {
+    let options = GameOptionData()
+    model = BMSModelSystem(gameOptions: options)
+
+    super.init()
+  }
 
   deinit {
     timer.cancel()
@@ -19,17 +24,11 @@ class PlayModel: Model {
   // MARK: - internal
   
   var progress: Double {
-    guard isInitialized else { return 0.0 }
-    
-    return min((elapsedSec / duration), 1.0)
+    return model.isReady ? model.gameProgress(at: timer.elapsedSec) : 0.0
   }
   
   var duration: Double {
-    guard isInitialized, let tick = model.notes.all.last?.tick else {
-      return 0.0
-    }
-    
-    return model.tick.elapsedAt(tick: tick)
+    return model.duration
   }
   
   func stop() {
@@ -46,7 +45,7 @@ class PlayModel: Model {
 
     BMSParser.parse(contentsOfBMS: lines)
       .subscribeOn(ConcurrentDispatchQueueScheduler(qos: .default))
-      .do(onNext: {[weak self] in self?.model = BMSModelSystem(data: $0) })
+      .do(onNext: {[weak self] in self?.model.prepareData(data: $0) })
       .map { $0.header.wav.mapValue { dirPath + "/" + $0 } }
       .flatMap { playerFactory.makePlayer(keyAndFileFullPath: $0) }
       .observeOn(MainScheduler.instance)
@@ -56,40 +55,32 @@ class PlayModel: Model {
         }
 
         Logger.info("Resources is loaded")
-
+        
         self_.soundPlayer = player
-        self_.isInitialized = true
-
         self_.startBMSPlayer(at: originSec)
       }).addDisposableTo(disposeBag)
   }
   
   func addCoverCount(_ value: Double) {
-    guard isInitialized else { return }
-    
-    model.coord.addCoverCount(value)
+    model.addCoverCount(value)
   }
   
   func addLiftCount(_ value: Double) {
-    guard isInitialized else { return }
-    
-    model.coord.addLiftCount(value)
+    model.addLiftCount(value)
   }
   
   func addHiSpeedCount(_ value: Double) {
-    guard isInitialized else { return }
-    
-    model.coord.addHiSpeedCount(value)
+    model.addHiSpeedCount(value)
   }
 
   func judge(event: GameEvent) {
-    guard isInitialized else { return }
+    guard model.isReady else { return }
 
     model.judge.judge(event: event, elapsed: elapsedSec)
   }
 
   func playKeySound(side: SideType, lane: LaneType) {
-    guard isInitialized,
+    guard model.isReady,
       let key = model.sound.keySoundKeyToPlay(side: side, lane: lane) else {
       return
     }
@@ -98,21 +89,21 @@ class PlayModel: Model {
   }
 
   func currentCoordData() -> BMSCoordData? {
-    guard isInitialized else { return nil }
+    guard model.isReady else { return nil }
 
     let currentTick = model.tick.tickAt(elapsedSec: elapsedSec)
 
     return BMSCoordData(judge: model.judge.getLastJudge().rawValue,
                         combo: model.judge.getCombo(),
-                        coverHeight: model.coord.coverHeight,
-                        liftHeight: model.coord.liftHeight,
+                        coverHeight: model.coverHeight,
+                        liftHeight: model.liftHeight,
                         notes: model.coord.getNotesInLaneAt(tick: currentTick),
                         longNotes: model.coord.getLongNotesInLaneAt(tick: currentTick),
                         barLines: model.coord.getBarLinesInLaneAt(tick: currentTick))
   }
   
   private var elapsedSec: Double {
-    guard isInitialized else { return 0.0 }
+    guard model.isReady else { return 0.0 }
     
     return controlledProgress == nil ?
       timer.elapsedSec : duration * controlledProgress!
@@ -121,7 +112,7 @@ class PlayModel: Model {
   // MARK: - private
 
   private func startBMSPlayer(at: Double = 0.0) {
-    guard isInitialized else { return }
+    guard model.isReady else { return }
 
     model.sound.updateKeyAssignAt(tick: 0)
     
@@ -131,7 +122,7 @@ class PlayModel: Model {
   }
 
   private func update(elapsedSec: Double) {
-    guard isInitialized, !Thread.isMainThread else {
+    guard model.isReady, !Thread.isMainThread else {
       return
     }
 
