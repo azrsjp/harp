@@ -7,8 +7,6 @@ class PlayModel: Model {
 
   private var soundPlayer: SoundPlayer<Int>!
   private let model: BMSModelSystem
-
-  var controlledProgress: Double?
   
   override init() {
     let options = GameOptionData()
@@ -22,14 +20,6 @@ class PlayModel: Model {
   }
 
   // MARK: - internal
-  
-  var progress: Double {
-    return model.isReady ? model.gameProgress(at: timer.elapsedSec) : 0.0
-  }
-  
-  var duration: Double {
-    return model.duration
-  }
   
   func stop() {
     timer.cancel()
@@ -76,7 +66,7 @@ class PlayModel: Model {
   func judge(event: GameEvent) {
     guard model.isReady else { return }
 
-    model.judge.judge(event: event, elapsed: elapsedSec)
+    model.judge.judge(event: event, elapsed: timer.elapsedSec)
   }
 
   func playKeySound(side: SideType, lane: LaneType) {
@@ -91,7 +81,7 @@ class PlayModel: Model {
   func currentCoordData() -> BMSCoordData? {
     guard model.isReady else { return nil }
 
-    let currentTick = model.tick.tickAt(elapsedSec: elapsedSec)
+    let currentTick = model.tick.tickAt(elapsedSec: timer.elapsedSec)
 
     return BMSCoordData(judge: model.judge.getLastJudge().rawValue,
                         combo: model.judge.getCombo(),
@@ -100,13 +90,6 @@ class PlayModel: Model {
                         notes: model.coord.getNotesInLaneAt(tick: currentTick),
                         longNotes: model.coord.getLongNotesInLaneAt(tick: currentTick),
                         barLines: model.coord.getBarLinesInLaneAt(tick: currentTick))
-  }
-  
-  private var elapsedSec: Double {
-    guard model.isReady else { return 0.0 }
-    
-    return controlledProgress == nil ?
-      timer.elapsedSec : duration * controlledProgress!
   }
 
   // MARK: - private
