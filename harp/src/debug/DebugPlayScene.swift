@@ -25,18 +25,9 @@ class DebugPlayScene: DebugScene {
     loadButton.action = #selector(onClickLoad)
     loadButton.target = self
     view.addSubview(loadButton)
-    
-    slider.rotate(byDegrees: 90.0)
-    slider.isContinuous = true
-    slider.target = self
-    slider.action = #selector(onSliderChanged)
-    slider.frame.size = NSSize(width: 30.0, height: 550.0)
-    slider.frame.origin = NSPoint(x: 350.0, y: view.frame.height - 565.0)
-    view.addSubview(slider)
   }
 
   @objc private func onClickLoad() {
-    let startSec = playScene.m.duration * playScene.m.progress
     playScene.removeFromParent()
     playScene = DIContainer.scene(PlayScene.self)
     playScene.didMove(to: view!)
@@ -45,12 +36,7 @@ class DebugPlayScene: DebugScene {
     Logger.info("Try to load \(self.bmsPathField.stringValue)")
 
     playScene.m.loadBMSFileAndIntialize(fullFilePath: bmsPathField.stringValue,
-                                        originSec: startSec)
-  }
-  
-  @objc private func onSliderChanged(sender: NSSlider) {
-    playScene.m.stop()
-    playScene.m.controlledProgress = sender.doubleValue
+                                        originSec: 0.0)
   }
   
   override func willMove(from view: SKView) {
@@ -61,8 +47,6 @@ class DebugPlayScene: DebugScene {
 
   override func update(_ currentTime: TimeInterval) {
     playScene.update(currentTime)
-
-    slider.doubleValue = playScene.m.progress
   }
   
   override func keyDown(with event: NSEvent) {
