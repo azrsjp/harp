@@ -59,6 +59,16 @@ final class BMSModelSystem {
     isReady = true
   }
   
+  func currentCoordData(tick: Int) -> BMSCoordData {
+    return BMSCoordData(judge: judge?.getLastJudge().rawValue ?? "",
+                        combo: judge?.getCombo() ?? 0,
+                        coverHeight: coverHeight,
+                        liftHeight: liftHeight,
+                        notes: coord?.getNotesInLaneAt(tick: tick) ?? [BMSNoteCoordData](),
+                        longNotes: coord?.getLongNotesInLaneAt(tick: tick) ?? [BMSLongNoteCoordData](),
+                        barLines: coord?.getBarLinesInLaneAt(tick: tick) ?? [BMSBarLineCoordData]() )
+  }
+  
   var coverHeight: CGFloat {
     return BMSNoteCoordinate.coverHeight(coverCount: coverCount.value)
   }
