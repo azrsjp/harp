@@ -57,18 +57,14 @@ final class BMSJudge {
       ($0.trait.type == .longEnd && longEndRange.isInMissRange(elpased: elapsed, justTiming: tick.elapsedAt(tick: $0.tick)))
     }
 
-    // On coming inActive(already dead) long note end judges, continue combo.
-    var shouldBreakCombo = false
-
     missedNotes.forEach {
+      // On coming inActive(already dead) long note end judges, continue combo.
       let judgeSuccess = notes.markNoteAsDead($0, judge: .negativePoor)
 
-      shouldBreakCombo = judgeSuccess || shouldBreakCombo
-    }
-
-    if shouldBreakCombo {
-      updateComboAndCurrentJudge(judge: .negativePoor)
-      subject.onNext(JudgeData(judge: .negativePoor, combo: combo, side: .player1))
+      if judgeSuccess {
+        updateComboAndCurrentJudge(judge: .negativePoor)
+        subject.onNext(JudgeData(judge: .negativePoor, combo: combo, side: .player1))
+      }
     }
   }
 
@@ -119,8 +115,9 @@ final class BMSJudge {
       // If long note is active in the lane, judge long end note as poor by early key release.
       if notes.breakLongNoteStateIfNeeded(side: side, lane: lane, tick: tick.tickAt(elapsedSec: elapsed)) {
         updateComboAndCurrentJudge(judge: .negativePoor)
+        return .negativePoor
       }
-      return .negativePoor
+      return nil
     }
     
     guard noteToJudge.trait.type == .longEnd else {
