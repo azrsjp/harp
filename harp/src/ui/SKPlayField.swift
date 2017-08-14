@@ -75,7 +75,7 @@ final class SKPlayField: SKSpriteNode {
     }
 
     zip(coords, barLines).forEach {
-      $1.position = CGPoint(x: 0.0, y: $0.offsetY)
+      $1.position = CGPoint(x: 0.0, y: $0.offsetY + lift.size.height)
       $1.isHidden = false
     }
   }
