@@ -20,13 +20,10 @@ class PlayModel: Model {
   }
 
   // MARK: - internal
-  
-  func stop() {
-    timer.cancel()
-  }
 
   func loadBMSFileAndIntialize(fullFilePath: String, originSec: Double = 0.0) {
     guard
+      !model.isReady,
       let lines = String(unknownEncodingContentsOfFile: fullFilePath),
       let playerFactory = SoundPlayerFactory.shared,
       let dirPath = fullFilePath.getFileDirPathIfAvailable() else {
@@ -78,18 +75,10 @@ class PlayModel: Model {
     soundPlayer?.play(forKey: key)
   }
 
-  func currentCoordData() -> BMSCoordData? {
-    guard model.isReady else { return nil }
+  func currentCoordData() -> BMSCoordData {
+    let currentTick = model.tick?.tickAt(elapsedSec: timer.elapsedSec) ?? 0
 
-    let currentTick = model.tick.tickAt(elapsedSec: timer.elapsedSec)
-
-    return BMSCoordData(judge: model.judge.getLastJudge().rawValue,
-                        combo: model.judge.getCombo(),
-                        coverHeight: model.coverHeight,
-                        liftHeight: model.liftHeight,
-                        notes: model.coord.getNotesInLaneAt(tick: currentTick),
-                        longNotes: model.coord.getLongNotesInLaneAt(tick: currentTick),
-                        barLines: model.coord.getBarLinesInLaneAt(tick: currentTick))
+    return model.currentCoordData(tick: currentTick)
   }
 
   // MARK: - private

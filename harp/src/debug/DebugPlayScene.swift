@@ -28,11 +28,6 @@ class DebugPlayScene: DebugScene {
   }
 
   @objc private func onClickLoad() {
-    playScene.removeFromParent()
-    playScene = DIContainer.scene(PlayScene.self)
-    playScene.didMove(to: view!)
-    addChild(playScene)
-    
     Logger.info("Try to load \(self.bmsPathField.stringValue)")
 
     playScene.m.loadBMSFileAndIntialize(fullFilePath: bmsPathField.stringValue,

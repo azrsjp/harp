@@ -29,9 +29,11 @@ class PlayView: View {
   }
 
   override func update(_ currentTime: TimeInterval) {
-    guard let model = model, let coords = model.currentCoordData() else {
+    guard let model = model else {
       return
     }
+    
+    let coords = model.currentCoordData()
 
     field.updateBarLineCoords(coords.barLines)
     field.updateNormalNoteCoords(coords.notes)
