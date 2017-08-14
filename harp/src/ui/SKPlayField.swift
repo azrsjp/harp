@@ -63,9 +63,11 @@ final class SKPlayField: SKSpriteNode {
   func updateBarLineCoords(_ coords: [BMSBarLineCoordData]) {
     let shortage = coords.count - barLines.count
     if shortage > 0 {
-      let addition = [SKSpriteNode](repeating: barLineFactory(), count: shortage)
-      addition.forEach { addChild($0) }
-      barLines.append(contentsOf: addition)
+      for _ in 0..<shortage {
+        let line = barLineFactory()
+        addChild(line)
+        barLines.append(line)
+      }
     }
 
     barLines.forEach {
