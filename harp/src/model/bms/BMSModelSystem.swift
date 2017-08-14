@@ -8,10 +8,10 @@ final class BMSModelSystem {
   private(set) var coord: BMSNoteCoordinate!
   private(set) var sound: BMSSound!
   private(set) var judge: BMSJudge!
-  
-  private(set) var gauge: Double = 20.0
-  private(set) var combo: Int = 0
+  private(set) var gauge: BMSGauge!
+
   private(set) var maxCombo: Int = 0
+  private(set) var gaugeType: GaugeType = .normal
   private(set) var lastJudge: JudgeData?
   private(set) var liftCount = Variable<Double>(0.0)
   private(set) var coverCount = Variable<Double>(0.0)
@@ -31,6 +31,7 @@ final class BMSModelSystem {
     hiSpeed.value = options.hiSpeed
     coverCount.value = options.coverCount
     liftCount.value = options.liftCount
+    gaugeType = options.gaugeType
   }
 
   func prepareData(data: BMSData) {
@@ -39,11 +40,15 @@ final class BMSModelSystem {
     tick = BMSTick(data: data)
     judge = BMSJudge(notes: notes!, tick: tick!)
     coord = BMSNoteCoordinate(data: data, notes: notes!)
+    gauge = BMSGaugeFactory.makeGauge(type: gaugeType,
+                                      total: data.header.total, noteNum: data.score.notes.count)
     
     judge.observable.subscribe(onNext: {[weak self] in
       self?.onJudged(judge: $0)
     }).addDisposableTo(disposeBag)
     
+    // hi-speed, cover, lift count can be configurable before bms loaded.
+    // Variables this class holding are adaptor for these.
     liftCount.asObservable().subscribe(onNext: {[weak self] in
       self?.coord.setLiftCount($0)
     }).addDisposableTo(disposeBag)
@@ -128,5 +133,11 @@ final class BMSModelSystem {
   
   private func onJudged(judge: JudgeData) {
     lastJudge = judge
+    maxCombo = max(maxCombo, judge.combo)
+    
+    let currentGauseValue = gauge.applyJudge(judge: judge.judge)
+    if currentGauseValue <= 0 {
+      Logger.info("Stage Failed")
+    }
   }
 }
