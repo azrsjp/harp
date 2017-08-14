@@ -63,6 +63,13 @@
 		718C06D91D241B6E002F6E68 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718C06D81D241B6E002F6E68 /* AppDelegate.swift */; };
 		718C06DF1D241B6E002F6E68 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 718C06DE1D241B6E002F6E68 /* Images.xcassets */; };
 		718C06E21D241B6E002F6E68 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 718C06E01D241B6E002F6E68 /* MainMenu.xib */; };
+		718D52AF1F41E3B900A5BE8A /* BMSGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52AE1F41E3B900A5BE8A /* BMSGauge.swift */; };
+		718D52B11F41E72D00A5BE8A /* BMSNormalGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52B01F41E72D00A5BE8A /* BMSNormalGauge.swift */; };
+		718D52B31F41F3F000A5BE8A /* BMSHardGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52B21F41F3F000A5BE8A /* BMSHardGauge.swift */; };
+		718D52B71F41F4CE00A5BE8A /* BMSExHardGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52B61F41F4CE00A5BE8A /* BMSExHardGauge.swift */; };
+		718D52B91F41F4E600A5BE8A /* BMSEasyGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52B81F41F4E500A5BE8A /* BMSEasyGauge.swift */; };
+		718D52BB1F41FE4000A5BE8A /* GaugeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52BA1F41FE4000A5BE8A /* GaugeType.swift */; };
+		718D52BD1F42035D00A5BE8A /* BMSGaugeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52BC1F42035D00A5BE8A /* BMSGaugeFactory.swift */; };
 		71A2A1E21E1ABE41000C885A /* Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E11E1ABE41000C885A /* Clickable.swift */; };
 		71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E31E1ABE68000C885A /* TextButton.swift */; };
 		71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E51E1ABEA8000C885A /* BasicScene.swift */; };
@@ -176,6 +183,13 @@
 		718C06E31D241B6E002F6E68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		718C06E81D241B6E002F6E68 /* harpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = harpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		718C06EE1D241B6E002F6E68 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		718D52AE1F41E3B900A5BE8A /* BMSGauge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSGauge.swift; path = Gauge/BMSGauge.swift; sourceTree = "<group>"; };
+		718D52B01F41E72D00A5BE8A /* BMSNormalGauge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSNormalGauge.swift; path = Gauge/BMSNormalGauge.swift; sourceTree = "<group>"; };
+		718D52B21F41F3F000A5BE8A /* BMSHardGauge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSHardGauge.swift; path = Gauge/BMSHardGauge.swift; sourceTree = "<group>"; };
+		718D52B61F41F4CE00A5BE8A /* BMSExHardGauge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSExHardGauge.swift; path = Gauge/BMSExHardGauge.swift; sourceTree = "<group>"; };
+		718D52B81F41F4E500A5BE8A /* BMSEasyGauge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSEasyGauge.swift; path = Gauge/BMSEasyGauge.swift; sourceTree = "<group>"; };
+		718D52BA1F41FE4000A5BE8A /* GaugeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeType.swift; sourceTree = "<group>"; };
+		718D52BC1F42035D00A5BE8A /* BMSGaugeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSGaugeFactory.swift; path = Gauge/BMSGaugeFactory.swift; sourceTree = "<group>"; };
 		71A2A1E11E1ABE41000C885A /* Clickable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clickable.swift; sourceTree = "<group>"; };
 		71A2A1E31E1ABE68000C885A /* TextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		71A2A1E51E1ABEA8000C885A /* BasicScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicScene.swift; sourceTree = "<group>"; };
@@ -360,6 +374,7 @@
 				7145897B1EBF532B00B7DD09 /* LaneType.swift */,
 				7145897D1EBF537F00B7DD09 /* NoteType.swift */,
 				7145897F1EBF53C000B7DD09 /* SideType.swift */,
+				718D52BA1F41FE4000A5BE8A /* GaugeType.swift */,
 			);
 			path = type;
 			sourceTree = "<group>";
@@ -443,6 +458,19 @@
 				718C06EE1D241B6E002F6E68 /* Info.plist */,
 			);
 			path = harpTest;
+			sourceTree = "<group>";
+		};
+		718D52AD1F41E37D00A5BE8A /* Gauge */ = {
+			isa = PBXGroup;
+			children = (
+				718D52AE1F41E3B900A5BE8A /* BMSGauge.swift */,
+				718D52B01F41E72D00A5BE8A /* BMSNormalGauge.swift */,
+				718D52B21F41F3F000A5BE8A /* BMSHardGauge.swift */,
+				718D52B61F41F4CE00A5BE8A /* BMSExHardGauge.swift */,
+				718D52B81F41F4E500A5BE8A /* BMSEasyGauge.swift */,
+				718D52BC1F42035D00A5BE8A /* BMSGaugeFactory.swift */,
+			);
+			name = Gauge;
 			sourceTree = "<group>";
 		};
 		71A2A1E01E1A96C4000C885A /* Input */ = {
@@ -554,6 +582,7 @@
 		E55784B61EC19BBA0039EDD9 /* BMS */ = {
 			isa = PBXGroup;
 			children = (
+				718D52AD1F41E37D00A5BE8A /* Gauge */,
 				E55784B71EC19BCD0039EDD9 /* BMSTick.swift */,
 				71FA797C1EC68535008FCE82 /* BMSNoteCoordinate.swift */,
 				71FA798B1EC7F501008FCE82 /* BMSSound.swift */,
@@ -878,6 +907,7 @@
 				718408371ED3666C00F5A9B1 /* BMSModelSystem.swift in Sources */,
 				71FA79861EC7CA8E008FCE82 /* PlayModel.swift in Sources */,
 				714589761EBF52B800B7DD09 /* BMSHeaderData.swift in Sources */,
+				718D52B31F41F3F000A5BE8A /* BMSHardGauge.swift in Sources */,
 				71E6B7911E16AD1300475846 /* SKSpriteNode.swift in Sources */,
 				71E6B7931E16C76C00475846 /* HIDDeviceManager.swift in Sources */,
 				7161837D1EC0B66F00D7B374 /* BMSNoteTraitData.swift in Sources */,
@@ -929,8 +959,10 @@
 				71C406521ED9566B003A9248 /* SKPlayField.swift in Sources */,
 				710217781EBCE35A002C73FB /* SoundPlayerFactory.swift in Sources */,
 				71FA798C1EC7F501008FCE82 /* BMSSound.swift in Sources */,
+				718D52BD1F42035D00A5BE8A /* BMSGaugeFactory.swift in Sources */,
 				71FA798E1EC9DD7D008FCE82 /* BMSJudge.swift in Sources */,
 				712790281E34DD9F00F0C5FE /* Model.swift in Sources */,
+				718D52BB1F41FE4000A5BE8A /* GaugeType.swift in Sources */,
 				718C06D91D241B6E002F6E68 /* AppDelegate.swift in Sources */,
 				71C273E51EB7A0760096A19D /* DebugUtil.swift in Sources */,
 				E5AECBA01ECABBBC00F1E34C /* SKNote.swift in Sources */,
@@ -939,12 +971,16 @@
 				71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */,
 				7102178A1EBE037E002C73FB /* SoundSource.swift in Sources */,
 				71CC198D1E1B2A0700391CAA /* Judge.swift in Sources */,
+				718D52AF1F41E3B900A5BE8A /* BMSGauge.swift in Sources */,
 				712790251E34C18E00F0C5FE /* DIContainer.swift in Sources */,
 				71FA797D1EC68535008FCE82 /* BMSNoteCoordinate.swift in Sources */,
 				71C273F11EBADB550096A19D /* BMSChannelDataParser.swift in Sources */,
 				7145897A1EBF52FF00B7DD09 /* BMSScoreData.swift in Sources */,
+				718D52B11F41E72D00A5BE8A /* BMSNormalGauge.swift in Sources */,
 				E5A868D51ECA95BC0068222D /* BMSCoordData.swift in Sources */,
+				718D52B71F41F4CE00A5BE8A /* BMSExHardGauge.swift in Sources */,
 				71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */,
+				718D52B91F41F4E600A5BE8A /* BMSEasyGauge.swift in Sources */,
 				E5FC96A21ECC4B8700535FC6 /* TimerThread.swift in Sources */,
 				71E6B78F1E16ABC600475846 /* SKView.swift in Sources */,
 				7127902C1E34DDB200F0C5FE /* Controller.swift in Sources */,
