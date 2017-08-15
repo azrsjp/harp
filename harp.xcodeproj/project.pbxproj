@@ -70,6 +70,11 @@
 		718D52B91F41F4E600A5BE8A /* BMSEasyGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52B81F41F4E500A5BE8A /* BMSEasyGauge.swift */; };
 		718D52BB1F41FE4000A5BE8A /* GaugeType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52BA1F41FE4000A5BE8A /* GaugeType.swift */; };
 		718D52BD1F42035D00A5BE8A /* BMSGaugeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52BC1F42035D00A5BE8A /* BMSGaugeFactory.swift */; };
+		718D52C41F420E0C00A5BE8A /* BMSRandomOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52C31F420E0C00A5BE8A /* BMSRandomOption.swift */; };
+		718D52C61F42108200A5BE8A /* Array+shuffled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52C51F42108200A5BE8A /* Array+shuffled.swift */; };
+		718D52C81F42953100A5BE8A /* BMSMirrorOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52C71F42953100A5BE8A /* BMSMirrorOption.swift */; };
+		718D52CA1F42980300A5BE8A /* BMSSuperRandomOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52C91F42980300A5BE8A /* BMSSuperRandomOption.swift */; };
+		718D52CC1F42A08900A5BE8A /* Array+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52CB1F42A08900A5BE8A /* Array+random.swift */; };
 		71A2A1E21E1ABE41000C885A /* Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E11E1ABE41000C885A /* Clickable.swift */; };
 		71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E31E1ABE68000C885A /* TextButton.swift */; };
 		71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E51E1ABEA8000C885A /* BasicScene.swift */; };
@@ -190,6 +195,11 @@
 		718D52B81F41F4E500A5BE8A /* BMSEasyGauge.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSEasyGauge.swift; path = Gauge/BMSEasyGauge.swift; sourceTree = "<group>"; };
 		718D52BA1F41FE4000A5BE8A /* GaugeType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaugeType.swift; sourceTree = "<group>"; };
 		718D52BC1F42035D00A5BE8A /* BMSGaugeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSGaugeFactory.swift; path = Gauge/BMSGaugeFactory.swift; sourceTree = "<group>"; };
+		718D52C31F420E0C00A5BE8A /* BMSRandomOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSRandomOption.swift; path = ScoreOption/BMSRandomOption.swift; sourceTree = "<group>"; };
+		718D52C51F42108200A5BE8A /* Array+shuffled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+shuffled.swift"; sourceTree = "<group>"; };
+		718D52C71F42953100A5BE8A /* BMSMirrorOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSMirrorOption.swift; path = ScoreOption/BMSMirrorOption.swift; sourceTree = "<group>"; };
+		718D52C91F42980300A5BE8A /* BMSSuperRandomOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSSuperRandomOption.swift; path = ScoreOption/BMSSuperRandomOption.swift; sourceTree = "<group>"; };
+		718D52CB1F42A08900A5BE8A /* Array+random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+random.swift"; sourceTree = "<group>"; };
 		71A2A1E11E1ABE41000C885A /* Clickable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clickable.swift; sourceTree = "<group>"; };
 		71A2A1E31E1ABE68000C885A /* TextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		71A2A1E51E1ABEA8000C885A /* BasicScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicScene.swift; sourceTree = "<group>"; };
@@ -473,6 +483,16 @@
 			name = Gauge;
 			sourceTree = "<group>";
 		};
+		718D52BE1F420C0400A5BE8A /* ScoreOption */ = {
+			isa = PBXGroup;
+			children = (
+				718D52C31F420E0C00A5BE8A /* BMSRandomOption.swift */,
+				718D52C71F42953100A5BE8A /* BMSMirrorOption.swift */,
+				718D52C91F42980300A5BE8A /* BMSSuperRandomOption.swift */,
+			);
+			name = ScoreOption;
+			sourceTree = "<group>";
+		};
 		71A2A1E01E1A96C4000C885A /* Input */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +556,8 @@
 				E55784B41EC192D60039EDD9 /* Dictionary+mapValue.swift */,
 				71FA79891EC7EECA008FCE82 /* String+isFilePath.swift */,
 				E59219D61ED2EF8B0097E76B /* Array+associate.swift */,
+				718D52C51F42108200A5BE8A /* Array+shuffled.swift */,
+				718D52CB1F42A08900A5BE8A /* Array+random.swift */,
 			);
 			path = extension;
 			sourceTree = "<group>";
@@ -582,6 +604,7 @@
 		E55784B61EC19BBA0039EDD9 /* BMS */ = {
 			isa = PBXGroup;
 			children = (
+				718D52BE1F420C0400A5BE8A /* ScoreOption */,
 				718D52AD1F41E37D00A5BE8A /* Gauge */,
 				E55784B71EC19BCD0039EDD9 /* BMSTick.swift */,
 				71FA797C1EC68535008FCE82 /* BMSNoteCoordinate.swift */,
@@ -916,6 +939,7 @@
 				718A5CFD1D4531F400B88A76 /* Common.swift in Sources */,
 				71CC19971E1BCF0B00391CAA /* Images.swift in Sources */,
 				71C273F31EBAF79D0096A19D /* Math.swift in Sources */,
+				718D52CA1F42980300A5BE8A /* BMSSuperRandomOption.swift in Sources */,
 				716140291E1FE54600034402 /* HIDInputData.swift in Sources */,
 				71BFD6FC1EB655E100658965 /* Array+safe.swift in Sources */,
 				71C4065C1EDAD46A003A9248 /* GameOptionData.swift in Sources */,
@@ -928,6 +952,7 @@
 				712790191E33D3BE00F0C5FE /* HIDInputConverterForInGame.swift in Sources */,
 				E542956E1EB6FF9700AAE250 /* String+trim.swift in Sources */,
 				71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */,
+				718D52CC1F42A08900A5BE8A /* Array+random.swift in Sources */,
 				E54B71721EBB604400266777 /* BMSParser.swift in Sources */,
 				E592F3961EB1CA6C00A672AB /* BMSData.swift in Sources */,
 				E59219D71ED2EF8B0097E76B /* Array+associate.swift in Sources */,
@@ -949,6 +974,8 @@
 				71FA798A1EC7EECA008FCE82 /* String+isFilePath.swift in Sources */,
 				E59219D51ED2D2400097E76B /* BMSLongNoteState.swift in Sources */,
 				71EA2C0D1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift in Sources */,
+				718D52C61F42108200A5BE8A /* Array+shuffled.swift in Sources */,
+				718D52C81F42953100A5BE8A /* BMSMirrorOption.swift in Sources */,
 				718A5CFB1D452B2B00B88A76 /* DebugMenuScene.swift in Sources */,
 				71FA79821EC7CA73008FCE82 /* PlayController.swift in Sources */,
 				71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */,
@@ -977,6 +1004,7 @@
 				71C273F11EBADB550096A19D /* BMSChannelDataParser.swift in Sources */,
 				7145897A1EBF52FF00B7DD09 /* BMSScoreData.swift in Sources */,
 				718D52B11F41E72D00A5BE8A /* BMSNormalGauge.swift in Sources */,
+				718D52C41F420E0C00A5BE8A /* BMSRandomOption.swift in Sources */,
 				E5A868D51ECA95BC0068222D /* BMSCoordData.swift in Sources */,
 				718D52B71F41F4CE00A5BE8A /* BMSExHardGauge.swift in Sources */,
 				71CC19891E1B21BD00391CAA /* GameEvent.swift in Sources */,
