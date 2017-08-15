@@ -1,8 +1,8 @@
 import Foundation
 
 final class BMSRandomOption {
-  static func apply(scoreData: inout BMSScoreData, containsScratch: Bool) {
-    let laneMap = containsScratch ? randomLaneMapPlus() : randomLaneMap()
+  static func apply(scoreData: inout BMSScoreData, includeScratch: Bool) {
+    let laneMap = includeScratch ? randomLaneMapPlus() : randomLaneMap()
     
     scoreData.notes
       = scoreData.notes.map { $0.laneChanged(lane: laneMap[$0.trait.lane] ?? $0.trait.lane) }

@@ -12,6 +12,7 @@ final class BMSModelSystem {
 
   private(set) var maxCombo: Int = 0
   private(set) var gaugeType: GaugeType = .normal
+  private(set) var scoreOptionType: ScoreOptionType = .none
   private(set) var lastJudge: JudgeData?
   private(set) var liftCount = Variable<Double>(0.0)
   private(set) var coverCount = Variable<Double>(0.0)
@@ -32,9 +33,12 @@ final class BMSModelSystem {
     coverCount.value = options.coverCount
     liftCount.value = options.liftCount
     gaugeType = options.gaugeType
+    scoreOptionType = options.scoreOptionType
   }
 
   func prepareData(data: BMSData) {
+    BMSScoreOptionApplier.apply(scoreData: &data.score, type: scoreOptionType)
+    
     notes = BMSNotesState(data: data)
     sound = BMSSound(data: data)
     tick = BMSTick(data: data)
