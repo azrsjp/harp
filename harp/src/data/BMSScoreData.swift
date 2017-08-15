@@ -50,4 +50,11 @@ struct BMSBarNoteData: BMSTimeSeries, Equatable, Hashable {
       lhs.key == rhs.key &&
       lhs.trait == rhs.trait
   }
+  
+  func laneChanged(lane: LaneType) -> BMSBarNoteData {
+    var copy = self
+    copy.trait.lane = lane
+
+    return copy
+  }
 }
