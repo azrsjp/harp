@@ -75,6 +75,8 @@
 		718D52C81F42953100A5BE8A /* BMSMirrorOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52C71F42953100A5BE8A /* BMSMirrorOption.swift */; };
 		718D52CA1F42980300A5BE8A /* BMSSuperRandomOption.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52C91F42980300A5BE8A /* BMSSuperRandomOption.swift */; };
 		718D52CC1F42A08900A5BE8A /* Array+random.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52CB1F42A08900A5BE8A /* Array+random.swift */; };
+		718D52CE1F42D28500A5BE8A /* ScoreOptionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52CD1F42D28500A5BE8A /* ScoreOptionType.swift */; };
+		718D52D01F42D40900A5BE8A /* BMSScoreOptionApplier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718D52CF1F42D40900A5BE8A /* BMSScoreOptionApplier.swift */; };
 		71A2A1E21E1ABE41000C885A /* Clickable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E11E1ABE41000C885A /* Clickable.swift */; };
 		71A2A1E41E1ABE68000C885A /* TextButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E31E1ABE68000C885A /* TextButton.swift */; };
 		71A2A1E61E1ABEA8000C885A /* BasicScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71A2A1E51E1ABEA8000C885A /* BasicScene.swift */; };
@@ -200,6 +202,8 @@
 		718D52C71F42953100A5BE8A /* BMSMirrorOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSMirrorOption.swift; path = ScoreOption/BMSMirrorOption.swift; sourceTree = "<group>"; };
 		718D52C91F42980300A5BE8A /* BMSSuperRandomOption.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSSuperRandomOption.swift; path = ScoreOption/BMSSuperRandomOption.swift; sourceTree = "<group>"; };
 		718D52CB1F42A08900A5BE8A /* Array+random.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+random.swift"; sourceTree = "<group>"; };
+		718D52CD1F42D28500A5BE8A /* ScoreOptionType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreOptionType.swift; sourceTree = "<group>"; };
+		718D52CF1F42D40900A5BE8A /* BMSScoreOptionApplier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BMSScoreOptionApplier.swift; path = ScoreOption/BMSScoreOptionApplier.swift; sourceTree = "<group>"; };
 		71A2A1E11E1ABE41000C885A /* Clickable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Clickable.swift; sourceTree = "<group>"; };
 		71A2A1E31E1ABE68000C885A /* TextButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextButton.swift; sourceTree = "<group>"; };
 		71A2A1E51E1ABEA8000C885A /* BasicScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicScene.swift; sourceTree = "<group>"; };
@@ -385,6 +389,7 @@
 				7145897D1EBF537F00B7DD09 /* NoteType.swift */,
 				7145897F1EBF53C000B7DD09 /* SideType.swift */,
 				718D52BA1F41FE4000A5BE8A /* GaugeType.swift */,
+				718D52CD1F42D28500A5BE8A /* ScoreOptionType.swift */,
 			);
 			path = type;
 			sourceTree = "<group>";
@@ -489,6 +494,7 @@
 				718D52C31F420E0C00A5BE8A /* BMSRandomOption.swift */,
 				718D52C71F42953100A5BE8A /* BMSMirrorOption.swift */,
 				718D52C91F42980300A5BE8A /* BMSSuperRandomOption.swift */,
+				718D52CF1F42D40900A5BE8A /* BMSScoreOptionApplier.swift */,
 			);
 			name = ScoreOption;
 			sourceTree = "<group>";
@@ -984,6 +990,7 @@
 				714589781EBF52D700B7DD09 /* BMSChannelData.swift in Sources */,
 				E54295741EB72BFD00AAE250 /* Any.swift in Sources */,
 				71C406521ED9566B003A9248 /* SKPlayField.swift in Sources */,
+				718D52CE1F42D28500A5BE8A /* ScoreOptionType.swift in Sources */,
 				710217781EBCE35A002C73FB /* SoundPlayerFactory.swift in Sources */,
 				71FA798C1EC7F501008FCE82 /* BMSSound.swift in Sources */,
 				718D52BD1F42035D00A5BE8A /* BMSGaugeFactory.swift in Sources */,
@@ -994,6 +1001,7 @@
 				71C273E51EB7A0760096A19D /* DebugUtil.swift in Sources */,
 				E5AECBA01ECABBBC00F1E34C /* SKNote.swift in Sources */,
 				710217861EBDBE9F002C73FB /* SoundPlayer.swift in Sources */,
+				718D52D01F42D40900A5BE8A /* BMSScoreOptionApplier.swift in Sources */,
 				E55784B81EC19BCD0039EDD9 /* BMSTick.swift in Sources */,
 				71FD1E471DF2D9060081E1B1 /* Strings.swift in Sources */,
 				7102178A1EBE037E002C73FB /* SoundSource.swift in Sources */,

@@ -1,7 +1,7 @@
 import Foundation
 
 final class BMSSuperRandomOption {
-  static func apply(scoreData: inout BMSScoreData, containsScratch: Bool) {
+  static func apply(scoreData: inout BMSScoreData, includeScratch: Bool) {
     var shuffled = [BMSBarNoteData]()
     
     // Firstly, shuffle only long notes
@@ -9,7 +9,7 @@ final class BMSSuperRandomOption {
       .sorted { $0.0.0.tick < $0.1.0.tick }
       .forEach {
         while true {
-          let laneMap = containsScratch ? randomLaneMapPlus() : randomLaneMap()
+          let laneMap = includeScratch ? randomLaneMapPlus() : randomLaneMap()
           let newLongStart = $0.0.laneChanged(lane: laneMap[$0.0.trait.lane] ?? $0.0.trait.lane)
           let newLongEnd = $0.1.laneChanged(lane: laneMap[$0.0.trait.lane] ?? $0.0.trait.lane)
 
@@ -26,7 +26,7 @@ final class BMSSuperRandomOption {
       .filter { $0.trait.type != .longStart && $0.trait.type != .longEnd }
       .forEach {
         while true {
-          let laneMap = containsScratch ? randomLaneMapPlus() : randomLaneMap()
+          let laneMap = includeScratch ? randomLaneMapPlus() : randomLaneMap()
           let newNote = $0.laneChanged(lane: laneMap[$0.trait.lane] ?? $0.trait.lane)
           
           if canPlaceNote(toPlace: newNote, in: shuffled) {
