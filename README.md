@@ -16,9 +16,9 @@ This application will be BMS Player for macOS (10.10 or newer). Currently work i
 - [x] Adopt to conventional HID controller for BMS
 - [x] BMS file Loader
 - [x] Accuracy of Judging
-- [ ] Hi-Speed, lift, hid+ options
-- [ ] Normal, Easy, Hard, Ex-Hard Gauge type
-- [ ] Random, S-Random options
+- [x] Hi-Speed, lift, hid+ options
+- [x] Normal, Easy, Hard, Ex-Hard Gauge type
+- [x] Random, S-Random, Mirror options
 - [ ] KeyConfig
 - [ ] InGame UI (default theme)
 - [ ] BMSFileManager(localDB)
