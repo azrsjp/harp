@@ -1,0 +1,3 @@
+[submodule "external/alure"]
+	path = external/alure
+	url = http://repo.or.cz/alure.git
