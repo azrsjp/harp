@@ -74,13 +74,34 @@ fileprivate final class ConcreteSoundSource: SoundSource {
   private var buffer: ALuint
   private var source: ALuint
   private let fullFilePath: String
+  
+  static private let extsToTryToLoad = [".ogg", ".mp3", ".wav"]
 
   init?(fullFilePath: String) {
-    let buffer = alureCreateBufferFromFile(fullFilePath)
-
+    // firstly, try to load with original ext.
+    var buffer = alureCreateBufferFromFile(fullFilePath)
+    
+    // on error to load, try to load with anothor ext
     if buffer == alNone {
-      Logger.error("Failed to load \(fullFilePath)")
-      return nil
+      let originalExt = fullFilePath.pregMatche(pattern: "\\.[a-zA-Z0-9]+$")?.last ?? ""
+      let exts = ConcreteSoundSource.extsToTryToLoad.filter { $0 != originalExt }
+      
+      // Retry to load
+      for ext in exts {
+        let fullFilePathWithExt = fullFilePath.pregReplace(pattern: "\\.[a-zA-Z0-9]+$", with: ext)
+        buffer = alureCreateBufferFromFile(fullFilePathWithExt)
+                
+        if buffer != alNone {
+          Logger.error("Load success \(fullFilePathWithExt)")
+          break
+        }
+      }
+      
+      // on error
+      if buffer == alNone {
+        Logger.error("Failed to load \(fullFilePath)")
+        return nil
+      }
     }
 
     var source: ALuint = 0
