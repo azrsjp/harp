@@ -301,7 +301,7 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		710217761EBCE33C002C73FB /* sound */ = {
+		710217761EBCE33C002C73FB /* Sound */ = {
 			isa = PBXGroup;
 			children = (
 				710217771EBCE35A002C73FB /* SoundPlayerFactory.swift */,
@@ -309,7 +309,7 @@
 				710217891EBE037D002C73FB /* SoundSource.swift */,
 				7102178B1EBEEBC7002C73FB /* SharedSound.swift */,
 			);
-			path = sound;
+			path = Sound;
 			sourceTree = "<group>";
 		};
 		7102178F1EBF3324002C73FB /* model */ = {
@@ -322,14 +322,14 @@
 			path = model;
 			sourceTree = "<group>";
 		};
-		710655DC1DF26ADD003A1169 /* operator */ = {
+		710655DC1DF26ADD003A1169 /* Operator */ = {
 			isa = PBXGroup;
 			children = (
 				710655DA1DF26AC3003A1169 /* CGSize.swift */,
 				71E6B7881E1695E600475846 /* CGPoint.swift */,
 				E54295731EB72BFD00AAE250 /* Any.swift */,
 			);
-			path = operator;
+			path = Operator;
 			sourceTree = "<group>";
 		};
 		7110D2401D45147000A11D76 /* resources */ = {
@@ -346,14 +346,14 @@
 		7110D2411D45151E00A11D76 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				71FD1E421DF2D7A70081E1B1 /* constants */,
-				71C9DB9F1D45344C00C7EEF0 /* core */,
-				718A5CF91D452B1700B88A76 /* debug */,
-				7110D2421D45153200A11D76 /* scene */,
-				E592F3911EB1BFB300A672AB /* model */,
-				7110D2441D45163400A11D76 /* type */,
-				E592F3941EB1CA5300A672AB /* data */,
-				7110D2431D45162800A11D76 /* ui */,
+				71FD1E421DF2D7A70081E1B1 /* Constants */,
+				71C9DB9F1D45344C00C7EEF0 /* Core */,
+				718A5CF91D452B1700B88A76 /* Debug */,
+				7110D2421D45153200A11D76 /* Scene */,
+				E592F3911EB1BFB300A672AB /* Model */,
+				7110D2441D45163400A11D76 /* Type */,
+				E592F3941EB1CA5300A672AB /* Data */,
+				7110D2431D45162800A11D76 /* UI */,
 				718C06D81D241B6E002F6E68 /* AppDelegate.swift */,
 				7102177E1EBD83CE002C73FB /* Bridging-Header.h */,
 				718C06E01D241B6E002F6E68 /* MainMenu.xib */,
@@ -361,15 +361,15 @@
 			path = src;
 			sourceTree = "<group>";
 		};
-		7110D2421D45153200A11D76 /* scene */ = {
+		7110D2421D45153200A11D76 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
-				71FA797E1EC7CA37008FCE82 /* play */,
+				71FA797E1EC7CA37008FCE82 /* Play */,
 			);
-			path = scene;
+			path = Scene;
 			sourceTree = "<group>";
 		};
-		7110D2431D45162800A11D76 /* ui */ = {
+		7110D2431D45162800A11D76 /* UI */ = {
 			isa = PBXGroup;
 			children = (
 				71A2A1E11E1ABE41000C885A /* Clickable.swift */,
@@ -377,10 +377,10 @@
 				E5AECB9F1ECABBBC00F1E34C /* SKNote.swift */,
 				71C406511ED9566B003A9248 /* SKPlayField.swift */,
 			);
-			path = ui;
+			path = UI;
 			sourceTree = "<group>";
 		};
-		7110D2441D45163400A11D76 /* type */ = {
+		7110D2441D45163400A11D76 /* Type */ = {
 			isa = PBXGroup;
 			children = (
 				71CC19881E1B21BD00391CAA /* GameEvent.swift */,
@@ -391,10 +391,10 @@
 				718D52BA1F41FE4000A5BE8A /* GaugeType.swift */,
 				718D52CD1F42D28500A5BE8A /* ScoreOptionType.swift */,
 			);
-			path = type;
+			path = Type;
 			sourceTree = "<group>";
 		};
-		712790261E34DD4800F0C5FE /* scene */ = {
+		712790261E34DD4800F0C5FE /* Scene */ = {
 			isa = PBXGroup;
 			children = (
 				71A2A1E51E1ABEA8000C885A /* BasicScene.swift */,
@@ -402,7 +402,7 @@
 				712790291E34DDA600F0C5FE /* View.swift */,
 				7127902B1E34DDB200F0C5FE /* Controller.swift */,
 			);
-			path = scene;
+			path = Scene;
 			sourceTree = "<group>";
 		};
 		717A12291E0FCF94006A4B4B /* operator */ = {
@@ -415,24 +415,24 @@
 			path = operator;
 			sourceTree = "<group>";
 		};
-		718A5CF81D45292700B88A76 /* config */ = {
+		718A5CF81D45292700B88A76 /* Config */ = {
 			isa = PBXGroup;
 			children = (
 				718A5CFC1D4531F400B88A76 /* Common.swift */,
 			);
-			path = config;
+			path = Config;
 			sourceTree = "<group>";
 		};
-		718A5CF91D452B1700B88A76 /* debug */ = {
+		718A5CF91D452B1700B88A76 /* Debug */ = {
 			isa = PBXGroup;
 			children = (
-				71C273E31EB79FEE0096A19D /* core */,
+				71C273E31EB79FEE0096A19D /* Core */,
 				718A5CFA1D452B2B00B88A76 /* DebugMenuScene.swift */,
 				71CC19861E1B134E00391CAA /* DebugInputKeysScene.swift */,
 				71CC19901E1B384200391CAA /* DebugUIComponentsScene.swift */,
 				71C406571ED98D62003A9248 /* DebugPlayScene.swift */,
 			);
-			path = debug;
+			path = Debug;
 			sourceTree = "<group>";
 		};
 		718C06CC1D241B6E002F6E68 = {
@@ -510,16 +510,16 @@
 			path = Input;
 			sourceTree = "<group>";
 		};
-		71C273E31EB79FEE0096A19D /* core */ = {
+		71C273E31EB79FEE0096A19D /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				712790331E34E47C00F0C5FE /* DebugScene.swift */,
 				71C273E41EB7A0760096A19D /* DebugUtil.swift */,
 			);
-			path = core;
+			path = Core;
 			sourceTree = "<group>";
 		};
-		71C273EB1EBAD89F0096A19D /* parser */ = {
+		71C273EB1EBAD89F0096A19D /* Parser */ = {
 			isa = PBXGroup;
 			children = (
 				E54B71711EBB604400266777 /* BMSParser.swift */,
@@ -528,28 +528,28 @@
 				71C273F01EBADB550096A19D /* BMSChannelDataParser.swift */,
 				71D276711EC368DE0064D435 /* BMSScoreDataFactory.swift */,
 			);
-			path = parser;
+			path = Parser;
 			sourceTree = "<group>";
 		};
-		71C9DB9F1D45344C00C7EEF0 /* core */ = {
+		71C9DB9F1D45344C00C7EEF0 /* Core */ = {
 			isa = PBXGroup;
 			children = (
 				E5FC969C1ECC4B1500535FC6 /* Timer */,
-				710217761EBCE33C002C73FB /* sound */,
-				712790261E34DD4800F0C5FE /* scene */,
+				710217761EBCE33C002C73FB /* Sound */,
+				712790261E34DD4800F0C5FE /* Scene */,
 				71A2A1E01E1A96C4000C885A /* Input */,
-				71E6B78D1E16ABA900475846 /* extension */,
-				710655DC1DF26ADD003A1169 /* operator */,
+				71E6B78D1E16ABA900475846 /* Extension */,
+				710655DC1DF26ADD003A1169 /* Operator */,
 				71CC199A1E1BDF6B00391CAA /* Logger.swift */,
 				7166A0061E2A7D3A00D1588C /* Bridge.swift */,
 				71C273F21EBAF79D0096A19D /* Math.swift */,
 				712790241E34C18E00F0C5FE /* DIContainer.swift */,
 				71EA2C0C1EB2182600D9C00F /* DMJudgeTextEncodingOfData.swift */,
 			);
-			path = core;
+			path = Core;
 			sourceTree = "<group>";
 		};
-		71E6B78D1E16ABA900475846 /* extension */ = {
+		71E6B78D1E16ABA900475846 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				E592F38C1EB1BF5100A672AB /* String+preg.swift */,
@@ -565,10 +565,10 @@
 				718D52C51F42108200A5BE8A /* Array+shuffled.swift */,
 				718D52CB1F42A08900A5BE8A /* Array+random.swift */,
 			);
-			path = extension;
+			path = Extension;
 			sourceTree = "<group>";
 		};
-		71FA797E1EC7CA37008FCE82 /* play */ = {
+		71FA797E1EC7CA37008FCE82 /* Play */ = {
 			isa = PBXGroup;
 			children = (
 				71FA797F1EC7CA5F008FCE82 /* PlayScene.swift */,
@@ -576,26 +576,26 @@
 				71FA79831EC7CA82008FCE82 /* PlayView.swift */,
 				71FA79851EC7CA8E008FCE82 /* PlayModel.swift */,
 			);
-			path = play;
+			path = Play;
 			sourceTree = "<group>";
 		};
-		71FD1E421DF2D7A70081E1B1 /* constants */ = {
+		71FD1E421DF2D7A70081E1B1 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				718A5CF81D45292700B88A76 /* config */,
-				71FD1E431DF2D7FC0081E1B1 /* resources */,
+				718A5CF81D45292700B88A76 /* Config */,
+				71FD1E431DF2D7FC0081E1B1 /* Resources */,
 			);
-			path = constants;
+			path = Constants;
 			sourceTree = "<group>";
 		};
-		71FD1E431DF2D7FC0081E1B1 /* resources */ = {
+		71FD1E431DF2D7FC0081E1B1 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
 				71CC19961E1BCF0B00391CAA /* Images.swift */,
 				71FD1E451DF2D9060081E1B1 /* Strings.swift */,
 				71C406551ED97F05003A9248 /* Colors.swift */,
 			);
-			path = resources;
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		CBB1086F74CD780FA108E3B0 /* Frameworks */ = {
@@ -634,16 +634,16 @@
 			path = extension;
 			sourceTree = "<group>";
 		};
-		E592F3911EB1BFB300A672AB /* model */ = {
+		E592F3911EB1BFB300A672AB /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				E55784B61EC19BBA0039EDD9 /* BMS */,
-				71C273EB1EBAD89F0096A19D /* parser */,
+				71C273EB1EBAD89F0096A19D /* Parser */,
 			);
-			path = model;
+			path = Model;
 			sourceTree = "<group>";
 		};
-		E592F3941EB1CA5300A672AB /* data */ = {
+		E592F3941EB1CA5300A672AB /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				E592F3951EB1CA6C00A672AB /* BMSData.swift */,
@@ -656,7 +656,7 @@
 				71C406591EDAC653003A9248 /* JudgeData.swift */,
 				71C4065B1EDAD46A003A9248 /* GameOptionData.swift */,
 			);
-			path = data;
+			path = Data;
 			sourceTree = "<group>";
 		};
 		E5FC969C1ECC4B1500535FC6 /* Timer */ = {
